@@ -1,0 +1,322 @@
+focus_tree = {
+	id = montenegro_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = MNT
+		}
+	}
+	
+	default = no
+
+	continuous_focus_position = { x = 50 y = 1650 }
+
+#	focus = {
+#		id = mnt_focus_10
+#		icon = GFX_goal_generic_major_alliance
+#		prerequisite = { focus = }
+#		mutually_exclusive = { focus =  }
+#		x = 10
+#		y = 0
+#		relative_position_id = 
+#
+#		cost = 10
+#
+#		ai_will_do = {
+#			factor = 1
+#		}
+#
+#		available = {
+#
+#		}
+#		
+#		bypass = {
+#
+#		}
+#
+#		cancel_if_invalid = yes
+#		continue_if_invalid = no
+#		available_if_capitulated = yes
+        search_filters = { FOCUS_FILTER_POLITICAL }
+#
+#		complete_tooltip = {
+#
+#		}
+#
+#		completion_reward = {
+        add_political_power = 120
+#
+#		}
+#	}
+
+	focus = {
+		id = MNT_focus_1
+		icon = GFX_focus_ger_reichskommisariats
+		x = 5
+		y = 1
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+
+		completion_reward = {
+			add_political_power = 350
+            add_popularity = { ideology = fascism popularity = 1 }
+		
+	
+		}
+	}
+	focus = {
+		id = MNT_focus_2
+		icon = GFX_goal_generic_position_armies
+		x = 5
+		y = 2
+	    prerequisite = { focus = MNT_focus_1 }
+        relative_position_id = HOL_the_western_possessions
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+
+		completion_reward = {
+			add_political_power = 120
+		
+	
+		}
+	}
+    focus = {
+		id = MNT_focus_3
+		icon = GFX_goal_generic_position_armies
+		x = 2
+		y = 3
+	    prerequisite = { focus = MNT_focus_1 }
+        relative_position_id = HOL_the_western_possessions
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+
+		completion_reward = {
+			add_political_power = 120
+		
+	
+		}
+	}
+ focus = {
+		id = MNT_focus_4
+		icon = GFX_goal_generic_position_armies
+		x = 8
+		y = 3
+	    prerequisite = { focus = MNT_focus_1 }
+        relative_position_id = HOL_the_western_possessions
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+
+		completion_reward = {
+			add_political_power = 120
+		
+	
+		}
+	}
+    focus = {
+		id = MNT_focus_5
+		icon = GFX_goal_generic_position_armies
+		x = 5
+		y = 5
+	    prerequisite = { focus = MNT_focus_2 }
+        prerequisite = { focus = MNT_focus_3 }
+        prerequisite = { focus = MNT_focus_4 }
+        relative_position_id = HOL_the_western_possessions
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+
+		completion_reward = {
+			add_political_power = 120
+		
+	
+		}
+	}
+focus = {
+		id = MNT_focus_6
+		icon = GFX_goal_generic_position_armies
+		x = 2
+		y = 7
+	    prerequisite = { focus = MNT_focus_5 }
+        relative_position_id = HOL_the_western_possessions
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+
+		completion_reward = {
+			add_political_power = 120
+		
+	
+		}
+	}
+    focus = {
+		id = MNT_focus_7
+		icon = GFX_goal_generic_position_armies
+		x = 8
+		y = 7
+	    prerequisite = { focus = MNT_focus_5 }
+        relative_position_id = HOL_the_western_possessions
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+
+		completion_reward = {
+			add_political_power = 120
+		
+	
+		}
+	}
+    focus = {
+		id = MNT_focus_8
+		icon = GFX_goal_generic_position_armies
+		x = 5
+		y = 9
+	    prerequisite = { focus = MNT_focus_5 }
+        relative_position_id = HOL_the_western_possessions
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+
+		completion_reward = {
+			add_political_power = 120
+		
+	
+		}
+	}
+
+}
