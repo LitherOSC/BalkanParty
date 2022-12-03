@@ -52,6 +52,8 @@ focus_tree = {
 #		}
 #	}
 
+############################ Political Branch #############################
+
 	focus = {
 		id = MNT_focus_1
 		icon = GFX_focus_ger_reichskommisariats
@@ -81,13 +83,17 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 350
             add_popularity = { ideology = fascism popularity = 1 }
+			set_politics = {
+	ruling_party = fascism
+	elections_allowed = no
+}
 		
 	
 		}
 	}
 	focus = {
 		id = MNT_focus_2
-		icon = GFX_goal_generic_position_armies
+		icon = GFX_focus_mex_privatisation
 		x = 5
 		y = 2
 	    prerequisite = { focus = MNT_focus_1 }
@@ -113,14 +119,16 @@ focus_tree = {
 
 
 		completion_reward = {
-			add_political_power = 120
+			add_war_support = 0.50
+			add_stability = 0.50
+			add_political_power = 150
 		
 	
 		}
 	}
     focus = {
 		id = MNT_focus_3
-		icon = GFX_goal_generic_position_armies
+		icon = GFX_focus_generic_military_mission
 		x = 2
 		y = 3
 	    prerequisite = { focus = MNT_focus_1 }
@@ -146,14 +154,14 @@ focus_tree = {
 
 
 		completion_reward = {
-			add_political_power = 120
+		add_manpower = 600000
 		
 	
 		}
 	}
  focus = {
 		id = MNT_focus_4
-		icon = GFX_goal_generic_position_armies
+		icon = GFX_goal_generic_construct_mil_factory
 		x = 8
 		y = 3
 	    prerequisite = { focus = MNT_focus_1 }
@@ -179,14 +187,19 @@ focus_tree = {
 
 
 		completion_reward = {
-			add_political_power = 120
+			add_building_construction = {
+	type = arms_factory
+	level = 6
+	instant_build = yes
+}
+	
 		
 	
 		}
 	}
     focus = {
 		id = MNT_focus_5
-		icon = GFX_goal_generic_position_armies
+		icon = GFX_focus_generic_armored_air_support
 		x = 5
 		y = 5
 	    prerequisite = { focus = MNT_focus_2 }
@@ -214,7 +227,14 @@ focus_tree = {
 
 
 		completion_reward = {
-			add_political_power = 120
+	add_equipment_to_stockpile = {
+
+        type = infantry_equipment_1
+
+        amount = 10000
+		
+
+    }
 		
 	
 		}
@@ -247,7 +267,9 @@ focus = {
 
 
 		completion_reward = {
-			add_political_power = 120
+			add_political_power = 50
+			create_wargoal = { type = annex_everything target = MAC }
+
 		
 	
 		}
@@ -262,7 +284,7 @@ focus = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 2
+			factor = 4
 		}
 
 		available = {
@@ -280,14 +302,16 @@ focus = {
 
 
 		completion_reward = {
-			add_political_power = 120
+			add_political_power = 50
+			create_wargoal = { type = annex_everything target = KOS }
+
 		
 	
 		}
 	}
     focus = {
 		id = MNT_focus_8
-		icon = GFX_goal_generic_position_armies
+		icon = GFX_focus_focus_fra_fascist_threat
 		x = 5
 		y = 9
 	    prerequisite = { focus = MNT_focus_5 }
@@ -313,7 +337,365 @@ focus = {
 
 
 		completion_reward = {
-			add_political_power = 120
+			add_political_power = 200
+			MNT = { create_wargoal = { type = puppet_wargoal_focus target = SER } }
+		
+	
+		}
+	}
+
+###################### Military Branch #######################
+
+ focus = {
+		id = MNT_focus_11
+		icon = GFX_focus_focus_fra_fascist_threat
+		x = 15
+		y = 0
+        relative_position_id = HOL_the_western_possessions
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+
+		completion_reward = {
+		army_experience = 125
+		navy_experience = 125
+		air_experience = 125
+		
+		custom_effect_tooltip = ROM_royal_guards_divisions_tt
+			hidden_effect = {
+				if = {
+					limit = {
+						has_tech = tech_recon
+					}
+					division_template = {
+						name = "Royal Guards Division"
+						priority = 2
+						division_names_group = ROM_INF_01
+						regiments = {
+							infantry = { x = 0 y = 0 }
+							infantry = { x = 0 y = 1 }
+							infantry = { x = 0 y = 2 }
+				
+		    	   		 	infantry = { x = 1 y = 0 }
+							infantry = { x = 1 y = 1 }
+							infantry = { x = 1 y = 2 }
+				
+		    	   		 	infantry = { x = 2 y = 0 }
+							artillery_brigade = { x = 2 y = 1 }
+							artillery_brigade = { x = 2 y = 2 }
+						}
+						support = {
+							engineer = { x = 0 y = 0 }
+							recon = { x = 0 y = 1 }
+						}
+					}
+					else = {
+						division_template = {
+							name = "Royal Guards Division"
+							priority = 2
+							division_names_group = ROM_INF_01
+							regiments = {
+								infantry = { x = 0 y = 0 }
+								infantry = { x = 0 y = 1 }
+								infantry = { x = 0 y = 2 }
+					
+			    	   		 	infantry = { x = 1 y = 0 }
+								infantry = { x = 1 y = 1 }
+								infantry = { x = 1 y = 2 }
+					
+			    	   		 	infantry = { x = 2 y = 0 }
+								artillery_brigade = { x = 2 y = 1 }
+								artillery_brigade = { x = 2 y = 2 }
+							}
+							support = {
+								engineer = { x = 0 y = 0 }
+							}
+						}
+					}
+				}
+				random_owned_controlled_state = {
+					limit = { ROOT = { has_full_control_of_state = PREV } }
+					prioritize = { 105 }
+					create_unit = {
+						division = "name = \"Royal Guards Division\" division_template = \"Royal Guards Division\" start_experience_factor = 1.0" 
+						owner = MNT
+						
+					}
+					create_unit = {
+						division = "name = \"Royal Guards Division\" division_template = \"Royal Guards Division\" start_experience_factor = 1.0" 
+						owner = MNT
+						
+					}
+					create_unit = {
+						division = "name = \"Royal Guards Division\" division_template = \"Royal Guards Division\" start_experience_factor = 1.0" 
+						owner = MNT
+						
+					}
+					create_unit = {
+						division = "name = \"Royal Guards Division\" division_template = \"Royal Guards Division\" start_experience_factor = 1.0" 
+						owner = MNT
+						
+					}
+					create_unit = {
+						division = "name = \"Royal Guards Division\" division_template = \"Royal Guards Division\" start_experience_factor = 1.0" 
+						owner = MNT
+						
+					}
+					create_unit = {
+						division = "name = \"Royal Guards Division\" division_template = \"Royal Guards Division\" start_experience_factor = 1.0" 
+						owner = MNT
+						
+					}
+					create_unit = {
+						division = "name = \"Royal Guards Division\" division_template = \"Royal Guards Division\" start_experience_factor = 1.0" 
+						owner = MNT
+						
+					}
+					create_unit = {
+						division = "name = \"Royal Guards Division\" division_template = \"Royal Guards Division\" start_experience_factor = 1.0" 
+						owner = MNT
+						
+					}
+					create_unit = {
+						division = "name = \"Royal Guards Division\" division_template = \"Royal Guards Division\" start_experience_factor = 1.0" 
+						owner = MNT
+						
+					}
+					create_unit = {
+						division = "name = \"Royal Guards Division\" division_template = \"Royal Guards Division\" start_experience_factor = 1.0" 
+						owner = MNT
+						
+					}
+					create_unit = {
+						division = "name = \"Royal Guards Division\" division_template = \"Royal Guards Division\" start_experience_factor = 1.0" 
+						owner = MNT
+						
+					}
+					create_unit = {
+						division = "name = \"Royal Guards Division\" division_template = \"Royal Guards Division\" start_experience_factor = 1.0" 
+						owner = MNT
+						
+					}
+					create_unit = {
+						division = "name = \"Royal Guards Division\" division_template = \"Royal Guards Division\" start_experience_factor = 1.0" 
+						owner = MNT
+						
+					}
+					create_unit = {
+						division = "name = \"Royal Guards Division\" division_template = \"Royal Guards Division\" start_experience_factor = 1.0" 
+						owner = MNT
+						
+					}
+					create_unit = {
+						division = "name = \"Royal Guards Division\" division_template = \"Royal Guards Division\" start_experience_factor = 1.0" 
+						owner = MNT
+						
+					}
+					create_unit = {
+						division = "name = \"Royal Guards Division\" division_template = \"Royal Guards Division\" start_experience_factor = 1.0" 
+						owner = MNT
+						
+					}
+					create_unit = {
+						division = "name = \"Royal Guards Division\" division_template = \"Royal Guards Division\" start_experience_factor = 1.0" 
+						owner = MNT
+						
+					}
+					create_unit = {
+						division = "name = \"Royal Guards Division\" division_template = \"Royal Guards Division\" start_experience_factor = 1.0" 
+						owner = MNT
+						
+					}
+					create_unit = {
+						division = "name = \"Royal Guards Division\" division_template = \"Royal Guards Division\" start_experience_factor = 1.0" 
+						owner = MNT
+						
+					}
+					create_unit = {
+						division = "name = \"Royal Guards Division\" division_template = \"Royal Guards Division\" start_experience_factor = 1.0" 
+						owner = MNT
+						
+					}
+					create_unit = {
+						division = "name = \"Royal Guards Division\" division_template = \"Royal Guards Division\" start_experience_factor = 1.0" 
+						owner = MNT
+						
+					}
+					create_unit = {
+						division = "name = \"Royal Guards Division\" division_template = \"Royal Guards Division\" start_experience_factor = 1.0" 
+						owner = MNT
+						
+					}
+					create_unit = {
+						division = "name = \"Royal Guards Division\" division_template = \"Royal Guards Division\" start_experience_factor = 1.0" 
+						owner = MNT
+						
+					}
+					create_unit = {
+						division = "name = \"Royal Guards Division\" division_template = \"Royal Guards Division\" start_experience_factor = 1.0" 
+						owner = MNT
+						
+					}
+					create_unit = {
+						division = "name = \"Royal Guards Division\" division_template = \"Royal Guards Division\" start_experience_factor = 1.0" 
+						owner = MNT
+						
+					}
+				}
+			}			
+		}
+	}
+	focus = {
+		id = MNT_focus_13
+		icon = GFX_focus_focus_fra_fascist_threat
+		x = 15
+		y = 2
+		prerequisite = { focus = MNT_focus_11}
+        relative_position_id = HOL_the_western_possessions
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+
+		completion_reward = {
+		army_experience = 250
+		navy_experience = 250
+		air_experience = 250
+	
+		
+		
+	
+		}
+	}
+	focus = {
+		id = MNT_focus_14
+		icon = GFX_focus_focus_fra_fascist_threat
+		x = 15
+		y = 4
+		prerequisite = { focus = MNT_focus_13}
+        relative_position_id = HOL_the_western_possessions
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+
+		completion_reward = {
+			custom_effect_tooltip = ROM_vanatori_de_munte_unit_tt
+			hidden_effect = {
+				division_template = {
+					name = "Vanatori de munte"
+					priority = 2
+					division_names_group = ROM_MTN_01
+					regiments = {
+						mountaineers = { x = 0 y = 0 }
+						mountaineers = { x = 0 y = 1 }
+						mountaineers = { x = 0 y = 2 }
+			
+	    	   		 	mountaineers = { x = 1 y = 0 }
+						mountaineers = { x = 1 y = 1 }
+						mountaineers = { x = 1 y = 2 }
+			
+	    	   		 	mountaineers = { x = 2 y = 0 }
+						mountaineers = { x = 2 y = 1 }
+						mountaineers = { x = 2 y = 2 }
+					}
+					support = {
+						artillery = { x = 0 y = 0 }
+					}
+				}
+				random_owned_controlled_state = {
+					limit = { ROOT = { has_full_control_of_state = PREV } }
+					prioritize = { 105 }
+					create_unit = {
+						division = "name = \"Vanatori de munte\" division_template = \"Vanatori de munte\" start_experience_factor = 1.0" 
+						owner = MNT
+					}
+										create_unit = {
+						division = "name = \"Vanatori de munte\" division_template = \"Vanatori de munte\" start_experience_factor = 1.0" 
+						owner = MNT
+					}
+										create_unit = {
+						division = "name = \"Vanatori de munte\" division_template = \"Vanatori de munte\" start_experience_factor = 1.0" 
+						owner = MNT
+					}
+										create_unit = {
+						division = "name = \"Vanatori de munte\" division_template = \"Vanatori de munte\" start_experience_factor = 1.0" 
+						owner = MNT
+					}
+										create_unit = {
+						division = "name = \"Vanatori de munte\" division_template = \"Vanatori de munte\" start_experience_factor = 1.0" 
+						owner = MNT
+					}
+										create_unit = {
+						division = "name = \"Vanatori de munte\" division_template = \"Vanatori de munte\" start_experience_factor = 1.0" 
+						owner = MNT
+					}
+										create_unit = {
+						division = "name = \"Vanatori de munte\" division_template = \"Vanatori de munte\" start_experience_factor = 1.0" 
+						owner = MNT
+					}
+										create_unit = {
+						division = "name = \"Vanatori de munte\" division_template = \"Vanatori de munte\" start_experience_factor = 1.0" 
+						owner = MNT
+					}
+				}
+			}
+			add_tech_bonus = {
+				name = ROM_vanatori_de_munte
+				bonus = 1.0
+				uses = 1
+				category = mountaineers_tech
+			}
+		}
+	}
+	
+		
 		
 	
 		}

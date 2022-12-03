@@ -241,9 +241,6 @@ ideas = {
 		}
 		CZE_export_focus2 = {
 
-			allowed = {
-				original_tag = CZE
-				always = no
 			}
 
 			allowed_civil_war = {
