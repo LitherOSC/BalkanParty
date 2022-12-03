@@ -1,2 +1,44 @@
 ideas = {
+  country = {
+		 SER_paramilitaries = {
+			
+			picture = YUG_all_yugoslavian_regiments
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				max_planning = 0.05
+				defence = 0.05
+        weekly_manpower = 500
+        conscription_factor = 0.1
+			}
+		}
+    SER_king_influence = {
+			
+			picture = HUN_hungarian_monarchy_democratic
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				party_popularity_stability_factor = 0.1
+        neutrality_drift = 0.05
+			}
+		}
+  }
 }

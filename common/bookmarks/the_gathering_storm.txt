@@ -95,6 +95,16 @@ bookmarks = {
 				TUR_pivot_to_the_past
 			}
 		}
+		"SER"={
+			history = 
+			ideology = neutrality
+			ideas = {
+
+			}
+			focuses = {
+
+			}
+		}
 
 		"---"={
 			history = "OTHER_GATHERING_STORM_DESC"
@@ -104,20 +114,9 @@ bookmarks = {
 		# minors from DLC ####
 
 
-		"SER"={
-			minor = yes
-			history = "TUR_GATHERING_STORM_DESC"
-			ideology = neutrality
-			ideas = {
-
-			}
-			focuses = {
-
-			}
-		}
 		"MNT"={
 			minor = yes
-			history = "TUR_GATHERING_STORM_DESC"
+			history = 
 			ideology = neutrality
 			ideas = {
 
@@ -128,7 +127,7 @@ bookmarks = {
 		}
 		"CRO"={
 			minor = yes
-			history = "TUR_GATHERING_STORM_DESC"
+			history = 
 			ideology = neutrality
 			ideas = {
 
@@ -137,7 +136,116 @@ bookmarks = {
 
 			}
 		}
-		
+		"BOS"={
+			minor = yes
+			history = 
+			ideology = neutrality
+			ideas = {
+
+			}
+			focuses = {
+
+			}
+		}
+		"KOS"={
+			minor = yes
+			history = 
+			ideology = neutrality
+			ideas = {
+
+			}
+			focuses = {
+
+			}
+		}
+		"MAC"={
+			minor = yes
+			history = 
+			ideology = neutrality
+			ideas = {
+
+			}
+			focuses = {
+
+			}
+		}		
+		"SLV"={
+			minor = yes
+			history = 
+			ideology = neutrality
+			ideas = {
+
+			}
+			focuses = {
+
+			}
+		}
+		"ALB"={
+			minor = yes
+			history = 
+			ideology = neutrality
+			ideas = {
+
+			}
+			focuses = {
+
+			}
+		}
+		"SLO"={
+			minor = yes
+			history = 
+			ideology = neutrality
+			ideas = {
+
+			}
+			focuses = {
+
+			}
+		}		
+		"MOL"={
+			minor = yes
+			history = 
+			ideology = neutrality
+			ideas = {
+
+			}
+			focuses = {
+
+			}
+		}		
+		"TRA"={
+			minor = yes
+			history = 
+			ideology = neutrality
+			ideas = {
+
+			}
+			focuses = {
+
+			}
+		}
+		"AUS"={
+			minor = yes
+			history = 
+			ideology = neutrality
+			ideas = {
+
+			}
+			focuses = {
+
+			}
+		}
+		"KUR"={
+			minor = yes
+			history = 
+			ideology = neutrality
+			ideas = {
+
+			}
+			focuses = {
+
+			}
+		}
 
 		effect = {
 			randomize_weather = 22345 # <- Obligatory in every bookmark !

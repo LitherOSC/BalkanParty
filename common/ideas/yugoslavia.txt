@@ -224,10 +224,7 @@ ideas = {
 			
 			picture = generic_central_management
 
-			allowed = {
-				original_tag = YUG
-				always = no
-			}
+
 
 			allowed_civil_war = {
 				always = yes

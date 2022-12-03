@@ -2,6 +2,9 @@
 #################################################### BOOKMARKS ###########################################
   BALKAN_DESC:0 "Balkan Party"
 #################################################### FOCUS ###############################################
+
+################### MNT
+
   MNT_focus_1:0 "March on Podgorica"
   MNT_focus_1_desc:0 "With the threat of Serbia in the north, we need a powerful government to assure our safety in the upcoming storm."
   MNT_focus_2:0 "Fascist Propaganda"
@@ -24,3 +27,63 @@
   MNT_focus_13_desc:0 "The 3rd Balkan War was complete chaos, but while the others faught we remained on the sideline observing their tactics."
   MNT_focus_14:0 "Mountain Divisons"
   MNT_focus_14_desc:0 "Our whole country is based in the mountains, training mountaineer division to defend our homeland from the Serbians would be the correct move."
+
+############# SER
+
+  SER_acknowledge_neighbors:0 "Acknowledge our Neighbors"
+  SER_acknowledge_neighbors_desc:0 "We must come to terms with the reality of the situation, that Yugoslavia is no more, and acknowledge our neighbors."
+  SER_diplomacy_effort:0 ""
+  SER_diplomacy_effort_desc:0 ""
+  SER_national_defence:0 ""
+  SER_national_defence_desc:0 ""
+  SER_welfare_program:0 ""
+  SER_welfare_program_desc:0 ""
+
+  SER_revive_YUG:0 ""
+  SER_revive_YUG_desc:0 ""
+  SER_establish_claims:0 ""
+  SER_establish_claims_desc:0 ""
+  SER_monarchy_memories:0 ""
+  SER_monarchy_memories_desc:0 ""
+  SER_rally_paramilitaries:0 ""
+  SER_rally_paramilitaries_desc:0 ""
+  SER_king_civil_war:0 ""
+  SER_king_civil_war_desc:0 ""
+  SER_king_influence:0 ""
+  SER_king_influence_desc:0 ""
+  SER_king_takeover:0 ""
+  SER_king_takeover_desc:0 ""
+  SER_proclaim_YUG:0 ""
+  SER_proclaim_YUG_desc:0 ""
+
+  SER_guarantee:0 ""
+  SER_guarantee_desc:0 ""
+  SER_god_artillery:0 "Serbian artillery is led by the hand of god!"
+  SER_god_artillery_desc:0 "Zagreb nam je daleko, Sarajevo jos dalje pa vam SRBIN pozdrav po granati salje. Zagreb je daleko, Sarajevo jos dalje pa vam SRBIN pozdrav po granati salje. Srpsku Granatu Bozija ruka vodi, tamo gde je posaljemo ona i pogodi. Srpsku Granatu Bozija ruka vodi, tamo gde je posaljemo ona i pogodi. Zenicu nevidimo, Tuzla u daljini al Granata pogadja Srbine nebrini. Zenicu nevidimo, Tuzla u daljini al Granata pogadja Srbine nebrini. Srpsku Granatu Bozija ruka vodi, tamo gde je posaljemo ona i pogodi. Srpsku Granatu Bozija ruka vodi, tamo gde je posaljemo ona i pogodi. Ja vec zalim Dusmane Tesko li je njima, jel Srpska Granata kao da oci ima !... Ja vec zalim Dusmane Tesko li je njima, jel Srpska Granata kao da oci ima !... Srpsku Granatu Bozija ruka vodi, tamo gde je posaljemo ona i pogodi. Srpsku Granatu Bozija ruka vodi, tamo gde je posaljemo ona i pogodi."
+
+  SER_fund_army:0 ""
+  SER_fund_army_desc:0 ""
+  SER_artillery:0 ""
+  SER_artillery_desc:0 ""
+
+
+
+#################################################### IDEAS #################################################
+
+########### SER
+
+  SER_paramilitaries:0 ""
+  SER_paramilitaries_desc:0 ""
+  SER_king_influence:0 ""
+  SER_king_influence_desc:0 ""
+
+  
+#################################################### CHARACTERS ##############################################
+  SER_YUG_king_char:0 "Prince Paul"
+#################################################### POLITICAL PARTIES #############################################
+  SER_kings_party:0 "King's Party"
+  SER_kings_party_long:0 "Party of Prince Paul of Yugoslavia"
+#################################################### COUNTRIES ##########################################
+  SER_YUG_KING_neutrality:0 "Kingdom of Yugoslavia"
+  SER_YUG_KING_neutrality_ADJ:0 "Yugoslavian"
+  SER_YUG_KING_neutrality_DEF:0 "Kingdom of Yugoslavia"

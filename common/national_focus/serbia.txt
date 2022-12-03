@@ -15,49 +15,298 @@ focus_tree = {
 
 	continuous_focus_position = { x = 50 y = 1100 }
 
-#	focus = {
-#		id = ROM_
-#		icon = GFX_
-#		prerequisite = { focus = }
-#		mutually_exclusive = { focus =  }
-#		x = -3
-#		y = 0
-#		relative_position_id = 
-#
-#		cost = 10
-#
-#		ai_will_do = {
-#			factor = 1
-#		}
-#
-#		available = {
-#
-#		}
-#		
-#		bypass = {
-#
-#		}
-#
-#		cancel_if_invalid = yes
-#		continue_if_invalid = no
-#		available_if_capitulated = no
-#
-#		complete_tooltip = {
-#
-#		}
-#
-#		completion_reward = {
-#
-#		}
-#	} 
+#########################################
+############### post Yugo friends
+#######################################
 
+	focus = {
+		id = SER_acknowledge_neighbors
+		icon = GFX_focus_generic_diplomatic_treaty
+
+		x = 2
+		y = 0
+		cost = 10
+		search_filters = {   }
+		mutually_exclusive = {focus = SER_revive_YUG}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+
+		}
+	}
+	focus = {
+		id = SER_diplomacy_effort
+		icon = GFX_goal_generic_improve_relations
+		relative_position_id = SER_acknowledge_neighbors
+		x = 2
+		y = 1
+		cost = 10
+		search_filters = {   }
+		prerequisite = { focus = SER_acknowledge_neighbors}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+
+		}
+	}
+	focus = {
+		id = SER_national_defence
+		icon = GFX_goal_generic_defence
+		relative_position_id = SER_acknowledge_neighbors
+		x = 0
+		y = 2
+		cost = 10
+		search_filters = {   }
+		prerequisite = { focus = SER_acknowledge_neighbors }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+
+		}
+	}
+	focus = {
+		id = SER_welfare_program
+		icon = GFX_goal_generic_national_unity
+		relative_position_id = SER_acknowledge_neighbors
+		x = -2
+		y = 1
+		cost = 10
+		search_filters = {   }
+		prerequisite = { focus = SER_acknowledge_neighbors}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+
+		}
+	}
+ 
+###################################
+############### Yugoslavian Revival
+#################################
+	focus = {
+		id = SER_revive_YUG
+		icon = GFX_focus_invite_yugoslavia
+		x = 10
+		y = 0
+		cost = 10
+		search_filters = {   }
+		mutually_exclusive = {focus = SER_acknowledge_neighbors}
+		
+		ai_will_do = {
+			factor = 3
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_stability = -0.05
+			add_war_support = 0.1
+			add_political_power = 100
+
+		}
+	}
+	focus = {
+		id = SER_establish_claims
+		icon = GFX_goal_generic_position_armies
+		relative_position_id = SER_revive_YUG
+		x = -2
+		y = 1
+		cost = 10
+		search_filters = {   }
+		prerequisite = { focus = SER_revive_YUG}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			 102 = { add_claim_by = SER }
+			 853 = { add_claim_by = SER }
+			 736 = { add_claim_by = SER }
+			 109 = { add_claim_by = SER }
+			 103 = { add_claim_by = SER }
+			 852 = { add_claim_by = SER }
+			 104 = { add_claim_by = SER }
+			 804 = { add_claim_by = SER }
+			 105 = { add_claim_by = SER }
+			 802 = { add_claim_by = SER }
+			 106 = { add_claim_by = SER }
+
+		}
+	}
+	focus = {
+		id = SER_monarchy_memories
+		icon = GFX_goal_generic_propaganda
+		relative_position_id = SER_revive_YUG
+		x = 0
+		y = 1
+		cost = 10
+		search_filters = {   }
+		prerequisite = { focus = SER_revive_YUG}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+
+		}
+	}
+	focus = {
+		id = SER_rally_paramilitaries
+		icon = GFX_focus_BUL_support_macedonian_organizations
+		relative_position_id = SER_revive_YUG
+		x = 2
+		y = 1
+		cost = 10
+		search_filters = {   }
+		prerequisite = { focus = SER_revive_YUG}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = SER_paramilitaries
+			add_war_support = 0.05
+
+		}
+	}
+	focus = {
+		id = SER_king_civil_war
+		icon = GFX_focus_generic_support_the_left_right
+		relative_position_id = SER_monarchy_memories
+		x = 1
+		y = 1
+		cost = 10
+		mutually_exclusive = {focus = SER_king_influence}
+		search_filters = {   }
+		prerequisite = { focus = SER_monarchy_memories}
+		prerequisite = { focus = SER_establish_claims}
+		prerequisite = { focus = SER_rally_paramilitaries}
+
+		ai_will_do = {
+			factor = 1
+		}		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_political_power = -100
+			effect_tooltip = {
+				set_party_name = {
+					ideology = neutrality
+					name = SER_kings_party
+					long_name = SER_kings_party_long
+				}	
+			}	
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.20
+			}	
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.1
+			}						
+			start_civil_war = {	
+				ideology = democratic
+				size = 0.3
+				capital = 45
+				states = { 746 }
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.75
+				}
+			}
+			set_politics = {
+				ruling_party = neutrality
+			}
+			promote_character = SER_YUG_king_char
+
+
+		}
+	}
+	focus = {
+		id = SER_king_influence
+		icon = GFX_goal_continuous_def_against_influence
+		relative_position_id = SER_monarchy_memories
+		x = -1
+		y = 1
+		cost = 10
+		mutually_exclusive = {focus = SER_king_civil_war}
+		search_filters = {   }
+		prerequisite = { focus = SER_monarchy_memories}
+		prerequisite = { focus = SER_establish_claims}
+		prerequisite = { focus = }
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = SER_king_influence
+
+		}
+	}
+	focus = {
+		id = SER_king_takeover
+		icon = GFX_focus_hun_elect_a_king
+		relative_position_id = SER_king_influence
+		x = 0
+		y = 1
+		cost = 10
+		search_filters = {   }
+		prerequisite = { focus = SER_king_influence}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			effect_tooltip = {
+				set_party_name = {
+					ideology = neutrality
+					name = SER_kings_party
+					long_name = SER_kings_party_long
+				}	
+			}	
+			promote_character = SER_YUG_king_char
+			add_stability = 0.1
+			add_political_power = 100
+		}
+	}
+	focus = {
+		id = SER_proclaim_YUG
+		icon = GFX_focus_invite_yugoslavia
+		relative_position_id = SER_king_takeover
+		x = 1
+		y = 1
+		cost = 10
+		search_filters = {   }
+		prerequisite = { focus = SER_king_takeover focus = SER_king_civil_war}
+		
+		available_if_capitulated = yes
+		available = {
+			has_war = true
+		}
+		completion_reward = {
+			set_cosmetic_tag = SER_YUG_KING
+
+		}
+	}
 	focus = {
 		id = 
 		icon = 
 		relative_position_id = 
 		x = 
 		y = 
-		cost = 20
+		cost = 10
 		search_filters = {   }
 		prerequisite = { focus = }
 		
@@ -65,8 +314,134 @@ focus_tree = {
 
 		completion_reward = {
 
+
 		}
 	}
 
+################################
+############### other
+###############################
+	focus = {
+		id = SER_guarantee
+		icon = GFX_goal_tripartite_pact
+		relative_position_id = SER_acknowledge_neighbors
+		x = 4
+		y = 2
+		cost = 10
+		search_filters = {   }
+		prerequisite = { focus = SER_diplomacy_effort focus = SER_establish_claims}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			give_guarantee = SLV
+			give_guarantee = CRO
+			give_guarantee = BOS
+			give_guarantee = MNT
+			give_guarantee = KOS
+			give_guarantee = MAC
+
+		}
+	}
+	focus = {
+		id = SER_god_artillery
+		icon = GFX_focus_BUL_restore_the_bulgarian_patriarchate
+		relative_position_id = SER_rally_paramilitaries
+		x = 2
+		y = 1
+		cost = 10
+
+		available = {
+			NOT  {
+				has_war = true
+			}
+
+		}
+		search_filters = {   }
+		prerequisite = { focus = SER_rally_paramilitaries}
+		prerequisite = { focus = SER_artillery}
+
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+
+		}
+	}
+###################################
+############# army
+###############################
+	focus = {
+		id = SER_fund_army
+		icon = GFX_focus_BUL_support_macedonian_organizations
+		x = 19
+		y = 0
+		cost = 10
+		search_filters = {   }
+		prerequisite = { focus = }
+		
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+
+		}
+	}
+	focus = {
+		id = 
+		icon = 
+		relative_position_id = 
+		x = 
+		y = 
+		cost = 10
+		search_filters = {   }
+		prerequisite = { focus = }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+
+		}
+	}
+	focus = {
+		id = SER_artillery
+		icon = GFX_goal_generic_army_artillery2
+		relative_position_id = SER_fund_army
+		x = -3
+		y = 1
+		cost = 5
+		search_filters = {   }
+		prerequisite = { focus = SER_fund_army}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+
+		}
+	}
+	focus = {
+		id = 
+		icon = 
+		relative_position_id = 
+		x = 
+		y = 
+		cost = 10
+		search_filters = {   }
+		prerequisite = { focus = }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+
+		}
+	}
 
 }
