@@ -1,2 +1,105 @@
 ideas = {
+  country = {
+		SLO_fortification_focus = {
+
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = FRA_fortification_focus
+
+			removal_cost = -1
+
+			modifier = {
+				production_speed_bunker_factor = 0.3
+				conscription = 0.003
+			}
+		}
+
+		SLO_fortification_focus2 = {
+
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = FRA_fortification_focus
+
+			removal_cost = -1
+
+			modifier = {
+				production_speed_bunker_factor = 0.3
+				conscription = 0.006
+			}
+		}
+
+		SLO_fortification_focus3 = {
+
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = FRA_fortification_focus
+
+			removal_cost = -1
+
+			modifier = {
+				production_speed_bunker_factor = 0.3
+				conscription = 0.009
+			}
+		}
+
+		SLO_fortification_focus4 = {
+
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = FRA_fortification_focus
+
+			removal_cost = -1
+
+			modifier = {
+				production_speed_bunker_factor = 0.3
+				conscription = 0.012
+			}
+		}
+
+    SLO_survival_idea = {
+      picture = generic_victors_of_ww1
+      allowed = {
+        always = yes
+      }
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+
+			modifier = {
+				surrender_limit = 0.1
+				conscription = 0.015
+        industrial_capacity_factory = 0.15
+        weekly_bombing_war_support = 0.005
+        weekly_casualties_war_support = 0.005
+        stability_factor = 0.1
+        political_power_gain = 0.15
+        war_support_factor = 0.1
+			}
+    }
+  }
 }

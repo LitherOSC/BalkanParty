@@ -52,6 +52,1075 @@ focus_tree = {
 #	} 
 
 
+	focus = {
+		id = SLO_fortification_studies
+		icon = GFX_goal_generic_construct_military
+		x = 2
+		y = 0
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 200			
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_MANPOWER }
+
+		completion_reward = {
+			army_experience = 10
+			add_ideas = SLO_fortification_focus
+		}
+	}
+
+	focus = {
+		id = SLO_fallback_line
+		icon = GFX_goal_generic_fortify_city
+		prerequisite = { focus = SLO_fortification_studies }
+		x = 0
+		y = 1
+		relative_position_id = SLO_fortification_studies
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 60
+			modifier = {
+				factor = 0.5
+				is_in_faction_with = CZE
+			}
+		}
+
+		available = {
+			SLO = { controls_state = 70 }
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			army_experience = 20
+			70 = {
+				add_building_construction = { type = bunker province = 541 level = 3 instant_build = yes }
+				add_building_construction = { type = bunker province = 11522 level = 3 instant_build = yes }
+				add_building_construction = { type = bunker province = 3537 level = 3 instant_build = yes }
+				add_building_construction = { type = bunker province = 11539 level = 3 instant_build = yes }
+
+			}
+			71 = {
+				add_building_construction = { type = bunker province = 11554 level = 3 instant_build = yes }				
+			}
+		}
+	}
+
+	focus = {
+		id = SLO_sudeten_1
+		icon = GFX_goal_generic_construct_military
+		prerequisite = { focus = SLO_fortification_studies }
+		x = 2
+		y = 1
+		relative_position_id = SLO_fortification_studies
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 90
+			modifier = {
+				factor = 0.5
+				is_in_faction_with = CZE
+			}
+			modifier = {
+				factor = 1.5
+				is_in_faction = no
+			}
+		}
+
+		available = {
+			SLO = { controls_state = 70 }
+		}
+
+		bypass = {
+			NOT = {			
+				70 = {
+					any_province_building_level = {
+						province = {
+							all_provinces = yes
+							limit_to_border = yes
+						}
+						building = bunker
+						level < 3
+					}
+				}
+				72 = {
+					any_province_building_level = {
+						province = {
+							all_provinces - yes
+							limit_to_border = yes
+						}
+						building = bunker
+						level < 3
+					}
+				}
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_MANPOWER }
+
+		completion_reward = {
+			army_experience = 20
+			if = {
+				limit = { controls_state = 70 }
+				70 = {
+					set_building_level = {
+						type = bunker
+						level = 3
+						province = {
+							all_provinces = yes
+							limit_to_border = yes
+							level < 3
+						}
+					}
+				}
+			}
+
+			if = {
+				limit = { controls_state = 72 }
+				72 = {
+					set_building_level = {
+						type = bunker
+						level = 3
+						province = {
+							all_provinces = yes
+							limit_to_border = yes
+							level < 3
+						}
+					}
+				}
+			}
+
+			swap_ideas = {
+				add_idea = SLO_fortification_focus2
+				remove_idea = SLO_fortification_focus
+			}	
+		}
+	}
+
+	focus = {
+		id = SLO_sudeten_2
+		icon = GFX_goal_generic_construct_military
+		prerequisite = { focus = SLO_sudeten_1 }
+		x = 0
+		y = 1
+		relative_position_id = SLO_sudeten_1
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 90
+			modifier = {
+				factor = 0.5
+				is_in_faction_with = CZE
+			}
+			modifier = {
+				factor = 1.5
+				is_in_faction = no
+			}
+		}
+
+		available = {
+			SLO = { controls_state = 70 }
+		}
+
+		bypass = {
+			NOT = {			
+				70 = {
+					any_province_building_level = {
+						province = {
+							all_provinces = yes
+							limit_to_border = yes
+						}
+						building = bunker
+						level < 5
+					}
+				}
+				72 = {
+					any_province_building_level = {
+						province = {
+							all_provinces = yes
+							limit_to_border = yes
+						}
+						building = bunker
+						level < 5
+					}
+				}
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_MANPOWER }
+
+		completion_reward = {
+			army_experience = 20
+			if = {
+				limit = { controls_state = 70 }
+				70 = {
+					set_building_level = {
+						type = bunker
+						level = 5
+						province = {
+							all_provinces = yes
+							limit_to_border = yes
+							level < 5
+						}
+					}
+				}
+			}
+
+			if = {
+				limit = { controls_state = 72 }
+				72 = {
+					set_building_level = {
+						type = bunker
+						level = 5
+						province = {
+							all_provinces = yes
+							limit_to_border = yes
+							level < 5
+						}
+					}
+				}
+			}
+
+			swap_ideas = {
+				add_idea = SLO_fortification_focus3
+				remove_idea = SLO_fortification_focus2
+			}	
+		}
+	}
+
+	focus = {
+		id = SLO_sudeten_3
+		icon = GFX_goal_generic_construct_military
+		prerequisite = { focus = SLO_sudeten_2 }
+		x = 0
+		y = 2
+		relative_position_id = SLO_sudeten_1
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 80
+			modifier = {
+				factor = 0.5
+				is_in_faction_with = CZE
+			}
+			modifier = {
+				factor = 1.5
+				is_in_faction = no
+			}
+		}
+
+		available = {
+			SLO = { controls_state = 70 }
+		}
+
+		bypass = {
+			NOT = {			
+				70 = {
+					any_province_building_level = {
+						province = {
+							all_provinces = yes
+							limit_to_border = yes
+						}
+						building = bunker
+						level < 7
+					}
+				}
+				72 = {
+					any_province_building_level = {
+						province = {
+							id = 445
+							id = 494
+							limit_to_border = yes
+						}
+						building = bunker
+						level < 7
+					}
+				}
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_MANPOWER }
+
+		completion_reward = {
+			army_experience = 30
+			if = {
+				limit = { controls_state = 70 }
+				70 = {
+					set_building_level = {
+						type = bunker
+						level = 7
+						province = {
+							all_provinces = yes
+							limit_to_border = yes
+							level < 7
+						}
+					}
+				}
+			}
+
+			if = {
+				limit = { controls_state = 72 }
+				72 = {
+					set_building_level = {
+						type = bunker
+						level = 7
+						province = {
+							all_provinces = yes
+							limit_to_border = yes
+							level < 7
+						}
+					}
+				}
+			}
+
+			swap_ideas = {
+				add_idea = SLO_fortification_focus4
+				remove_idea = SLO_fortification_focus3
+			}	
+		}
+	}
+
+	focus = {
+		id = SLO_hungarian_line
+		icon = GFX_goal_generic_construct_military
+		prerequisite = { focus = SLO_internal_redoubts }
+		x = 1
+		y = 1
+		relative_position_id = SLO_internal_redoubts
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 60
+			modifier = {
+				factor = 0.5
+				is_in_faction_with = HUN
+			}
+			modifier = {
+				factor = 0.5
+				HUN = { exists = no }
+			}
+		}
+
+		available = {
+			SLO = { controls_state = 664 }
+			SLO = { controls_state = 73 }
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {       
+			army_experience = 30
+			664 = {
+				add_building_construction = { type = bunker province = 3565 level = 3 instant_build = yes }
+				add_building_construction = { type = bunker province = 3716 level = 3 instant_build = yes }
+				add_building_construction = { type = bunker province = 6561 level = 3 instant_build = yes }
+				add_building_construction = { type = bunker province = 6573 level = 3 instant_build = yes }
+				add_building_construction = { type = bunker province = 9537 level = 3 instant_build = yes }
+				add_building_construction = { type = bunker province = 11679 level = 3 instant_build = yes }
+			}
+			
+			73 = {
+				add_building_construction = { type = bunker province = 11691 level = 3 instant_build = yes }
+				add_building_construction = { type = bunker province = 3548 level = 3 instant_build = yes }
+			}
+		}
+	}
+
+	focus = {
+		id = SLO_polish_line
+		icon = GFX_goal_generic_construct_military
+		prerequisite = { focus = SLO_internal_redoubts }
+		x = -1
+		y = 1
+		relative_position_id = SLO_internal_redoubts
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 50
+			modifier = {
+				factor = 0.25
+				is_in_faction_with = TRA
+			}
+		}
+
+		available = {
+			SLO = { controls_state = 73 }
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			army_experience = 30
+			73 = {
+				add_building_construction = { type = bunker province = 6571 level = 3 instant_build = yes }
+				add_building_construction = { type = bunker province = 3548 level = 3 instant_build = yes }
+			}
+		}
+	}
+
+	focus = {
+		id = SLO_internal_redoubts
+		icon = GFX_goal_generic_fortify_city
+		prerequisite = { focus = SLO_fortification_studies }
+		x = -2
+		y = 1
+		relative_position_id = SLO_fortification_studies
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		available = {
+			SLO = { controls_state = 71 }
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			army_experience = 20
+			71 = {
+				add_building_construction = { type = bunker province = 581 level = 3 instant_build = yes }
+				add_building_construction = { type = bunker province = 3550 level = 3 instant_build = yes }
+				add_building_construction = { type = bunker province = 3581 level = 3 instant_build = yes }
+				add_building_construction = { type = bunker province = 6586 level = 3 instant_build = yes }
+			}
+		}
+	}
+
+
+	focus = {
+		id = SLO_survival
+		icon = GFX_focus_generic_strike_at_democracy2
+		mutually_exclusive = {  }
+		relative_position_id = SLO_fallback_line
+		x = 0
+		y = 3
+		prerequisite = { focus = SLO_polish_line}
+		prerequisite = { focus = SLO_sudeten_3}
+		prerequisite = { focus = SLO_hungarian_line}
+		prerequisite = { focus = SLO_fallback_line}
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+
+		completion_reward = {
+			add_ideas = SLO_survival_idea
+		}
+	}
+
+
+#################################
+############ INDUSTRY
+
+
+	focus = {
+		id = SOL_industrial_legacy
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 10
+		y = 0
+
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 90
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			add_ideas = SOL_industrial_legacy_idea
+		}
+	}
+
+	focus = {
+		id = SOL_favor_czechs_1
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = SOL_industrial_legacy }
+		x = -2
+		y = 1
+		relative_position_id = SOL_industrial_legacy
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 40
+
+
+		}
+
+
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = SOL_favor_czechs_2
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = SOL_arms_exports_1}
+		x = -2
+		y = 1
+		relative_position_id = SOL_arms_exports_1
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 80
+		}
+
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = SOL_favor_czechs_3
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = SOL_arms_exports_2}
+		x = -2
+		y = 1
+		relative_position_id = SOL_arms_exports_2
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 80
+		}
+
+
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}		
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = SOL_balanced_1
+		icon = GFX_goal_generic_construction
+		prerequisite = { focus = SOL_industrial_legacy }
+
+		x = 2
+		y = 1
+		relative_position_id = SOL_industrial_legacy
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 70
+
+		}
+
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = SOL_balanced_2
+		icon = GFX_goal_generic_construction
+		prerequisite = { focus = SOL_arms_exports_1 }
+		x = 2
+		y = 1
+		relative_position_id = SOL_arms_exports_1
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 80
+		}
+
+
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = SOL_balanced_3
+		icon = GFX_goal_generic_construction
+		prerequisite = { focus = SOL_arms_exports_2 }
+		x = 2
+		y = 1
+		relative_position_id = SOL_arms_exports_2
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 80
+		}
+
+
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = SOL_united_population
+		icon = GFX_goal_tripartite_pact
+		prerequisite = { focus = SOL_arms_exports_3 focus = SLO_survival }
+		x = 5
+		y = 3
+		relative_position_id = SLO_survival
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_STABILITY }
+
+		completion_reward = {
+			if = {
+				limit = { has_idea = SOL_divided_nation }
+				remove_ideas = SOL_divided_nation
+			}
+		}
+	}
+
+	focus = {
+		id = SOL_arms_exports_1
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SOL_balanced_1 }
+		prerequisite = {focus = SOL_favor_czechs_1}
+		x = 2
+		y = 1
+		relative_position_id = SOL_favor_czechs_1
+
+		cost = 15
+
+		ai_will_do = {
+			factor = 80
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			add_ideas = SOL_export_focus1
+		}
+	}
+
+	focus = {
+		id = SOL_arms_exports_2
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SOL_favor_czechs_2 }
+		prerequisite = { focus = SOL_balanced_2}
+		x = 2
+		y = 1
+		relative_position_id = SOL_favor_czechs_2
+
+		cost = 15
+
+		ai_will_do = {
+			factor = 70
+
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			swap_ideas = { remove_idea = SOL_export_focus1 add_idea = SOL_export_focus2  }
+		}
+	}
+
+	focus = {
+		id = SOL_arms_exports_3
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SOL_favor_czechs_3 }
+		prerequisite = { focus = SOL_balanced_3}
+		x = 2
+		y = 1
+		relative_position_id = SOL_favor_czechs_3
+
+		cost = 15
+
+		ai_will_do = {
+			factor = 70
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			swap_ideas = { remove_idea = SOL_export_focus2 add_idea = SOL_export_focus3 }
+		}
+	}
+#############################
 
 	focus = {
 		id = 

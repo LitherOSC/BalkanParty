@@ -1,7 +1,7 @@
 bookmarks = {
 	bookmark = {
-		name = "BALKAN_DESC"
-		desc = "GATHERING_STORM_DESC"
+		name = "BALKAN_TITLE"
+		desc = "BALKAN_DESC"
 		date = 1936.1.1.12
 		picture = "GFX_select_date_1936"
 		default_country = "ROM"
@@ -96,13 +96,15 @@ bookmarks = {
 			}
 		}
 		"SER"={
-			history = 
+			history = "SER_BALKAN_DESC"
 			ideology = neutrality
 			ideas = {
 
 			}
 			focuses = {
-
+				SER_acknowledge_neighbors
+				SER_revive_YUG
+				SER_guarantee
 			}
 		}
 
@@ -199,7 +201,7 @@ bookmarks = {
 
 			}
 			focuses = {
-
+				SLO_fortification_studies
 			}
 		}		
 		"MOL"={
