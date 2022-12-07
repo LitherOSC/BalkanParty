@@ -34,8 +34,12 @@
 
   SER_acknowledge_neighbors:0 "Acknowledge our Neighbors"
   SER_acknowledge_neighbors_desc:0 "We must come to terms with the reality of the situation, that Yugoslavia is no more, and acknowledge our neighbors."
-  SER_diplomacy_effort:0 ""
-  SER_diplomacy_effort_desc:0 ""
+  SER_diplomacy_effort:0 "Serbian Diplomatic Efforts"
+  SER_diplomacy_effort_desc:0 "Acknowleding our neighbors has improved our diplomatic situation, but not cutting each other's throay can hardly be considered civilized diplomacy. We must make haste to correct this."
+  SER_establish_embassies:0 "Establish Embassies"
+  SER_establish_embassies_desc:0 "Secure diplomatic channels must be established "
+  SER_cultural_exchange:0 ""
+  
   SER_national_defence:0 ""
   SER_national_defence_desc:0 ""
   SER_welfare_program:0 ""
