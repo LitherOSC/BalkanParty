@@ -91,6 +91,58 @@ focus_tree = {
 
 		}
 	}
+	focus = {
+		id = SER_establish_embassies
+		icon = 
+		relative_position_id = SER_diplomacy_effort
+		x = 1
+		y = 1
+		cost = 10
+		search_filters = {   }
+		prerequisite = { focus = SER_diplomacy_effort}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+
+		}
+	}
+	focus = {
+		id = SER_cultural_exchange
+		icon = 
+		relative_position_id = SER_establish_embassies
+		x = 1
+		y = 1
+		cost = 10
+		search_filters = {   }
+		prerequisite = { focus = SER_establish_embassies}
+		prerequisite = { focus = SER_welfare_program}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+
+		}
+	}
+	focus = {
+		id = 
+		icon = 
+		relative_position_id = 
+		x = 
+		y = 
+		cost = 10
+		search_filters = {   }
+		prerequisite = { focus = }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+
+		}
+	}
  
 ###################################
 ############### Yugoslavian Revival
