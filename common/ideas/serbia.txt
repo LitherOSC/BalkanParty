@@ -1,5 +1,23 @@
 ideas = {
   country = {
+    SER_memories_of_YUG_1 = {
+			
+			picture = HUN_hungarian_monarchy_democratic
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+
+			}
+		}
 		 SER_paramilitaries = {
 			
 			picture = YUG_all_yugoslavian_regiments
