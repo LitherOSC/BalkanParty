@@ -51,7 +51,12 @@ focus_tree = {
 #		}
 #	} 
 
-
+####################################################################
+#################### SHARED 
+###############################################################
+	shared_focus = YUG_modernize_the_air_force
+	shared_focus = YUG_expand_the_split_shipyards
+	shared_focus = YUG_expand_the_serbian_shipyards
 
 	focus = {
 		id = 

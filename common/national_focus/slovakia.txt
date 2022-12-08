@@ -53,11 +53,44 @@ focus_tree = {
 
 
 	focus = {
-		id = SLO_fortification_studies
-		icon = GFX_goal_generic_construct_military
-		x = 2
+		id = SLO_copy_CZE
+		icon = GFX_focus_renounce_the_treaty_of_trianon
+		mutually_exclusive = {  }
+		x = 8
 		y = 0
 
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+
+		completion_reward = {
+		}
+	}
+################################################################################
+####################### SLO_fortification_focus
+###############################################################################
+	focus = {
+		id = SLO_fortification_studies
+		icon = GFX_goal_generic_construct_military
+		x = -5
+		y = 2
+	prerequisite = {focus = SLO_copy_CZE}
+	relative_position_id = SLO_copy_CZE
 		cost = 10
 
 		ai_will_do = {
@@ -588,9 +621,10 @@ focus_tree = {
 	focus = {
 		id = SOL_industrial_legacy
 		icon = GFX_goal_generic_construct_civ_factory
-		x = 10
-		y = 0
-
+		x = 5
+		y = 2
+		prerequisite = {focus = SLO_copy_CZE}
+		relative_position_id = SLO_copy_CZE
 
 		cost = 10
 
@@ -684,6 +718,7 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = SOL_arms_exports_1
+		
 
 		cost = 10
 

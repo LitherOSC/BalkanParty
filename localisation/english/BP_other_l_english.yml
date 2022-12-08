@@ -1,0 +1,20 @@
+﻿l_english: 
+#################################################### BOOKMARKS ###########################################
+  BALKAN_TITLE:0 "Balkan Party"
+  BALKAN_DESC:0 "The Balkans, also known as the Balkan Peninsula, is a geographical area in southeastern Europe with various geographical and historical definitions. The region takes its name from the Balkan Mountains that stretch throughout the whole of Bulgaria. The Balkan Peninsula is bordered by the Adriatic Sea in the northwest, the Ionian Sea in the southwest, the Aegean Sea in the south, the Turkish Straits in the east, and the Black Sea in the northeast. The northern border of the peninsula is variously defined. The highest point of the Balkans is Mount Musala, 2,925 metres (9,596 ft), in the Rila mountain range, Bulgaria. We, the modder's expanded this slightly."
+  SER_BALKAN_DESC:0 "Yugoslavia is but a memory, shattered into a multitude of nations. Will Seriba, the inheritor of Yugoslavia's army and Belgrade try to make amends with its neighbors or will it seek to establish the form control of Belgrade from Slovenia to Macedonia once more?"
+  
+#################################################### CHARACTERS ##############################################
+  SER_YUG_king_char:0 "Prince Paul"
+#################################################### POLITICAL PARTIES #############################################
+  SER_kings_party:0 "King's Party"
+  SER_kings_party_long:0 "Party of Prince Paul of Yugoslavia"
+#################################################### COUNTRIES ##########################################
+  SER_YUG_KING_neutrality:0 "Kingdom of Yugoslavia"
+  SER_YUG_KING_neutrality_ADJ:0 "Yugoslavian"
+  SER_YUG_KING_neutrality_DEF:0 "Kingdom of Yugoslavia"
+  
+#################################################### MUSIC ##############################################
+  maintheme:0 "Bosanska Artiljerija"
+  maintheme2:0 "My Dad is a War Criminal"
+  maintheme3:0 "Serbian Artillery is led by God"

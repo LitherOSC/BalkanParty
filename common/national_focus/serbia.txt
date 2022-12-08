@@ -15,6 +15,13 @@ focus_tree = {
 
 	continuous_focus_position = { x = 50 y = 1100 }
 
+####################################################################
+#################### SHARED 
+###############################################################
+	shared_focus = YUG_modernize_the_air_force
+	shared_focus = YUG_expand_the_split_shipyards
+	shared_focus = YUG_expand_the_serbian_shipyards
+
 #########################################
 ############### post Yugo friends
 #######################################
@@ -479,6 +486,740 @@ focus_tree = {
 		}
 	}
 	focus = {
+		id = SER_army_modernization
+		icon = GFX_goal_generic_army_doctrines
+		x = 2
+		y = 1
+		prerequisite = {focus = SER_fund_army}
+		relative_position_id = SER_fund_army
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 70
+			modifier = {
+				factor = 1.2
+				is_in_faction_with = GER
+			}
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+
+
+		completion_reward = {
+			army_experience = 25
+		}
+	}
+
+	focus = {
+		id = SER_motorize_the_cavalry
+		icon = GFX_goal_generic_cavalry
+		prerequisite = { focus = SER_army_modernization }
+		x = 4
+		y = 1
+		relative_position_id =  SER_army_modernization
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 50
+			modifier = {
+				factor = 1.2
+				is_in_faction_with = GER
+			}
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = YUG_motorize_the_cavalry
+				bonus = 3.0
+				technology = motorised_infantry
+			}
+		}
+	}
+
+	focus = {
+		id = SER_motorized_logistics
+		icon = GFX_goal_generic_army_motorized
+		prerequisite = { focus = SER_motorize_the_cavalry }
+		x = 2
+		y = 1
+		relative_position_id = SER_motorize_the_cavalry
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 40
+			modifier = {
+				factor = 1.2
+				is_in_faction_with = GER
+			}
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = YUG_motorized_logistics
+				bonus = 1.0
+				uses = 2
+				category = hospital_tech
+				category = logistics_tech
+			}
+		}
+	}
+
+	focus = {
+		id = SER_armored_cavalry
+		icon = GFX_goal_generic_build_tank
+		prerequisite = { focus = SER_motorize_the_cavalry }
+		x = 0
+		y = 1
+		relative_position_id = SER_motorize_the_cavalry
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 40
+			modifier = {
+				factor = 1.5
+				is_in_faction_with = GER
+			}
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = YUG_armored_cavalry
+				bonus = 1.0
+				uses = 1
+				category = cat_mechanized_equipment
+			}
+		}
+	}
+
+	focus = {
+		id = SER_tank_conversions
+		icon = GFX_goal_generic_production2
+		prerequisite = { focus = SER_armored_cavalry }
+		mutually_exclusive = { focus = SER_modern_tanks }
+		x = -1
+		y = 1
+		relative_position_id = SER_armored_cavalry
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 50
+			modifier = {
+				factor = 1.5
+				is_in_faction_with = GER
+			}
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+
+		completion_reward = {
+			add_ideas = YUG_idea_tank_conversions
+		}
+	}
+
+	focus = {
+		id = SER_modern_tanks
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = SER_armored_cavalry }
+		mutually_exclusive = { focus = SER_tank_conversions }
+		x = 1
+		y = 1
+		relative_position_id = SER_armored_cavalry
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 25
+			modifier = {
+				factor = 3
+				is_in_faction_with = GER
+			}
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = YUG_modern_tanks
+				bonus = 1.0
+				uses = 1
+				category = armor
+			}
+		}
+	}
+
+	focus = {
+		id = SER_tank_licenses
+		icon = GFX_focus_generic_license_production
+		prerequisite = { focus = SER_modern_tanks focus = SER_tank_conversions}
+		x = 0
+		y = 2
+		relative_position_id = SER_armored_cavalry
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 60
+			modifier = {
+				factor = 1.2
+				is_in_faction_with = GER
+			}
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+
+		completion_reward = {
+			add_ideas = YUG_tank_licenses
+		}
+	}
+
+	focus = {
+		id = SER_small_arms
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = SER_army_modernization }
+		x = -1
+		y = 1
+		relative_position_id = SER_army_modernization
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 70
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = YUG_small_arms
+				bonus = 1.00
+				uses = 1
+				category = infantry_weapons
+			}
+		}
+	}
+
+	focus = {
+		id = SER_domestic_artillery_production
+		icon = GFX_goal_generic_construct_military
+		prerequisite = { focus = SER_small_arms }
+		x = 0
+		y = 1
+		relative_position_id = SER_small_arms
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 70
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = YUG_domestic_artillery_production
+				bonus = 1.00
+				uses = 1
+				category = artillery
+			}
+		}
+	}
+
+	focus = {
+		id = SER_anti_tank_defenses
+		icon = GFX_goal_generic_army_artillery2
+		prerequisite = { focus = SER_domestic_artillery_production }
+		x = 0
+		y = 1
+		relative_position_id = SER_domestic_artillery_production
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = YUG_anti_tank_defenses
+				bonus = 3.0
+				uses = 1
+				category = cat_anti_tank
+			}
+		}
+	}
+
+	focus = {
+		id = SER_mountain_brigades
+		icon = GFX_goal_generic_special_forces
+		prerequisite = { focus = SER_army_modernization }
+		x = 1
+		y = 1
+		relative_position_id = SER_army_modernization
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 70
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = YUG_mountain_brigades
+				bonus = 3.0
+				uses = 1
+				category = mountaineers_tech
+			}
+		}
+	}
+
+	focus = {
+		id = SER_independent_engineer_regiments
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SER_mountain_brigades }
+		x = 0
+		y = 1
+		relative_position_id = SER_mountain_brigades
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = YUG_independent_engineer_regiments
+				bonus = 3.0
+				uses = 1
+				category = engineers_tech
+			}
+		}
+	}
+
+	focus = {
+		id = SER_motorized_recon_companies
+		icon = GFX_goal_generic_military_sphere
+		prerequisite = { focus = SER_independent_engineer_regiments }
+		x = 0
+		y = 1
+		relative_position_id = SER_independent_engineer_regiments
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 40
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = YUG_motorized_recon_companies
+				bonus = 3.0
+				uses = 1
+				category = recon_tech
+			}
+		}
+	}
+
+	focus = {
+		id = SER_form_parachute_battalions
+		icon = GFX_focus_generic_paratrooper
+		prerequisite = { focus = SER_motorized_recon_companies }
+		x = 0
+		y = 1
+		relative_position_id = SER_motorized_recon_companies
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = YUG_form_parachute_battalions
+				bonus = 3.0
+				uses = 1
+				category = para_tech
+			}
+		}
+	}
+
+	focus = {
+		id = SER_army_maneuvers
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = SER_army_modernization }
+		x = -4
+		y = 1
+		relative_position_id = SER_army_modernization
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 70
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = YUG_army_maneuvers
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = SER_supremacy_of_offense
+		icon = GFX_goal_generic_major_war
+		prerequisite = { focus = SER_army_maneuvers }
+		mutually_exclusive = { focus = SER_supremacy_of_defense }
+		x = -1
+		y = 1
+		relative_position_id = SER_army_maneuvers
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = YUG_supremacy_of_offense
+				cost_reduction = 0.5
+				uses = 2
+				category = cat_mobile_warfare
+				category = cat_superior_firepower
+			}
+		}
+	}
+
+	focus = {
+		id = SER_supremacy_of_defense
+		icon = GFX_goal_generic_position_armies
+		prerequisite = { focus = SER_army_maneuvers }
+		mutually_exclusive = { focus = SER_supremacy_of_offense }
+		x = 1
+		y = 1
+		relative_position_id = SER_army_maneuvers
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = YUG_supremacy_of_defense
+				cost_reduction = 0.5
+				uses = 2
+				category = cat_grand_battle_plan
+				category = cat_mass_assault
+			}
+		}
+	}
+
+	focus = {
+		id = SER_artillery_regiments
+		icon = GFX_goal_generic_army_artillery
+		prerequisite = { focus = SER_supremacy_of_offense focus = SER_supremacy_of_defense }
+		x = 0
+		y = 2
+		relative_position_id = SER_army_maneuvers
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 70
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+
+
+		completion_reward = {
+			add_ideas = YUG_artillery_regiments
+		}
+	}
+	
+	focus = {
+		id = SER_medal_for_extreme_bravery
+		icon = GFX_goal_generic_build_tank
+		prerequisite = { focus = SER_artillery_regiments }
+		x = 0
+		y = 1
+		relative_position_id = SER_artillery_regiments
+
+		cost = 10
+		
+		allow_branch = {
+			has_dlc = "By Blood Alone"
+		}
+		
+		ai_will_do = {
+			factor = 70
+		}
+
+		available = {
+			any_neighbor_country = {
+				is_major = yes
+				has_war_with = ROOT
+			}
+		}
+
+		bypass = {
+
+		}
+
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+
+
+		completion_reward = {
+			custom_effect_tooltip = yug_extreme_bravery_medal
+		}
+	}
+	focus = {
 		id = 
 		icon = 
 		relative_position_id = 
@@ -495,5 +1236,6 @@ focus_tree = {
 
 		}
 	}
+
 
 }
