@@ -34,8 +34,8 @@
   SER_diplomacy_effort_desc:0 "Acknowleding our neighbors has improved our diplomatic situation, but not cutting each other's throay can hardly be considered civilized diplomacy. We must make haste to correct this."
   SER_establish_embassies:0 "Establish Embassies"
   SER_establish_embassies_desc:0 "Secure diplomatic channels must be established "
-  SER_cultural_exchange:0 ""
-  SER_cultural_exchange_desc:0 ""
+  SER_cultural_exchange:0 "Commission of Balkan Cultural Exchange"
+  SER_cultural_exchange_desc:0 "A commission to facilitate a cultural exchange with out dear neighbors to promote cross national unity. May this open opportunities for all!aA"
   
   SER_national_defence:0 ""
   SER_national_defence_desc:0 ""
@@ -104,6 +104,8 @@
   SER_supremacy_of_defense_desc:1 "Hemmed in by enemies on all sides, we must hold out long enough for our allies to take the heat off us. The development of new military doctrines must focus on the defense of our homeland."
   SER_artillery_regiments:0 "Artillery Regiments"
   SER_artillery_regiments_desc:1 "By introducing powerful artillery regiments to our divisions their overall fighting strength will be greatly increased."
+  SER_army_of_Belgrade:0 "Army of Belgrade                                "
+  SER_army_of_Belgrade_desc:0 "Soldiers of the serbian army, keep your heads held high! Overrun, you fall one by one! For Belgrade and the Fatherland! Soldiers, heroes, die for your land, your lives are gone, erased by your command! Until your last dying breath!"
 
 ################ SLO
 
