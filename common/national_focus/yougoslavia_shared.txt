@@ -6,7 +6,7 @@ shared_focus = {
   y = 0
 
 	offset = {
-		x = 4
+		x = 9
 		y = 0
 		trigger = {
 			 tag = SER 
@@ -619,16 +619,16 @@ shared_focus = {
   }
 }
 
-##############################################################
-######################## NAVY 
-#########################################################
+###########################################################################################
+###################################################### NAVY 
+##########################################################################################
 
 shared_focus = {
   id = YUG_expand_the_split_shipyards
   icon = GFX_goal_generic_construct_naval_dockyard
   mutually_exclusive = { focus = YUG_expand_the_serbian_shipyards }
   relative_position_id = YUG_modernize_the_air_force
-  x = 8
+  x = 6
   y = 0
 
   cost = 10

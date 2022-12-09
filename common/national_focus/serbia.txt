@@ -30,7 +30,7 @@ focus_tree = {
 		id = SER_acknowledge_neighbors
 		icon = GFX_focus_generic_diplomatic_treaty
 
-		x = 2
+		x = 8
 		y = 0
 		cost = 10
 		search_filters = {   }
@@ -68,8 +68,8 @@ focus_tree = {
 		id = SER_national_defence
 		icon = GFX_goal_generic_defence
 		relative_position_id = SER_acknowledge_neighbors
-		x = 0
-		y = 2
+		x = -2
+		y = 1
 		cost = 10
 		search_filters = {   }
 		prerequisite = { focus = SER_acknowledge_neighbors }
@@ -82,10 +82,28 @@ focus_tree = {
 		}
 	}
 	focus = {
+		id = SER_state_security_forces
+		icon = GFX_goal_generic_intelligence_exchange
+		relative_position_id = SER_national_defence
+		mutually_exclusive = { focus = SER_establish_embassies}
+		x = 0
+		y = 1
+		cost = 10
+		search_filters = {   }
+		prerequisite = { focus = SER_national_defence}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+
+		}
+	}
+	focus = {
 		id = SER_welfare_program
 		icon = GFX_goal_generic_national_unity
 		relative_position_id = SER_acknowledge_neighbors
-		x = -2
+		x = 0
 		y = 1
 		cost = 10
 		search_filters = {   }
@@ -99,10 +117,28 @@ focus_tree = {
 		}
 	}
 	focus = {
+		id = SER_democratic_rights
+		icon = GFX_focus_hol_the_foundations_of_defense
+		relative_position_id = SER_welfare_program
+		x = 0
+		y = 2
+		cost = 10
+		search_filters = {   }
+		prerequisite = { focus = SER_welfare_program}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+
+		}
+	}
+	focus = {
 		id = SER_establish_embassies
-		icon = 
+		icon = GFX_goal_anschluss
 		relative_position_id = SER_diplomacy_effort
-		x = 1
+		mutually_exclusive = {focus = SER_state_security_forces}
+		x = 0
 		y = 1
 		cost = 10
 		search_filters = {   }
@@ -117,14 +153,51 @@ focus_tree = {
 	}
 	focus = {
 		id = SER_cultural_exchange
-		icon = 
+		icon = GFX_goal_generic_positive_trade_relations
 		relative_position_id = SER_establish_embassies
-		x = 1
+
+		x = 0
 		y = 1
 		cost = 10
 		search_filters = {   }
 		prerequisite = { focus = SER_establish_embassies}
-		prerequisite = { focus = SER_welfare_program}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+
+		}
+	}
+	focus = {
+		id = SER_force_free_elections
+		icon = GFX_focus_generic_self_management
+		relative_position_id = SER_acknowledge_neighbors
+		mutually_exclusive = { focus = SER_promote_Blagoje}
+		x = 1
+		y = 4
+		cost = 10
+		search_filters = {   }
+		prerequisite = { focus = SER_democratic_rights}
+		prerequisite = { focus = SER_cultural_exchange}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+
+		}
+	}
+	focus = {
+		id = SER_promote_Blagoje
+		icon = GFX_focus_SOV_ally_bukharinists
+		relative_position_id = SER_acknowledge_neighbors
+		mutually_exclusive = { focus = SER_force_free_elections}
+		x = -2
+		y = 4
+		cost = 10
+		search_filters = {   }
+		prerequisite = { focus = SER_state_security_forces}
 		
 		available_if_capitulated = yes
 
@@ -151,13 +224,13 @@ focus_tree = {
 		}
 	}
  
-###################################
-############### Yugoslavian Revival
-#################################
+#####################################################################################
+########################################## Yugoslavian Revival
+#################################################################################
 	focus = {
 		id = SER_revive_YUG
 		icon = GFX_focus_invite_yugoslavia
-		x = 10
+		x = 16
 		y = 0
 		cost = 10
 		search_filters = {   }
@@ -205,7 +278,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SER_monarchy_memories
-		icon = GFX_goal_generic_propaganda
+		icon = GFX_focus_hun_elect_a_king
 		relative_position_id = SER_revive_YUG
 		x = 0
 		y = 1
@@ -292,8 +365,31 @@ focus_tree = {
 		}
 	}
 	focus = {
+		id = SER_execute_civilian_traitors
+		icon = GFX_focus_POL_riot_of_37
+		relative_position_id = SER_rally_paramilitaries
+		x = 0
+		y = 2
+		cost = 5
+		search_filters = {   }
+		prerequisite = { focus = SER_king_civil_war}
+		prerequisite = { focus = SER_rally_paramilitaries}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.1
+			}		
+			45 = { add_manpower = -50000}
+			764 = { add_manpower = -50000}			
+		}
+
+	}
+	focus = {
 		id = SER_king_influence
-		icon = GFX_goal_continuous_def_against_influence
+		icon = GFX_goal_generic_propaganda
 		relative_position_id = SER_monarchy_memories
 		x = -1
 		y = 1
@@ -317,7 +413,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SER_king_takeover
-		icon = GFX_focus_hun_elect_a_king
+		icon = GFX_focus_rom_royal_dictatorship
 		relative_position_id = SER_king_influence
 		x = 0
 		y = 1
@@ -356,6 +452,57 @@ focus_tree = {
 		}
 		completion_reward = {
 			set_cosmetic_tag = SER_YUG_KING
+
+		}
+	}
+	focus = {
+		id = SER_YUG_industrial_investments
+		icon = GFX_focus_generic_industry_3
+		relative_position_id = SER_proclaim_YUG
+		x = -2
+		y = 1
+		cost = 10
+		search_filters = {   }
+		prerequisite = { focus = SER_proclaim_YUG }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+
+		}
+	}
+	focus = {
+		id = SER_YUG_state_security_forces
+		icon = 
+		relative_position_id = SER_proclaim_YUG
+		x = 0
+		y = 1
+		cost = 10
+		search_filters = {   }
+		prerequisite = { focus = SER_proclaim_YUG}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+
+		}
+	}
+	focus = {
+		id = 
+		icon = 
+		relative_position_id = 
+		x = 
+		y = 
+		cost = 10
+		search_filters = {   }
+		prerequisite = { focus = }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+
 
 		}
 	}
@@ -407,7 +554,7 @@ focus_tree = {
 		icon = GFX_focus_BUL_restore_the_bulgarian_patriarchate
 		relative_position_id = SER_rally_paramilitaries
 		x = 2
-		y = 1
+		y = 4
 		cost = 10
 
 		available = {
@@ -428,13 +575,389 @@ focus_tree = {
 
 		}
 	}
-###################################
-############# army
-###############################
+#######################################################################################
+######################################### INDUSTRY 
+#####################################################################################
+		focus = {
+		id = SER_industrialization_program
+		icon = GFX_goal_generic_construction
+		x = 2
+		y = 0
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 80
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
+
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1.0
+				uses = 2
+				category = industry
+			}
+		}
+	}
+
+	focus = {
+		id = SER_expand_the_mining_industry
+		icon = GFX_goal_generic_construct_civilian
+		prerequisite = { focus = SER_industrialization_program }
+		x = 0
+		y = 1
+		relative_position_id = SER_industrialization_program
+
+		cost = 10
+
+
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+
+		completion_reward = {
+			add_ideas = YUG_idea_expanded_mining_industry
+		}
+	}
+
+	focus = {
+		id = SER_rare_minerals_exploitation
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = SER_expand_the_mining_industry }
+		x = -3
+		y = 1
+		relative_position_id = SER_expand_the_mining_industry
+
+		cost = 10
+
+
+
+		available = {
+			any_controlled_state = {
+				is_core_of = ROOT
+				is_fully_controlled_by = ROOT
+			}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+
+		completion_reward = {
+			if = {
+				limit = {
+					105 = {
+						OR = {
+							is_fully_controlled_by = ROOT
+							controller = {
+								is_subject_of = ROOT
+								has_full_control_of_state = PREV
+							}
+							controller = {
+								tag = MNT
+								is_in_faction_with = ROOT
+								has_full_control_of_state = PREV
+							}
+						}
+					}
+				}
+				105 = {
+					add_resource = {
+						type = tungsten
+						amount = 8
+					}
+				}
+			}
+			else = {
+				random_owned_controlled_state = {
+					prioritize = { 105 802 }
+					add_resource = {
+						type = tungsten
+						amount = 8
+					}
+				}
+			}
+			if = {
+				limit = {
+					109 = {
+						OR = {
+							is_fully_controlled_by = ROOT
+							controller = {
+								is_subject_of = ROOT
+								has_full_control_of_state = PREV
+							}
+							controller = {
+								tag = MNT
+								is_in_faction_with = ROOT
+								has_full_control_of_state = PREV
+							}
+						}
+					}
+				}
+				109 = {
+					add_resource = {
+						type = chromium
+						amount = 8
+					}
+				}
+			}
+			else = {
+				random_owned_controlled_state = {
+					prioritize = { 109 103 }
+					add_resource = {
+						type = chromium
+						amount = 8
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = SER_exploit_the_pannonian_deposits
+		icon = GFX_goal_generic_oil_refinery
+		prerequisite = { focus = SER_rare_minerals_exploitation }
+		x = 0
+		y = 1
+		relative_position_id = SER_rare_minerals_exploitation
+
+		cost = 10
+
+
+
+		available = {
+			45 = {
+				OR = {
+					is_fully_controlled_by = ROOT
+					controller = {
+						is_subject_of = ROOT
+						has_full_control_of_state = PREV
+					}
+				}
+			}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+
+		completion_reward = {
+			if = {
+				limit = {
+					45 = {
+						OR = {
+							is_fully_controlled_by = ROOT
+							controller = {
+								is_subject_of = ROOT
+								has_full_control_of_state = PREV
+							}
+						}
+					}
+				}
+				45 = {
+					add_resource = {
+						type = oil
+						amount = 8
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = SER_develop_civilian_industry
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = SER_expand_the_mining_industry }
+		mutually_exclusive = { focus = SER_develop_military_industry }
+		x = -1
+		y = 1
+		relative_position_id = SER_expand_the_mining_industry
+
+		cost = 10
+
+
+
+		available = {
+			any_controlled_state = {
+				is_core_of = ROOT
+				is_fully_controlled_by = ROOT
+			}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				prioritize = { 853 102 }
+				limit = {
+					ROOT = { has_full_control_of_state = PREV }
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+
+			random_owned_controlled_state = {
+				prioritize = { 107 }
+				limit = {
+					ROOT = { has_full_control_of_state = PREV }
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+
+			random_owned_controlled_state = {
+				prioritize = { 109 }
+				limit = {
+					ROOT = { has_full_control_of_state = PREV }
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = SER_develop_military_industry
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = SER_expand_the_mining_industry }
+		mutually_exclusive = { focus = SER_develop_civilian_industry }
+		x = 1
+		y = 1
+		relative_position_id = SER_expand_the_mining_industry
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 40
+			modifier = {
+				factor = 2
+				is_in_faction_with = GER
+			}
+		}
+
+		available = {
+			any_controlled_state = {
+				is_core_of = ROOT
+				is_fully_controlled_by = ROOT
+			}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				prioritize = { 107 }
+				limit = {
+					ROOT = { has_full_control_of_state = PREV }
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = SER_expand_the_university_of_zagreb
+		icon = GFX_focus_research
+		prerequisite = { focus = SER_develop_civilian_industry focus = SER_develop_military_industry }
+		x = 0
+		y = 5
+		relative_position_id = SER_industrialization_program
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 100
+		}
+
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+########################################################################################
+########################################### army
+##########################################################################################
 	focus = {
 		id = SER_fund_army
 		icon = GFX_focus_BUL_support_macedonian_organizations
-		x = 19
+		x = 25
 		y = 0
 		cost = 10
 		search_filters = {   }
@@ -1217,6 +1740,42 @@ focus_tree = {
 
 		completion_reward = {
 			custom_effect_tooltip = yug_extreme_bravery_medal
+		}
+	}
+	focus = {
+		id = SER_army_of_Belgrade
+		icon = GFX_focus_generic_little_entente
+		relative_position_id = SER_army_modernization
+		x = -2
+		y = 5
+		cost = 10
+		search_filters = {   }
+		prerequisite = { 
+			focus = SER_god_artillery 
+			focus = SER_medal_for_extreme_bravery 
+			focus = SER_anti_tank_defenses
+			focus = SER_form_parachute_battalions
+			focus = SER_tank_licenses
+		}
+		available = {
+			OR = {
+				AND = {
+					has_completed_focus = SER_medal_for_extreme_bravery
+					has_completed_focus = SER_anti_tank_defenses
+					has_completed_focus = SER_form_parachute_battalions
+					has_completed_focus = SER_tank_licenses
+				}
+				AND = {
+					has_completed_focus = SER_god_artillery
+				}
+			}
+		}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+
 		}
 	}
 	focus = {
