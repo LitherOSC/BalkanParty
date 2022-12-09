@@ -99,7 +99,8 @@ bookmarks = {
 			history = "SER_BALKAN_DESC"
 			ideology = neutrality
 			ideas = {
-
+				SER_memories_of_YUG_1
+				SER_36_paramilitaries
 			}
 			focuses = {
 				SER_acknowledge_neighbors

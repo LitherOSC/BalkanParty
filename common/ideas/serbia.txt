@@ -15,7 +15,28 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
+				party_popularity_stability_factor = -0.5
+				stability_factor = -0.1
+				war_support_factor = 0.1
+			}
+		}
+    SER_36_paramilitaries = {
+			
+			picture = HUN_hungarian_monarchy_democratic
 
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.05
+				war_support_factor = 0.05
 			}
 		}
 		 SER_paramilitaries = {
