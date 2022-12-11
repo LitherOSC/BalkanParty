@@ -166,44 +166,7 @@ focus_tree = {
 	
 		}
 	}
- focus = {
-		id = MNT_focus_4
-		icon = GFX_goal_generic_construct_mil_factory
-		x = 8
-		y = 3
-	    prerequisite = { focus = MNT_focus_1 }
-        relative_position_id = HOL_the_western_possessions
-		cost = 10
 
-		ai_will_do = {
-			factor = 2
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-
-		completion_reward = {
-			add_building_construction = {
-	type = arms_factory
-	level = 6
-	instant_build = yes
-}
-	
-		
-	
-		}
-	}
     focus = {
 		id = MNT_focus_5
 		icon = GFX_focus_generic_armored_air_support
@@ -355,7 +318,7 @@ focus = {
 
  focus = {
 		id = MNT_focus_11
-		icon = GFX_focus_focus_fra_fascist_threat
+		icon = GFX_focus_focus_fra_maquis
 		x = 15
 		y = 0
         relative_position_id = HOL_the_western_possessions
@@ -570,7 +533,7 @@ focus = {
 	}
 	focus = {
 		id = MNT_focus_13
-		icon = GFX_focus_focus_fra_fascist_threat
+		icon = GFX_focus_generic_military_academy
 		x = 15
 		y = 2
 		prerequisite = { focus = MNT_focus_11}
@@ -607,7 +570,7 @@ focus = {
 	}
 	focus = {
 		id = MNT_focus_14
-		icon = GFX_focus_focus_fra_fascist_threat
+		icon = GFX_goal_generic_small_arms
 		x = 15
 		y = 4
 		prerequisite = { focus = MNT_focus_13}
@@ -701,11 +664,96 @@ focus = {
 			}
 		}
 	}
-	
-		
-		
-	
+
+	focus = {
+		id = MNT_focus_15
+		icon = GFX_goal_generic_cavalry
+		x = 15
+		y = 6
+		prerequisite = { focus = MNT_focus_14}
+        relative_position_id = HOL_the_western_possessions
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = YUG_army_maneuvers
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+						add_doctrine_cost_reduction = {
+				name = YUG_army_maneuvers
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
 		}
 	}
+	focus = {
+		id = MNT_focus_4
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 8
+		y = 3
+	    prerequisite = { focus = MNT_focus_1 }
+        relative_position_id = HOL_the_western_possessions
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+
+		completion_reward = {
+						random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 6
+				add_building_construction = {
+					type = arms_factory
+					level = 6
+					instant_build = yes
+				}
+
+			}
+		}
+	}
+
 
 }
