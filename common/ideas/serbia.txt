@@ -2,8 +2,7 @@ ideas = {
   country = {
     SER_memories_of_YUG_1 = {
 			
-			picture = HUN_hungarian_monarchy_democratic
-
+			picture = generic_victors_of_ww1
 			allowed = {
 				always = no
 			}
@@ -22,7 +21,7 @@ ideas = {
 		}
     SER_36_paramilitaries = {
 			
-			picture = HUN_hungarian_monarchy_democratic
+			picture = YUG_local_militias
 
 			allowed = {
 				always = no
@@ -60,6 +59,27 @@ ideas = {
         conscription_factor = 0.1
 			}
 		}
+		SER_nationalist_guard_IDEA = {
+			
+			picture = YUG_all_yugoslavian_regiments
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				max_planning = 0.05
+				army_defence_factor = 0.05
+				army_attack_factor = 0.05
+				fascism_drift = 0.025
+			}
+		}
     SER_king_influence = {
 			
 			picture = HUN_hungarian_monarchy_democratic
@@ -77,6 +97,24 @@ ideas = {
 			modifier = {
 				party_popularity_stability_factor = 0.1
         neutrality_drift = 0.05
+			}
+		}
+    SER_king_spirit = {
+			
+			picture = YUG_peter_ii
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.1
 			}
 		}
   }
