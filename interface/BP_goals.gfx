@@ -1,0 +1,148 @@
+spriteTypes = {	
+####################################################
+
+	SpriteType = {
+	name = "GFX_AUS_secure_electors"
+	texturefile = "gfx/interface/goals/goal_continuous_air_production.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_AUS_imperial_ascendancy"
+	texturefile = "gfx/interface/goals/imperial_ascendancy.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_AUS_the_imperial_border"
+	texturefile = "gfx/interface/goals/the_imperial_border.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_AUS_a_roman_empire"
+	texturefile = "gfx/interface/goals/a_roman_empire.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_AUSAUS_aeiou"
+	texturefile = "gfx/interface/goals/aeiou.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_AUS_the_ostend_company"
+	texturefile = "gfx/interface/goals/the_ostend_company.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_AUS_holdings_in_india"
+	texturefile = "gfx/interface/goals/goal_continuous_air_production.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_AUS_the_riches_of_china"
+	texturefile = "gfx/interface/goals/goal_continuous_air_production.dds"			
+	}	
+
+	SpriteType = {
+	name = "GFX_AUS_settle_austrialasia"
+	texturefile = "gfx/interface/goals/settle_austrialasia.dds"			
+	}	
+
+	SpriteType = {
+	name = "GFX_AUS_balance_the_estates"
+	texturefile = "gfx/interface/goals/balance_the_estates.dds"			
+	}	
+
+	SpriteType = {
+	name = "GFX_AUS_austria_prospers"
+	texturefile = "gfx/interface/goals/austria_prospers.dds"			
+	}	
+
+	SpriteType = {
+	name = "GFX_AUS_imperial_capitals"
+	texturefile = "gfx/interface/goals/imperial_capitals.dds"			
+	}	
+
+	SpriteType = {
+	name = "GFX_AUS_the_viennese_waltz"
+	texturefile = "gfx/interface/goals/the_viennese_waltz.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_AUS_decline_of_hungary"
+	texturefile = "gfx/interface/goals/goal_continuous_air_production.dds"			
+	}
+	SpriteType = {
+	name = "GFX_AUS_the_hungarian_question"
+	texturefile = "gfx/interface/goals/the_hungarian_question.dds"			
+	}
+	SpriteType = {
+	name = "GFX_AUS_invest_in_the_provinces"
+	texturefile = "gfx/interface/goals/invest_in_the_provinces.dds"			
+	}
+	SpriteType = {
+	name = "GFX_AUS_multicultural_empire"
+	texturefile = "gfx/interface/goals/multicultural_empire.dds"			
+	}
+	SpriteType = {
+	name = "GFX_AUS_secure_croatia"
+	texturefile = "gfx/interface/goals/goal_continuous_air_production.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_AUS_italian_ambition"
+	texturefile = "gfx/interface/goals/goal_continuous_air_production.dds"			
+	}
+		
+	SpriteType = {
+	name = "GFX_AUS_duchy_of_milan"
+	texturefile = "gfx/interface/goals/goal_continuous_air_production.dds"			
+	}
+		
+	SpriteType = {
+	name = "GFX_AUS_king_of_naples"
+	texturefile = "gfx/interface/goals/goal_continuous_air_production.dds"			
+	}
+		
+	SpriteType = {
+	name = "GFX_AUS_defeat_the_serbs"
+	texturefile = "gfx/interface/goals/defeat_the_serbs.dds"			
+	}	
+	SpriteType = {
+	name = "GFX_AUS_conquer_transylvania"
+	texturefile = "gfx/interface/goals/goal_continuous_air_production.dds"			
+	}	
+	SpriteType = {
+	name = "GFX_AUS_push_on_to_bulgaria"
+	texturefile = "gfx/interface/goals/push_on_to_bulgaria.dds"			
+	}	
+	SpriteType = {
+	name = "GFX_AUS_the_scourge_of_europe"
+	texturefile = "gfx/interface/goals/goal_continuous_air_production.dds"			
+	}	
+	SpriteType = {
+	name = "GFX_goal_continuous_air_production"
+	texturefile = "gfx/interface/goals/goal_continuous_air_production.dds"			
+	}	
+	SpriteType = {
+	name = "GFX_goal_continuous_air_production"
+	texturefile = "gfx/interface/goals/goal_continuous_air_production.dds"			
+	}	
+	SpriteType = {
+	name = "GFX_goal_continuous_air_production"
+	texturefile = "gfx/interface/goals/goal_continuous_air_production.dds"			
+	}	
+	SpriteType = {
+	name = "GFX_goal_continuous_air_production"
+	texturefile = "gfx/interface/goals/goal_continuous_air_production.dds"			
+	}	
+	SpriteType = {
+	name = "GFX_goal_continuous_air_production"
+	texturefile = "gfx/interface/goals/goal_continuous_air_production.dds"			
+	}
+
+	#########################################
+	SpriteType = {
+	name = "GFX_goal_continuous_air_production"
+	texturefile = "gfx/interface/goals/goal_continuous_air_production.dds"			
+	}
+
+

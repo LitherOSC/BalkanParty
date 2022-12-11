@@ -13,7 +13,7 @@ focus_tree = {
 	
 	default = no
 
-	continuous_focus_position = { x = 50 y = 1100 }
+	continuous_focus_position = { x = 50 y = 2000 }
 
 #	focus = {
 #		id = ROM_
@@ -50,14 +50,14 @@ focus_tree = {
 #
 #		}
 #	} 
-
-
-
+#####################################################################
+######################################## HRE
+###################################################################
 	focus = {
-		id = 
-		icon = 
+		id = AUS_declare_HRE
+		icon = GFX_goal_unknown
 		mutually_exclusive = {  }
-		x = 3
+		x = 6
 		y = 0
 
 		cost = 10
@@ -80,6 +80,706 @@ focus_tree = {
 
 
 		completion_reward = {
+
+		}
+	}
+
+#######################################################################
+################################## Secure Electors
+#####################################################################
+
+	focus = {
+		id = AUS_secure_electors
+		icon = GFX_AUS_secure_electors
+		mutually_exclusive = {  }
+		relative_position_id = AUS_declare_HRE
+		x = -4
+		y = 1
+		prerequisite = { focus = AUS_declare_HRE}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+
+		completion_reward = {
+
+		}
+	}
+	focus = {
+		id = AUS_control_bohemia
+		icon = GFX_goal_unknown
+		relative_position_id = AUS_secure_electors
+		x = 0
+		y = 1
+		cost = 10
+		search_filters = {   }
+		prerequisite = { focus = AUS_secure_electors}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+
+		}
+	}
+	focus = {
+		id = AUS_recover_silesia
+		icon = GFX_goal_unknown
+		relative_position_id = AUS_control_bohemia
+		x = 0
+		y = 1
+		cost = 10
+		search_filters = {   }
+		prerequisite = { focus = AUS_control_bohemia}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+
+		}
+	}
+	focus = {
+		id = AUS_conquer_galacia
+		icon = GFX_goal_unknown
+		relative_position_id = AUS_recover_silesia
+		x = 0
+		y = 1
+		cost = 10
+		search_filters = {   }
+		prerequisite = { focus = AUS_recover_silesia}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+
+		}
+	}
+	focus = {
+		id = AUS_king_of_poland
+		icon = GFX_goal_unknown
+		relative_position_id = AUS_conquer_galacia
+		x = 0
+		y = 1
+		cost = 10
+		search_filters = {   }
+		prerequisite = { focus = AUS_conquer_galacia}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+
+		}
+	}
+
+	focus = {
+		id = AUS_imperial_ascendancy
+		icon = GFX_AUS_imperial_ascendancy
+		relative_position_id = AUS_secure_electors
+		x = 2
+		y = 1
+		cost = 10
+		search_filters = {   }
+		prerequisite = { focus = AUS_secure_electors}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+
+		}
+	}
+	focus = {
+		id = AUS_the_imperial_border
+		icon = GFX_AUS_the_imperial_border
+		relative_position_id = AUS_imperial_ascendancy
+		x = 0
+		y = 1
+		cost = 10
+		search_filters = {   }
+		prerequisite = { focus = AUS_imperial_ascendancy}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+
+		}
+	}
+	focus = {
+		id = AUS_a_holy_empire
+		icon = GFX_goal_unknown
+		relative_position_id = AUS_the_imperial_border
+		x = 0
+		y = 1
+		cost = 10
+		search_filters = {   }
+		prerequisite = { focus = AUS_the_imperial_border}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+
+		}
+	}
+	focus = {
+		id = AUS_a_roman_empire
+		icon = GFX_AUS_a_roman_empire
+		relative_position_id = AUS_a_holy_empire
+		x = 0
+		y = 1
+		cost = 10
+		search_filters = {   }
+		prerequisite = { focus = AUS_a_holy_empire}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+
+		}
+	}
+	focus = {
+		id = AUS_aeiou
+		icon = GFX_AUSAUS_aeiou
+		relative_position_id = AUS_a_roman_empire
+		x = 0
+		y = 2
+		cost = 10
+		search_filters = {   }
+		prerequisite = { focus = AUS_a_roman_empire}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+
+		}
+	}
+###########################################################
+########################### austrian netherlands
+################################################################
+	focus = {
+		id = AUS_austrian_netherlands
+		icon = GFX_goal_unknown
+		relative_position_id = AUS_declare_HRE
+		x = 0
+		y = 1
+		prerequisite = { focus = AUS_declare_HRE}
+		cost = 10
+		search_filters = {   }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+
+		}
+	}
+	focus = {
+		id = AUS_the_ostend_company
+		icon = GFX_AUS_the_ostend_company
+		relative_position_id = AUS_austrian_netherlands
+		x = 0
+		y = 1
+		cost = 10
+		search_filters = {   }
+		prerequisite = { focus = AUS_austrian_netherlands}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+
+		}
+	}
+	focus = {
+		id = AUS_holdings_in_india
+		icon = GFX_AUS_holdings_in_india
+		relative_position_id = AUS_the_ostend_company
+		x = 0
+		y = 1
+		cost = 10
+		search_filters = {   }
+		prerequisite = { focus = AUS_the_ostend_company}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+
+		}
+	}
+	focus = {
+		id = AUS_the_riches_of_china
+		icon = GFX_AUS_the_riches_of_china
+		relative_position_id = AUS_holdings_in_india
+		x = 0
+		y = 1
+		cost = 10
+		search_filters = {   }
+		prerequisite = { focus = AUS_holdings_in_india}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+
+		}
+	}
+	focus = {
+		id = AUS_settle_austrialasia
+		icon = GFX_AUS_settle_austrialasia
+		relative_position_id = AUS_the_riches_of_china
+		x = 0
+		y = 1
+		cost = 10
+		search_filters = {   }
+		prerequisite = { focus = AUS_the_riches_of_china}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+
+		}
+	}
+##############################################
+################### balance the estates
+	focus = {
+		id = AUS_balance_the_estates
+		icon = GFX_AUS_balance_the_estates
+		relative_position_id = AUS_declare_HRE
+		x = 2
+		y = 1
+		cost = 10
+		search_filters = {   }
+		prerequisite = { focus = AUS_declare_HRE}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+
+		}
+	}
+	focus = {
+		id = AUS_austria_prospers
+		icon = GFX_AUS_austria_prospers
+		relative_position_id = AUS_balance_the_estates
+		x = 0
+		y = 1
+		cost = 10
+		search_filters = {   }
+		prerequisite = { focus = AUS_balance_the_estates}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+
+		}
+	}
+	focus = {
+		id = AUS_imperial_capitals
+		icon = GFX_AUS_imperial_capitals
+		relative_position_id = AUS_austria_prospers
+		x = 0
+		y = 1
+		cost = 10
+		search_filters = {   }
+		prerequisite = { focus = AUS_austria_prospers}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+
+		}
+	}
+	focus = {
+		id = AUS_the_viennese_waltz
+		icon = GFX_AUS_the_viennese_waltz
+		relative_position_id = AUS_imperial_capitals
+		x = 0
+		y = 1
+		cost = 10
+		search_filters = {   }
+		prerequisite = { focus = AUS_imperial_capitals}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+
+		}
+	}
+######################################################
+######################
+####################################################
+	focus = {
+		id = AUS_decline_of_hungary
+		icon = GFX_AUS_decline_of_hungary
+		relative_position_id = AUS_declare_HRE
+		x = 4
+		y = 1
+		cost = 10
+		search_filters = {   }
+		prerequisite = { focus = AUS_declare_HRE}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+
+		}
+	}
+	focus = {
+		id = AUS_royal_hungary
+		icon = GFX_goal_unknown
+		relative_position_id = AUS_decline_of_hungary
+		x = 0
+		y = 3
+		cost = 10
+		search_filters = {   }
+		prerequisite = { focus = AUS_decline_of_hungary}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+
+		}
+	}
+	focus = {
+		id = AUS_the_hungarian_question
+		icon = GFX_goal_unknown
+		relative_position_id = AUS_royal_hungary
+		x = -2
+		y = 1
+		cost = 10
+		search_filters = {   }
+		prerequisite = { focus = AUS_royal_hungary}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+
+		}
+	}
+	
+	focus = {
+		id = AUS_invest_in_the_provinces
+		icon = GFX_AUS_invest_in_the_provinces
+		relative_position_id = AUS_the_hungarian_question
+		x = -2
+		y = 1
+		cost = 10
+		search_filters = {   }
+		prerequisite = { focus = AUS_the_hungarian_question}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+
+		}
+	}
+	focus = {
+		id = AUS_multicultural_empire
+		icon = GFX_AUS_multicultural_empire
+		relative_position_id = AUS_the_hungarian_question
+		x = 0
+		y = 1
+		cost = 10
+		search_filters = {   }
+		prerequisite = { focus = AUS_the_hungarian_question}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+
+		}
+	}
+	focus = {
+		id = AUS_secure_croatia
+		icon = GFX_goal_unknown
+		relative_position_id = AUS_royal_hungary
+		x = 0
+		y = 2
+		cost = 10
+		search_filters = {   }
+		prerequisite = { focus = AUS_royal_hungary}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+
+		}
+	}
+	focus = {
+		id = AUS_italian_ambition
+		icon = GFX_AUS_italian_ambition
+		relative_position_id = AUS_secure_croatia
+		x = -4
+		y = 1
+		cost = 10
+		search_filters = {   }
+		prerequisite = { focus = AUS_secure_croatia}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+
+		}
+	}
+	focus = {
+		id = AUS_duchy_of_milan
+		icon = GFX_AUS_duchy_of_milan
+		relative_position_id = AUS_italian_ambition
+		x = 0
+		y = 2
+		cost = 10
+		search_filters = {   }
+		prerequisite = { focus = AUS_italian_ambition}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+
+		}
+	}
+	focus = {
+		id = AUS_king_of_naples
+		icon = GFX_AUS_king_of_naples
+		relative_position_id = AUS_duchy_of_milan
+		x = 0
+		y = 1
+		cost = 10
+		search_filters = {   }
+		prerequisite = { focus = AUS_duchy_of_milan}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+
+		}
+	}
+	focus = {
+		id = AUS_defeat_the_serbs
+		icon = GFX_AUS_defeat_the_serbs
+		relative_position_id = AUS_secure_croatia
+		x = -2
+		y = 1
+		cost = 10
+		search_filters = {   }
+		prerequisite = { focus = AUS_secure_croatia}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+
+		}
+	}
+
+	focus = {
+		id = AUS_conquer_transylvania
+		icon = GFX_AUS_conquer_transylvania
+		relative_position_id = AUS_secure_croatia
+		x = 0
+		y = 1
+		cost = 10
+		search_filters = {   }
+		prerequisite = { focus = AUS_secure_croatia}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+
+		}
+	}
+
+	focus = {
+		id = AUS_push_on_to_bulgaria
+		icon = GFX_AUS_push_on_to_bulgaria
+		relative_position_id = AUS_conquer_transylvania
+		x = 0
+		y = 1
+		cost = 10
+		search_filters = {   }
+		prerequisite = { focus = AUS_defeat_the_serbs}
+		prerequisite = { focus = AUS_conquer_transylvania}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+
+		}
+	}
+	focus = {
+		id = AUS_the_scourge_of_europe
+		icon = GFX_AUS_the_scourge_of_europe
+		relative_position_id = AUS_push_on_to_bulgaria
+		x = 0
+		y = 2
+		cost = 10
+		search_filters = {   }
+		prerequisite = { focus = AUS_push_on_to_bulgaria}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+
+		}
+	}
+###################################################################
+###############################
+##############################################################
+	focus = {
+		id = 
+		icon = GFX_goal_unknown
+		relative_position_id = 
+		x = 0
+		y = 1
+		cost = 10
+		search_filters = {   }
+		prerequisite = { focus = }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+
+		}
+	}
+	focus = {
+		id = 
+		icon = GFX_goal_unknown
+		relative_position_id = 
+		x = 0
+		y = 1
+		cost = 10
+		search_filters = {   }
+		prerequisite = { focus = }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+
+		}
+	}
+	focus = {
+		id = 
+		icon = GFX_goal_unknown
+		relative_position_id = 
+		x = 0
+		y = 1
+		cost = 10
+		search_filters = {   }
+		prerequisite = { focus = }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+
+		}
+	}
+	focus = {
+		id = 
+		icon = GFX_goal_unknown
+		relative_position_id = 
+		x = 0
+		y = 1
+		cost = 10
+		search_filters = {   }
+		prerequisite = { focus = }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+
+		}
+	}
+	focus = {
+		id = 
+		icon = GFX_goal_unknown
+		relative_position_id = 
+		x = 0
+		y = 1
+		cost = 10
+		search_filters = {   }
+		prerequisite = { focus = }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+
+		}
+	}
+	focus = {
+		id = 
+		icon = GFX_goal_unknown
+		relative_position_id = 
+		x = 0
+		y = 1
+		cost = 10
+		search_filters = {   }
+		prerequisite = { focus = }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+
+		}
+	}
+	focus = {
+		id = 
+		icon = GFX_goal_unknown
+		relative_position_id = 
+		x = 0
+		y = 1
+		cost = 10
+		search_filters = {   }
+		prerequisite = { focus = }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+
 		}
 	}
 }
