@@ -71,6 +71,12 @@
   SER_king_takeover_desc:0 ""
   SER_proclaim_YUG:0 "Proclaim the Kingdom of Yugoslavia"
   SER_proclaim_YUG_desc:0 ""
+  SER_YUG_national_guard:0 "Nationalist Guard"
+  SER_YUG_national_guard_desc:0 ""
+  SER_YUG_distance_king:0 "Distance the King From Politics"
+  SER_YUG_distance_king_desc:0 ""
+  SER_YUG_fascist_gov:0 "Nationalist Government"
+  SER_YUG_fascist_gov_desc:0 ""
 
   SER_YUG_industrial_investments:0 "Yugoslavian Industrial Investments"
   SER_YUG_industrial_investments_desc:0 ""
