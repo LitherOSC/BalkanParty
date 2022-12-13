@@ -4,7 +4,7 @@
 ########################################## AUS
 
   AUS_declare_HRE:0 "Europa Universalis IV; Imperial Austria 1444"
-  AUS_declare_HRE_desc:0 "Discover new ways to expand your empire in this expansion to Paradox Development Studio’s flagship game about the early modern era. Europa Universalis IV: Emperor brings new depth and new options to your efforts to dominate the globe in the early modern world. Can you make your reign endure through the centuries?"
+  AUS_declare_HRE_desc:0 "Discover new ways to expand your empire in this expansion to Paradox Development Studio's flagship game about the early modern era. Europa Universalis IV: Emperor brings new depth and new options to your efforts to dominate the globe in the early modern world. Can you make your reign endure through the centuries?"
   AUS_secure_electors:0 "Secure Electors"
   AUS_secure_electors_desc:0 ""
   AUS_control_bohemia:0 "Control Bohemia"
@@ -157,6 +157,14 @@
   SER_promote_Blagoje:0 "Promote Blagoje Nešković"
   SER_promote_Blagoje_desc:0 "Promote Blagoje Nešković to the head of state security."
 
+  SER_serbian_industry:0 ""
+  SER_serbian_industry_desc:0 ""
+  SER_seize_means_of_production:0 ""
+  SER_seize_means_of_production_desc:0 ""
+  SER_people's_industry:0 ""
+  SER_people's_industry_desc:0 ""
+
+
   SER_revive_YUG:0 "Revive Yugoslavia"
   SER_revive_YUG_desc:0 "The Kingdom of Yugoslavia may have disintegrated, but the king, Prince Paul, still draws breath. With him, the spirit of Yugoslavia lives on. And who better to take the task of reclaiming the Kingdom than the one who controls Belgrade?"
   SER_establish_claims:0 "Claim the Former Realm"
@@ -206,6 +214,23 @@
   SER_develop_military_industry_desc:2 "A modern military requires a heavy industrial base to support the necessary production of new aircraft."
   SER_expand_the_university_of_zagreb:0 "Expand the University of Zagreb"
   SER_expand_the_university_of_zagreb_desc:1 "The old University of Zagreb has long been one of the premier institutions of higher learning. Additional funding will allow it to also provide valuable research."
+
+  SER_COM_IND_CIV_1:0 ""
+  SER_COM_IND_CIV_1_desc:0 ""
+  SER_COM_IND_CIV_2:0 ""
+  SER_COM_IND_CIV_2_desc:0 ""
+  SER_COM_IND_adm:0 ""
+  SER_COM_IND_adm_desc:0 ""
+  SER_COM_IND_INF_1:0 ""
+  SER_COM_IND_INF_1_desc:0 ""
+  SER_COM_IND_INF_2:0 ""
+  SER_COM_IND_INF_2_desc:0 ""
+  SER_COM_IND_mil_1:0 ""
+  SER_COM_IND_mil_1_desc:0 ""
+  SER_COM_IND_mil_2:0 ""
+  SER_COM_IND_mil_2_desc:0 ""
+  SER_communist_system:0 ""
+  SER_communist_system_desc:0 ""
 
   SER_fund_army:0 "Fund the Army"
   SER_fund_army_desc:0 "With Serbia inheriting the Yugoslavian army, it is severely underfunded. We cannot allow it to waste away, not when our neighbors field armies of their own. "
