@@ -1202,7 +1202,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SER_COM_IND_CIV_1
-		icon = 
+		icon = GFX_goal_generic_construct_civilian
 		relative_position_id = SER_people's_industry
 		x = -2
 		y = 1
@@ -1219,7 +1219,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SER_COM_IND_CIV_2
-		icon = 
+		icon = GFX_goal_generic_construct_civ_factory
 		relative_position_id = SER_COM_IND_CIV_1
 		x = 0
 		y = 1
@@ -1236,7 +1236,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SER_COM_IND_adm
-		icon = 
+		icon = GFX_focus_generic_socialist_science
 		relative_position_id = SER_people's_industry
 		x = 0
 		y = 1
@@ -1253,7 +1253,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SER_COM_IND_INF_1
-		icon = 
+		icon = GFX_goal_generic_construct_infrastructure
 		relative_position_id = SER_COM_IND_adm
 		x = 0
 		y = 1
@@ -1270,7 +1270,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SER_COM_IND_INF_2
-		icon = 
+		icon = GFX_goal_generic_construct_infrastructure
 		relative_position_id = SER_COM_IND_INF_1
 		x = 0
 		y = 1
@@ -1287,7 +1287,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SER_COM_IND_mil_1
-		icon = 
+		icon = GFX_goal_generic_construct_mil_factory
 		relative_position_id = SER_people's_industry
 		x = 2
 		y = 1
@@ -1304,7 +1304,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SER_COM_IND_mil_2
-		icon = 
+		icon = GFX_goal_generic_construct_mil_factory
 		relative_position_id = SER_COM_IND_mil_1
 		x = 0
 		y = 1
@@ -1321,7 +1321,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SER_communist_system
-		icon = 
+		icon = GFX_focus_SOV_merge_plants
 		relative_position_id = SER_COM_IND_INF_2
 		x = 0
 		y = 1
@@ -1338,6 +1338,11 @@ focus_tree = {
 
 		}
 	}
+############################################
+################## INDUSTRY 
+##########################################
+
+
 ########################################################################################
 ########################################### army
 ##########################################################################################
@@ -1395,6 +1400,7 @@ focus_tree = {
 
 		}
 	}
+
 	focus = {
 		id = SER_army_modernization
 		icon = GFX_goal_generic_army_doctrines
