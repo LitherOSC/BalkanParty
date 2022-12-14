@@ -153,16 +153,18 @@
 
   SER_force_free_elections:0 "Force Free Elections"
   SER_force_free_elections_desc:0 "The people demand proper elelections! who are we to stand in thre path of innovation."
+  SER_serbian_industry:0 "Serbian Industry"
+  SER_serbian_industry_desc:0 "Serbia as a nation lacking in a proper industrial output. We must put in effort to shift the production possibilities curve right."
 
   SER_promote_Blagoje:0 "Promote Blagoje Nešković"
   SER_promote_Blagoje_desc:0 "Promote Blagoje Nešković to the head of state security."
-
-  SER_serbian_industry:0 "Serbian Industry"
-  SER_serbian_industry_desc:0 "Serbia as a nation lacking in a proper industrial output. We must put in effort to shift the production possibilities curve right."
-  SER_seize_means_of_production:0 "Seize the Means of Production"
-  SER_seize_means_of_production_desc:0 "Зграбите средства за производњу! Рад је слобода, труд је слобода."
   SER_people's_industry:0 "Industry of the People"
   SER_people's_industry_desc:0 "The means of production belong to the people, run by the people. The government must invest into this."
+  SER_COM_coup:0 ""
+  SER_COM_coup_desc:0 ""
+
+
+
 
 
   SER_revive_YUG:0 "Revive Yugoslavia"
@@ -215,6 +217,8 @@
   SER_expand_the_university_of_zagreb:0 "Expand the University of Zagreb"
   SER_expand_the_university_of_zagreb_desc:1 "The old University of Zagreb has long been one of the premier institutions of higher learning. Additional funding will allow it to also provide valuable research."
 
+  SER_seize_means_of_production:0 "Seize the Means of Production"
+  SER_seize_means_of_production_desc:0 "Зграбите средства за производњу! Рад је слобода, труд је слобода."
   SER_COM_IND_CIV_1:0 "The Civilian Sector"
   SER_COM_IND_CIV_1_desc:0 "The civilian economy is the backbone of any nation. It must not be neglected."
   SER_COM_IND_CIV_2:0 "Consumer goods production"

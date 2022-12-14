@@ -13,7 +13,7 @@ focus_tree = {
 	
 	default = no
 
-	continuous_focus_position = { x = 50 y = 1100 }
+	continuous_focus_position = { x = 50 y = 1500 }
 
 ####################################################################
 #################### SHARED 
@@ -169,6 +169,10 @@ focus_tree = {
 
 		}
 	}
+
+################################
+################## DEM 
+###################################
 	focus = {
 		id = SER_force_free_elections
 		icon = GFX_focus_generic_self_management
@@ -189,6 +193,26 @@ focus_tree = {
 		}
 	}
 	focus = {
+		id = SER_serbian_industry
+		icon = GFX_focus_generic_industry_1
+		relative_position_id = SER_force_free_elections
+		x = 2
+		y = 1
+		cost = 10
+		search_filters = {   }
+		prerequisite = {  focus = SER_force_free_elections}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+
+		}
+	}
+################################
+################# COM
+################################
+	focus = {
 		id = SER_promote_Blagoje
 		icon = GFX_focus_SOV_ally_bukharinists
 		relative_position_id = SER_acknowledge_neighbors
@@ -207,27 +231,10 @@ focus_tree = {
 		}
 	}
 
-	focus = {
-		id = SER_serbian_industry
-		icon = GFX_focus_generic_industry_1
-		relative_position_id = SER_force_free_elections
-		x = 2
-		y = 1
-		cost = 10
-		search_filters = {   }
-		prerequisite = {  focus = SER_force_free_elections}
-		
-		available_if_capitulated = yes
-
-		completion_reward = {
-
-
-		}
-	}
  	
 	focus = {
-		id = SER_seize_means_of_production
-		icon = GFX_focus_eng_liberate_the_home_of_marx
+		id = SER_people's_industry
+		icon = GFX_focus_ITA_the_italian_republic
 		relative_position_id = SER_promote_Blagoje
 		x = -2
 		y = 1
@@ -241,16 +248,16 @@ focus_tree = {
 
 
 		}
-	}	
+	}
 	focus = {
-		id = 
-		icon = 
-		relative_position_id = 
-		x = 
-		y = 
+		id = SER_COM_coup
+		icon = GFX_focus_spr_class_war
+		relative_position_id = SER_promote_Blagoje
+		x = 0
+		y = 1
 		cost = 10
 		search_filters = {   }
-		prerequisite = { focus = }
+		prerequisite = { focus = SER_promote_Blagoje}
 		
 		available_if_capitulated = yes
 
@@ -1181,17 +1188,17 @@ focus_tree = {
 ################################################
 ################ INDUSTY COM
 ##############################################
-
 	focus = {
-		id = SER_people's_industry
-		icon = GFX_focus_ITA_the_italian_republic
-		relative_position_id = SER_seize_means_of_production
+		id = SER_seize_means_of_production
+		icon = GFX_focus_eng_liberate_the_home_of_marx
+		relative_position_id = SER_people's_industry
 		x = -3
 		y = 1
 		cost = 10
 		search_filters = {   }
-		prerequisite = { focus = SER_seize_means_of_production}
+		prerequisite = { focus = SER_people's_industry}
 		prerequisite = { focus = SER_expand_the_university_of_zagreb}
+		prerequisite = { focus = SER_COM_coup}
 		
 		available_if_capitulated = yes
 
@@ -1199,16 +1206,16 @@ focus_tree = {
 
 
 		}
-	}
+	}	
 	focus = {
 		id = SER_COM_IND_CIV_1
 		icon = GFX_goal_generic_construct_civilian
-		relative_position_id = SER_people's_industry
+		relative_position_id = SER_seize_means_of_production
 		x = -2
 		y = 1
 		cost = 10
 		search_filters = {   }
-		prerequisite = { focus = SER_people's_industry}
+		prerequisite = { focus = SER_seize_means_of_production}
 		
 		available_if_capitulated = yes
 
@@ -1237,12 +1244,12 @@ focus_tree = {
 	focus = {
 		id = SER_COM_IND_adm
 		icon = GFX_focus_generic_socialist_science
-		relative_position_id = SER_people's_industry
+		relative_position_id = SER_seize_means_of_production
 		x = 0
 		y = 1
 		cost = 10
 		search_filters = {   }
-		prerequisite = { focus = SER_people's_industry}
+		prerequisite = { focus = SER_seize_means_of_production}
 		
 		available_if_capitulated = yes
 
@@ -1288,12 +1295,12 @@ focus_tree = {
 	focus = {
 		id = SER_COM_IND_mil_1
 		icon = GFX_goal_generic_construct_mil_factory
-		relative_position_id = SER_people's_industry
+		relative_position_id = SER_seize_means_of_production
 		x = 2
 		y = 1
 		cost = 10
 		search_filters = {   }
-		prerequisite = { focus = SER_people's_industry}
+		prerequisite = { focus = SER_seize_means_of_production}
 		
 		available_if_capitulated = yes
 
