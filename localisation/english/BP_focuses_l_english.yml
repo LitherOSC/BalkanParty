@@ -162,6 +162,11 @@
   SER_people's_industry_desc:0 "The means of production belong to the people, run by the people. The government must invest into this."
   SER_COM_coup:0 ""
   SER_COM_coup_desc:0 ""
+  SER_COM_constitution:0 ""
+  SER_COM_constitution_desc:0 ""
+  SER_COM_expand_party:0 ""
+  SER_COM_expand_party_desc:0 ""
+  
 
 
 
