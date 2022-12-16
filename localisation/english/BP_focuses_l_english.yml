@@ -166,7 +166,15 @@
   SER_COM_constitution_desc:0 ""
   SER_COM_expand_party:0 ""
   SER_COM_expand_party_desc:0 ""
-  
+  SER_COM_socialist_militia:0 ""
+  SER_COM_socialist_militia_desc:0 ""
+  SER_COM_peasant_army:0 ""
+  SER_COM_peasant_army_desc:0 ""
+  SER_COM_trotskyite_model:0 ""
+  SER_COM_trotskyite_model_desc:0 ""
+  SER_COM_anti_fascism:0 ""
+  SER_COM_anti_fascism_desc:0 ""
+
 
 
 

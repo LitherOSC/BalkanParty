@@ -284,23 +284,6 @@ focus_tree = {
 		}
 	}	
 	focus = {
-		id = 
-		icon = 
-		relative_position_id = SER_COM_coup
-		x = 2
-		y = 1
-		cost = 10
-		search_filters = {   }
-		prerequisite = { focus = SER_COM_coup}
-		
-		available_if_capitulated = yes
-
-		completion_reward = {
-
-
-		}
-	}	
-	focus = {
 		id = SER_COM_expand_party
 		icon = GFX_focus_eng_concessions_to_the_trade_unions
 		relative_position_id = SER_COM_constitution
@@ -318,6 +301,90 @@ focus_tree = {
 		}
 	}	
 	focus = {
+		id = SER_COM_socialist_militia
+		icon = GFX_focus_spr_the_anti_fascist_workers_revolution
+		relative_position_id = SER_COM_coup
+		x = 2
+		y = 1
+		cost = 10
+		search_filters = {   }
+		prerequisite = { focus = SER_COM_coup}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+
+		}
+	}	
+	focus = {
+		id = SER_COM_peasant_army
+		icon = GFX_focus_ITA_peasants_rise
+		relative_position_id = SER_socialist_militia
+		x = 0
+		y = 1
+		cost = 10
+		search_filters = {   }
+		prerequisite = { focus = SER_socialist_militia}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+
+		}
+	}
+	focus = {
+		id = SER_COM_trotskyite_model
+		icon = GFX_focus_fra_loyalty_trotzky
+		relative_position_id = SER_COM_coup
+		x = 1
+		y = 3
+		cost = 10
+		search_filters = {   }
+		prerequisite = { focus = SER_COM_expand_party}
+		prerequisite = {focus = SER_COM_peasant_army}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+
+		}
+	}
+	focus = {
+		id = SER_COM_anti_fascism
+		icon = GFX_focus_generic_anti_fascist_diplomacy
+		relative_position_id = SER_COM_trotskyite_model
+		x = 2
+		y = 1
+		cost = 10
+		search_filters = {   }
+		prerequisite = { focus = SER_COM_trotskyite_model}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+
+		}
+	}	focus = {
+		id = 
+		icon = 
+		relative_position_id = SER_COM_anti_fascism
+		x = 0
+		y = 1
+		cost = 10
+		search_filters = {   }
+		prerequisite = { focus = SER_COM_anti_fascism}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+
+		}
+	}	focus = {
 		id = 
 		icon = 
 		relative_position_id = 
@@ -333,8 +400,7 @@ focus_tree = {
 
 
 		}
-	}
-	focus = {
+	}	focus = {
 		id = 
 		icon = 
 		relative_position_id = 
@@ -342,8 +408,39 @@ focus_tree = {
 		y = 
 		cost = 10
 		search_filters = {   }
-		prerequisite = { focus = SER_COM_expand_party}
-		prerequisite = {focus = }
+		prerequisite = { focus = }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+
+		}
+	}	focus = {
+		id = 
+		icon = 
+		relative_position_id = 
+		x = 
+		y = 
+		cost = 10
+		search_filters = {   }
+		prerequisite = { focus = }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+
+		}
+	}	focus = {
+		id = 
+		icon = 
+		relative_position_id = 
+		x = 
+		y = 
+		cost = 10
+		search_filters = {   }
+		prerequisite = { focus = }
 		
 		available_if_capitulated = yes
 
