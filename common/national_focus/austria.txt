@@ -84,9 +84,9 @@ focus_tree = {
 		}
 	}
 
-#######################################################################
-################################## Secure Electors
-#####################################################################
+###################################
+############ Secure Electors
+###################################
 
 	focus = {
 		id = AUS_secure_electors
@@ -774,6 +774,528 @@ focus_tree = {
 		cost = 10
 		search_filters = {   }
 		prerequisite = { focus = }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+
+		}
+	}
+###########################################################################################
+############################################################### COM
+#########################################################################################
+
+	focus = {
+		id = AUS_acknowledge_neighbors
+		icon = GFX_focus_generic_diplomatic_treaty
+
+		x = 8
+		y = 0
+		cost = 10
+		search_filters = {   }
+		mutually_exclusive = {focus = AUS_revive_YUG}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+
+		}
+	}
+	focus = {
+		id = AUS_diplomacy_effort
+		icon = GFX_goal_generic_improve_relations
+		relative_position_id = AUS_acknowledge_neighbors
+		x = 2
+		y = 1
+		cost = 10
+		search_filters = {   }
+		prerequisite = { focus = AUS_acknowledge_neighbors}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+
+		}
+	}
+	focus = {
+		id = AUS_national_defence
+		icon = GFX_goal_generic_defence
+		relative_position_id = AUS_acknowledge_neighbors
+		x = -2
+		y = 1
+		cost = 10
+		search_filters = {   }
+		prerequisite = { focus = AUS_acknowledge_neighbors }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+
+		}
+	}
+	focus = {
+		id = AUS_state_security_forces
+		icon = GFX_goal_generic_intelligence_exchange
+		relative_position_id = AUS_national_defence
+		mutually_exclusive = { focus = AUS_establish_embassies}
+		x = 0
+		y = 1
+		cost = 10
+		search_filters = {   }
+		prerequisite = { focus = AUS_national_defence}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+
+		}
+	}
+	focus = {
+		id = AUS_welfare_program
+		icon = GFX_goal_generic_national_unity
+		relative_position_id = AUS_acknowledge_neighbors
+		x = 0
+		y = 1
+		cost = 10
+		search_filters = {   }
+		prerequisite = { focus = AUS_acknowledge_neighbors}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+
+		}
+	}
+	focus = {
+		id = AUS_democratic_rights
+		icon = GFX_focus_hol_the_foundations_of_defense
+		relative_position_id = AUS_welfare_program
+		x = 0
+		y = 2
+		cost = 10
+		search_filters = {   }
+		prerequisite = { focus = AUS_welfare_program}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+
+		}
+	}
+	focus = {
+		id = AUS_establish_embassies
+		icon = GFX_goal_anschluss
+		relative_position_id = AUS_diplomacy_effort
+		mutually_exclusive = {focus = AUS_state_security_forces}
+		x = 0
+		y = 1
+		cost = 10
+		search_filters = {   }
+		prerequisite = { focus = AUS_diplomacy_effort}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+
+		}
+	}
+	focus = {
+		id = AUS_cultural_exchange
+		icon = GFX_goal_generic_positive_trade_relations
+		relative_position_id = AUS_establish_embassies
+
+		x = 0
+		y = 1
+		cost = 10
+		search_filters = {   }
+		prerequisite = { focus = AUS_establish_embassies}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+
+		}
+	}
+
+################################
+################## DEM 
+###################################
+	focus = {
+		id = AUS_force_free_elections
+		icon = GFX_focus_generic_self_management
+		relative_position_id = AUS_acknowledge_neighbors
+		mutually_exclusive = { focus = AUS_promote_Blagoje}
+		x = 1
+		y = 4
+		cost = 10
+		search_filters = {   }
+		prerequisite = { focus = AUS_democratic_rights}
+		prerequisite = { focus = AUS_cultural_exchange}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+
+		}
+	}
+	focus = {
+		id = AUS_serbian_industry
+		icon = GFX_focus_generic_industry_1
+		relative_position_id = AUS_force_free_elections
+		x = 2
+		y = 1
+		cost = 10
+		search_filters = {   }
+		prerequisite = {  focus = AUS_force_free_elections}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+
+		}
+	}
+
+	focus = {
+		id = AUS_promote_Blagoje
+		icon = GFX_focus_SOV_ally_bukharinists
+		relative_position_id = AUS_acknowledge_neighbors
+		mutually_exclusive = { focus = AUS_force_free_elections}
+		x = -2
+		y = 4
+		cost = 10
+		search_filters = {   }
+		prerequisite = { focus = AUS_state_security_forces}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+
+		}
+	}
+
+ 	
+	focus = {
+		id = AUS_people's_industry
+		icon = GFX_focus_ITA_the_italian_republic
+		relative_position_id = AUS_promote_Blagoje
+		x = -2
+		y = 1
+		cost = 10
+		search_filters = {   }
+		prerequisite = { focus = AUS_promote_Blagoje}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+
+		}
+	}
+	focus = {
+		id = AUS_COM_coup
+		icon = GFX_focus_spr_class_war
+		relative_position_id = AUS_promote_Blagoje
+		x = 0
+		y = 1
+		cost = 10
+		search_filters = {   }
+		prerequisite = { focus = AUS_promote_Blagoje}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+
+		}
+	}	
+	focus = {
+		id = AUS_COM_constitution
+		icon = GFX_focus_POL_complete_april_constitution
+		relative_position_id = AUS_COM_coup
+		x = 0
+		y = 1
+		cost = 10
+		search_filters = {   }
+		prerequisite = { focus = AUS_COM_coup}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+
+		}
+	}	
+	focus = {
+		id = AUS_COM_expand_party
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
+		relative_position_id = AUS_COM_constitution
+		x = 0
+		y = 1
+		cost = 10
+		search_filters = {   }
+		prerequisite = { focus = AUS_COM_constitution}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+
+		}
+	}	
+	focus = {
+		id = AUS_COM_socialist_militia
+		icon = GFX_focus_spr_the_anti_fascist_workers_revolution
+		relative_position_id = AUS_COM_coup
+		x = 2
+		y = 1
+		cost = 10
+		search_filters = {   }
+		prerequisite = { focus = AUS_COM_coup}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+
+		}
+	}	
+	focus = {
+		id = AUS_COM_peasant_army
+		icon = GFX_focus_ITA_peasants_rise
+		relative_position_id = AUS_socialist_militia
+		x = 0
+		y = 1
+		cost = 10
+		search_filters = {   }
+		prerequisite = { focus = AUS_socialist_militia}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+
+		}
+	}
+	focus = {
+		id = AUS_COM_trotskyite_model
+		icon = GFX_focus_fra_loyalty_trotzky
+		relative_position_id = AUS_COM_coup
+		x = 1
+		y = 3
+		cost = 10
+		search_filters = {   }
+		prerequisite = { focus = AUS_COM_expand_party}
+		prerequisite = {focus = AUS_COM_peasant_army}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+
+		}
+	}
+	focus = {
+		id = AUS_COM_anti_fascism
+		icon = GFX_focus_generic_anti_fascist_diplomacy
+		relative_position_id = AUS_COM_trotskyite_model
+		x = 2
+		y = 1
+		cost = 10
+		search_filters = {   }
+		prerequisite = { focus = AUS_COM_trotskyite_model}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+
+		}
+	}	focus = {
+		id = 
+		icon = 
+		relative_position_id = AUS_COM_anti_fascism
+		x = 0
+		y = 1
+		cost = 10
+		search_filters = {   }
+		prerequisite = { focus = AUS_COM_anti_fascism}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+
+		}
+	}
+
+################################################
+################ INDUSTY COM
+##############################################
+	focus = {
+		id = AUS_seize_means_of_production
+		icon = GFX_focus_eng_liberate_the_home_of_marx
+		relative_position_id = AUS_people's_industry
+		x = -3
+		y = 1
+		cost = 10
+		search_filters = {   }
+		prerequisite = { focus = AUS_people's_industry}
+		prerequisite = { focus = AUS_expand_the_university_of_zagreb}
+		prerequisite = { focus = AUS_COM_coup}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+
+		}
+	}	
+	focus = {
+		id = AUS_COM_IND_CIV_1
+		icon = GFX_goal_generic_construct_civilian
+		relative_position_id = AUS_seize_means_of_production
+		x = -2
+		y = 1
+		cost = 10
+		search_filters = {   }
+		prerequisite = { focus = AUS_seize_means_of_production}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+
+		}
+	}
+	focus = {
+		id = AUS_COM_IND_CIV_2
+		icon = GFX_goal_generic_construct_civ_factory
+		relative_position_id = AUS_COM_IND_CIV_1
+		x = 0
+		y = 1
+		cost = 10
+		search_filters = {   }
+		prerequisite = { focus = AUS_COM_IND_CIV_1}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+
+		}
+	}
+	focus = {
+		id = AUS_COM_IND_adm
+		icon = GFX_focus_generic_socialist_science
+		relative_position_id = AUS_seize_means_of_production
+		x = 0
+		y = 1
+		cost = 10
+		search_filters = {   }
+		prerequisite = { focus = AUS_seize_means_of_production}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+
+		}
+	}
+	focus = {
+		id = AUS_COM_IND_INF_1
+		icon = GFX_goal_generic_construct_infrastructure
+		relative_position_id = AUS_COM_IND_adm
+		x = 0
+		y = 1
+		cost = 10
+		search_filters = {   }
+		prerequisite = { focus = AUS_COM_IND_adm}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+
+		}
+	}
+	focus = {
+		id = AUS_COM_IND_INF_2
+		icon = GFX_goal_generic_construct_infrastructure
+		relative_position_id = AUS_COM_IND_INF_1
+		x = 0
+		y = 1
+		cost = 10
+		search_filters = {   }
+		prerequisite = { focus = AUS_COM_IND_INF_1}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+
+		}
+	}
+	focus = {
+		id = AUS_COM_IND_mil_1
+		icon = GFX_goal_generic_construct_mil_factory
+		relative_position_id = AUS_seize_means_of_production
+		x = 2
+		y = 1
+		cost = 10
+		search_filters = {   }
+		prerequisite = { focus = AUS_seize_means_of_production}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+
+		}
+	}
+	focus = {
+		id = AUS_COM_IND_mil_2
+		icon = GFX_goal_generic_construct_mil_factory
+		relative_position_id = AUS_COM_IND_mil_1
+		x = 0
+		y = 1
+		cost = 10
+		search_filters = {   }
+		prerequisite = { focus = AUS_COM_IND_mil_1}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+
+		}
+	}
+	focus = {
+		id = AUS_communist_system
+		icon = GFX_focus_SOV_merge_plants
+		relative_position_id = AUS_COM_IND_INF_2
+		x = 0
+		y = 1
+		cost = 10
+		search_filters = {   }
+		prerequisite = { focus = AUS_COM_IND_INF_2}
+		prerequisite = {focus = AUS_COM_IND_mil_2}
+		prerequisite = {focus = AUS_COM_IND_CIV_2}
 		
 		available_if_capitulated = yes
 
