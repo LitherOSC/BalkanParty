@@ -2,6 +2,11 @@
 
 
 ########################################## AUS
+  AUS_election_of_1936:0 "Election of 1936"
+  AUS_election_of_1936_desc:0 ""
+  AUS_Archduke_Robert_of_Austria_Este:0 "Coronate Archduke Robert of Austria-Este"
+  AUS_Archduke_Robert_of_Austria_Este_desc:0 ""
+
 
   AUS_declare_HRE:0 "Europa Universalis IV; Imperial Austria 1444"
   AUS_declare_HRE_desc:0 "Discover new ways to expand your empire in this expansion to Paradox Development Studio's flagship game about the early modern era. Europa Universalis IV: Emperor brings new depth and new options to your efforts to dominate the globe in the early modern world. Can you make your reign endure through the centuries?"
@@ -74,7 +79,43 @@
   AUS_the_scourge_of_europe_desc:0 ""
   
   
-  
+  AUS_promote_Blagoje:0 "Promote Blagoje Nešković"
+  AUS_promote_Blagoje_desc:0 "Promote Blagoje Nešković to the head of state security."
+  AUS_people's_industry:0 "Industry of the People"
+  AUS_people's_industry_desc:0 "The means of production belong to the people, run by the people. The government must invest into this."
+  AUS_COM_coup:0 "Storm Belgrade"
+  AUS_COM_coup_desc:0 "The state security is in our hand! We must quickly storm the capital and enforce a communist government. Glory to comrade Blagoje Nešković"
+  AUS_COM_constitution:0 "Socialist Republic Constitution"
+  AUS_COM_constitution_desc:0 "A piece of paper infused with the ideals of the new communist state will be a power symbol for the people and an bastion of legitamacy."
+  AUS_COM_expand_party:0 "Expand the Party"
+  AUS_COM_expand_party_desc:0 "The people must participate in the communist party, they must be turned into true communists."
+  AUS_COM_socialist_militia:0 "Socialist Militia"
+  AUS_COM_socialist_militia_desc:0 "The people must not only be infused with an undying loyalty to the cause, they must be prepared to fight for it. Small scale militias will keep the skills of the people sharp. "
+  AUS_COM_peasant_army:0 "Peasant Army"
+  AUS_COM_peasant_army_desc:0 "The workers, while ready to fight, are far more useful in the factories, they can be used as a reserve. The peasants will go into the fray first."
+  AUS_COM_trotskyite_model:0 "Trotskyite Model"
+  AUS_COM_trotskyite_model_desc:0 "The list of communist countries is incomplete. YOU CAN HELP BY EXPANDING IT."
+  AUS_COM_anti_fascism:0 "Anti Fascism Policy"
+  AUS_COM_anti_fascism_desc:0 "Fascism is a grave threat to our very existance, we must be the vanguard of the socialist cause that stands against it."
+
+  AUS_seize_means_of_production:0 "Seize the Means of Production"
+  AUS_seize_means_of_production_desc:0 "Зграбите средства за производњу! Рад je слобода, труд je слобода."
+  AUS_COM_IND_CIV_1:0 "The Civilian Sector"
+  AUS_COM_IND_CIV_1_desc:0 "The civilian economy is the backbone of any nation. It must not be neglected."
+  AUS_COM_IND_CIV_2:0 "Consumer goods production"
+  AUS_COM_IND_CIV_2_desc:0 "Civilians demand everything from toilets to books to cars. We must expand our civilian industry to meet these demands."
+  AUS_COM_IND_adm:0 "Bureau of Industry"
+  AUS_COM_IND_adm_desc:0 "A bureau must be established to properly oversee the industrial programs of Serbia."
+  AUS_COM_IND_INF_1:0 "Serbian Roads"
+  AUS_COM_IND_INF_1_desc:0 "The roads of a nation are like its veins. They must not be neglected, and infact, be expanded upon."
+  AUS_COM_IND_INF_2:0 "Serbian Rail"
+  AUS_COM_IND_INF_2_desc:0 "If roads are veins, railroads are arteries. A national effort must be conducted to imcrease their count."
+  AUS_COM_IND_mil_1:0 "Fire Arm Production"
+  AUS_COM_IND_mil_1_desc:0 "Fire Arms are essential in the hellhole that is the Balkans. Can't fire at will if you have nothing to fire with."
+  AUS_COM_IND_mil_2:0 "Barrel production"
+  AUS_COM_IND_mil_2_desc:0 "Artillery? Tanks? Cannons? Factories must be established for all of this."
+  AUS_communist_system:0 "Communist System"
+  AUS_communist_system_desc:0 "With advances in Serbian industry, the Bureau has perfected its use of demand economy. Production is greater than ever!"
 
 ################### MNT
 
@@ -314,5 +355,8 @@
   SLO_internal_redoubts_desc:0 "Better safe than sorry. We'll hold out like the bloody Swiss in our mountains."
   SLO_survival:0 "Slovak Survival"
   SLO_survival_desc:0 "We will fight them in the cities, through forests, over mountains and rivers. We will never surrender!"
+
+
+  
 
   

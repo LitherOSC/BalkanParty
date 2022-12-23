@@ -50,6 +50,41 @@ focus_tree = {
 #
 #		}
 #	} 
+
+	focus = {
+		id = AUS_election_of_1936
+		icon = GFX_goal_unknown
+		x = 20
+		y = 1
+		cost = 10
+		search_filters = {   }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+################### create a event you lazy prick #########
+
+		}
+	}
+	focus = {
+		id = AUS_Archduke_Robert_of_Austria_Este
+		icon = GFX_goal_unknown
+		relative_position_id = AUS_election_of_1936
+		x = -10
+		y = 1
+		cost = 10
+		search_filters = {   }
+		prerequisite = { focus = AUS_election_of_1936}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+
+		}
+	}
+
 #####################################################################
 ######################################## HRE
 ###################################################################
@@ -57,10 +92,11 @@ focus_tree = {
 		id = AUS_declare_HRE
 		icon = GFX_goal_unknown
 		mutually_exclusive = {  }
-		x = 6
-		y = 0
-
+		x = 0
+		y = 1
+		relative_position_id = AUS_Archduke_Robert_of_Austria_Este
 		cost = 10
+		prerequisite = { focus = AUS_Archduke_Robert_of_Austria_Este}
 
 		ai_will_do = {
 			factor = 1
