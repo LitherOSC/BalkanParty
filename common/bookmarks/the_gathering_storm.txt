@@ -66,18 +66,15 @@ bookmarks = {
 			}
 		}
 
-		"GRE"={
-			history = "GRE_GATHERING_STORM_DESC"
+		"AUS"={
+			history = 
 			ideology = neutrality
 			ideas = {
-				GRE_debt_to_the_ifc
-				GRE_schachtplan
-				GRE_political_instability_dummy
+
 			}
 			focuses = {
-				GRE_metaxism_focus
-				GRE_resurrecting_the_megali_idea
-				GRE_stage_an_incident_in_the_bosporus
+				AUS_Archduke_Robert_of_Austria_Este
+				AUS_elect_the_KPO
 			}
 		}
 
@@ -227,17 +224,7 @@ bookmarks = {
 
 			}
 		}
-		"AUS"={
-			minor = yes
-			history = 
-			ideology = neutrality
-			ideas = {
 
-			}
-			focuses = {
-
-			}
-		}
 		"KUR"={
 			minor = yes
 			history = 
@@ -249,7 +236,21 @@ bookmarks = {
 
 			}
 		}
-
+		"GRE"={
+			history = "GRE_GATHERING_STORM_DESC"
+			minor = yes
+			ideology = neutrality
+			ideas = {
+				GRE_debt_to_the_ifc
+				GRE_schachtplan
+				GRE_political_instability_dummy
+			}
+			focuses = {
+				GRE_metaxism_focus
+				GRE_resurrecting_the_megali_idea
+				GRE_stage_an_incident_in_the_bosporus
+			}
+		}
 		effect = {
 			randomize_weather = 22345 # <- Obligatory in every bookmark !
 			#123 = { rain_light = yes }

@@ -1,5 +1,17 @@
 ﻿l_english: 
 
+############ AUS
+
+ AUS_KPO_election_unrest:0 "Electoral Unrest"
+ AUS_KPO_election_unrest_desc:0 "The people aren't pleased how a minority party magically won the elections of 1936. They smell the fraud and civil unrest is high."
+ AUS_KPO_secure_the_vote:0 "Secure the Vote"
+ AUS_KPO_secure_the_vote_desc:0 "The Vote has been secured. The people could eat cake, except there is none to be had."
+ AUS_KPO_nationalist_paramilitarism_idea:0 "Nationalist Paramilitary"
+ AUS_KPO_nationalist_paramilitarism_idea_desc:0 ""
+ AUS_KPO_socialist_militia_idea:0 "Socialist Paramilitary"
+ AUS_KPO_socialist_militia_idea_desc:0 ""
+ AUS_KPO_state_security_forces_idea:0 "Socialist Gestapo"
+ AUS_KPO_state_security_forces_idea_desc:0 ""
 
 ########### SER
 

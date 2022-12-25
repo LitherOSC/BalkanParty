@@ -9,6 +9,8 @@
 #################################################### POLITICAL PARTIES #############################################
   SER_kings_party:0 "King's Party"
   SER_kings_party_long:0 "Party of Prince Paul of Yugoslavia"
+  AUS_KPO_party:0 "KPO"
+  AUS_KPO_party_long:0 "Kommunistische Partei Österreichs"
 #################################################### COUNTRIES ##########################################
   SER_YUG_KING_neutrality:0 "Kingdom of Yugoslavia"
   SER_YUG_KING_neutrality_ADJ:0 "Yugoslavian"
