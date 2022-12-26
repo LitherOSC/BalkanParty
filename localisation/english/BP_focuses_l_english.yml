@@ -132,6 +132,14 @@
   AUS_communist_system:0 "Communist System"
   AUS_communist_system_desc:0 "With advances in Serbian industry, the Bureau has perfected its use of demand economy. Production is greater than ever!"
 
+  AUS_GER_greater_austria:0 "Ein größeres Österreich"
+  AUS_GER_greater_austria_desc:0 "Ein größeres Österreich, eine blühende Zukunft ist in greifbarer Nähe. Dies ist die Stunde, das Jahrhundert, um unseren Platz im Herzen Europas zu markieren!"
+
+  AUS_GER_north_wall:0 "Czech Wall"
+  AUS_GER_north_wall_desc:0 "The Czech build their fortifications like a second Maginot Line. We should return the gesture."
+  AUS_GER_south_wall:0 "Slovenian & Hungarian Line"
+  AUS_GER_south_wall_desc:0 "Who can trust what the Hungarians are plotting or what trouble is brewing in the lands of Yugoslavia? Best not to be caught off gaurd."
+
 ################### MNT
 
   MNT_focus_1:0 "March on Podgorica"

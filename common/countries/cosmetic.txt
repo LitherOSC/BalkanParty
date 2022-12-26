@@ -4,6 +4,11 @@ SER_YUG_KING = {
 
 }
 
+AUS_GER_greater_aus_cos_tag = {
+	color = rgb { 128 128 128 }
+	color_ui = rgb { 115 115 115 }
+}
+
 
 
 MAL_UK = {

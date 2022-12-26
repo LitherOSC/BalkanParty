@@ -75,6 +75,7 @@ bookmarks = {
 			focuses = {
 				AUS_Archduke_Robert_of_Austria_Este
 				AUS_elect_the_KPO
+				AUS_GER_greater_austria
 			}
 		}
 
