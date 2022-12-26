@@ -10,7 +10,7 @@ state = {
 	state_category = town
 
 	history = {
-		owner = 
+		owner = SOV
 		buildings = {
 			infrastructure = 2
 		}
