@@ -31,15 +31,9 @@ spriteTypes = {
 	texturefile = "gfx/interface/goals/the_ostend_company.dds"			
 	}
 
-	SpriteType = {
-	name = "GFX_AUS_holdings_in_india"
-	texturefile = "gfx/interface/goals/goal_continuous_air_production.dds"			
-	}
 
-	SpriteType = {
-	name = "GFX_AUS_the_riches_of_china"
-	texturefile = "gfx/interface/goals/goal_continuous_air_production.dds"			
-	}	
+
+
 
 	SpriteType = {
 	name = "GFX_AUS_settle_austrialasia"

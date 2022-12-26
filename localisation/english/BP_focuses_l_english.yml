@@ -139,6 +139,10 @@
   AUS_GER_north_wall_desc:0 "The Czech build their fortifications like a second Maginot Line. We should return the gesture."
   AUS_GER_south_wall:0 "Slovenian & Hungarian Line"
   AUS_GER_south_wall_desc:0 "Who can trust what the Hungarians are plotting or what trouble is brewing in the lands of Yugoslavia? Best not to be caught off gaurd."
+  AUS_oil_expansion:0 "Expand the Oil Fields"
+  AUS_oil_expansion_desc:0 "We have been fortunate enough to have a natural oil field. We must exploit it to its full potential"
+  AUS_rocketry_focus:0 "Austrian Rocketry Efforts"
+  AUS_rocketry_focus_desc:0 "There is a new field of warfare yet to be properly researched. With large rockets we can potentially strike anywhere in the Balkans with hundreds of kilograms of explosives."
 
 ################### MNT
 

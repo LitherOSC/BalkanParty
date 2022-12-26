@@ -63,13 +63,14 @@ focus_tree = {
 
 		completion_reward = {
 
-################### create a event you lazy prick #########
-
+			country_event = {
+				id = austria.1
+			}
 		}
 	}
 	focus = {
 		id = AUS_Archduke_Robert_of_Austria_Este
-		icon = GFX_goal_unknown
+		icon = GFX_focus_eng_god_save_the_king
 		relative_position_id = AUS_election_of_1936
 		x = -15
 		y = 1
@@ -127,7 +128,7 @@ focus_tree = {
 
 	focus = {
 		id = AUS_GER_greater_austria
-		icon = GFX_goal_generic_military_sphere
+		icon = GFX_focus_ger_reichskommisariats
 		mutually_exclusive = { focus = AUS_Archduke_Robert_of_Austria_Este }
 		mutually_exclusive = { focus = AUS_elect_the_KPO}
 		relative_position_id = AUS_election_of_1936
@@ -165,7 +166,7 @@ focus_tree = {
 ###################################################################
 	focus = {
 		id = AUS_declare_HRE
-		icon = GFX_goal_unknown
+		icon = GFX_focus_POL_habsburg
 		mutually_exclusive = {  }
 		x = 0
 		y = 1
@@ -201,12 +202,14 @@ focus_tree = {
 
 	focus = {
 		id = AUS_secure_electors
-		icon = GFX_AUS_secure_electors
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties
 		mutually_exclusive = {  }
 		relative_position_id = AUS_declare_HRE
 		x = -4
 		y = 1
-		prerequisite = { focus = AUS_declare_HRE}
+		available = {
+			has_completed_focus = AUS_declare_HRE
+		}
 
 		cost = 10
 
@@ -390,11 +393,13 @@ focus_tree = {
 ################################################################
 	focus = {
 		id = AUS_austrian_netherlands
-		icon = GFX_goal_unknown
+		icon = GFX_focus_hol_gateway_to_europe
 		relative_position_id = AUS_declare_HRE
 		x = 0
 		y = 1
-		prerequisite = { focus = AUS_declare_HRE}
+		available = {
+			has_completed_focus = AUS_declare_HRE
+		}
 		cost = 10
 		search_filters = {   }
 		
@@ -424,7 +429,7 @@ focus_tree = {
 	}
 	focus = {
 		id = AUS_holdings_in_india
-		icon = GFX_AUS_holdings_in_india
+		icon = GFX_focus_RAJ_two_nation_theory
 		relative_position_id = AUS_the_ostend_company
 		x = 0
 		y = 1
@@ -441,7 +446,7 @@ focus_tree = {
 	}
 	focus = {
 		id = AUS_the_riches_of_china
-		icon = GFX_AUS_the_riches_of_china
+		icon = GFX_focus_usa_focus_on_asia
 		relative_position_id = AUS_holdings_in_india
 		x = 0
 		y = 1
@@ -483,7 +488,9 @@ focus_tree = {
 		y = 1
 		cost = 10
 		search_filters = {   }
-		prerequisite = { focus = AUS_declare_HRE}
+		available = {
+			has_completed_focus = AUS_declare_HRE
+		}
 		
 		available_if_capitulated = yes
 
@@ -554,7 +561,9 @@ focus_tree = {
 		y = 1
 		cost = 10
 		search_filters = {   }
-		prerequisite = { focus = AUS_declare_HRE}
+		available = {
+			has_completed_focus = AUS_declare_HRE
+		}
 		
 		available_if_capitulated = yes
 
@@ -1208,7 +1217,11 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-
+			modify_building_resources = {
+					building = industrial_complex
+					resource = steel
+					amount = 1
+			}
 
 		}
 	}	
@@ -1914,7 +1927,7 @@ focus_tree = {
 	}
 
 	focus = {
-		id = GER_coal_liquidization
+		id = AUS_oil_expansion
 		icon = GFX_goal_generic_oil_refinery
 		prerequisite = { focus = GER_autarky }
 		x = 0
@@ -1926,7 +1939,7 @@ focus_tree = {
 		}
 
 		available = {
-			has_full_control_of_state = 65
+			has_full_control_of_state = 4
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
@@ -1938,14 +1951,18 @@ focus_tree = {
 			}
 			if = {
 				limit = {
-					has_full_control_of_state = 65
+					has_full_control_of_state = 4
 				}
-				65 = {
+				4 = {
 					add_extra_state_shared_building_slots = 1
 					add_building_construction = {
 						type = synthetic_refinery
 						level = 1
 						instant_build = yes
+					}
+					add_resource = {
+						type = oil
+						amount = 24
 					}
 				}
 			}
@@ -1955,22 +1972,26 @@ focus_tree = {
 	focus = {
 		id = GER_synthetic_rubber
 		icon = GFX_focus_generic_rubber
-		prerequisite = { focus = GER_coal_liquidization }
+		prerequisite = { focus = AUS_oil_expansion }
 		x = 0
 		y = 1
-		relative_position_id = GER_coal_liquidization
+		relative_position_id = AUS_oil_expansion
 		cost = 10
 		ai_will_do = {
 			factor = 4
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-	
-        	modify_building_resources = {
-        	   building = synthetic_refinery
-        	   resource = rubber
-        	   amount = 2
-        	}
+			modify_building_resources = {
+					building = synthetic_refinery
+					resource = rubber
+					amount = 2
+			}
+			modify_building_resources = {
+					building = synthetic_refinery
+					resource = oil
+					amount = 1
+			}
 		}
 	}
 
@@ -5407,10 +5428,9 @@ focus_tree = {
 	}
 
 	focus = {
-		id = GER_rocketry_focus
+		id = AUS_rocketry_focus
 		icon = GFX_focus_rocketry
 		prerequisite = { focus = GER_extra_tech_slot }
-		prerequisite = { focus = GER_air_innovation_2 }
 		x = 2
 		y = 1
 		relative_position_id = GER_extra_tech_slot
@@ -5418,6 +5438,12 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}	
+		available = {
+			AND = {
+				has_completed_focus = extra_tech_slot
+				has_completed_focus = GER_air_innovation_2
+			}
+		}
 
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -5441,10 +5467,10 @@ focus_tree = {
 	focus = {
 		id = GER_wunderwaffe
 		icon = GFX_focus_wonderweapons
-		prerequisite = { focus = GER_rocketry_focus }
+		prerequisite = { focus = AUS_rocketry_focus }
 		x = 0
 		y = 1
-		relative_position_id = GER_rocketry_focus
+		relative_position_id = AUS_rocketry_focus
 		cost = 10
 		ai_will_do = {
 			factor = 1

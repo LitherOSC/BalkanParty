@@ -1,0 +1,41 @@
+##################
+#Austrian events
+#################
+
+add_namespace = austria
+
+country_event = {
+	id = austria.1
+	title = austria.1.t
+	desc = austria.1.desc
+	picture = GFX_report_event_election_vote
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = AUS
+	}
+	option = {
+		name = austria.1.a
+		ai_chance = {
+			factor = 50
+		}
+		complete_national_focus = AUS_Archduke_Robert_of_Austria_Este
+	}
+	option = {
+		name = austria.1.b
+		ai_chance = {
+			factor = 30
+		}
+		complete_national_focus = AUS_GER_greater_austria
+	}
+	option = {
+		name = austria.1.c
+		ai_chance = {
+			factor = 20
+		}
+		complete_national_focus = AUS_elect_the_KPO
+	}
+}
