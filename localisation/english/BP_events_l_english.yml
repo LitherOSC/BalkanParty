@@ -4,7 +4,7 @@
 ###############################
 
  austria.1.t:0 "Election of 1936"
- austria.1.desc:0 "The Time has come for a decisive choice of national policy and party. Three candidates are up for the masses to choose, or atleast so shall they believe. \n\nWill the last emperor of Austria Hungary, Archduke Robert of Austria Este, return to politics? \nShall the nationalists carry out their dreams of a Greater Austria?  \nOr perhaps... the communists will secure the election through dubious means? \n\nI consider it completely unimportant who in the party will vote, or how; but what is extraordinarily important is this — who will count the votes, and how. -Joseph Stalin; The Memoirs of Stalin's Former Secretary by Boris Bazhanov"
+ austria.1.desc:0 "The Time has come for a decisive choice of national policy and party. Three candidates are up for the masses to choose, or at-least so shall they believe. \n\nWill the last emperor of Austria Hungary, Archduke Robert of Austria Este, return to politics? \nShall the nationalists carry out their dreams of a Greater Austria?  \nOr perhaps... the communists will secure the election through dubious means? \n\nI consider it completely unimportant who in the party will vote, or how; but what is extraordinarily important is this — who will count the votes, and how. -Joseph Stalin; The Memoirs of Stalin's Former Secretary by Boris Bazhanov"
  austria.1.a:0 "The Archduke will rebuild the glory of the past!"
  austria.1.b:0 "Don't be stupid, be a smarty; come and join your Nazi Party!"
  austria.1.c:0 "Let a KPO member guard the vote box."
@@ -20,4 +20,30 @@
 
  austria.4.t:0 "Slovenia accepts demands"
  austria.4.desc:0 "Austrian diplomats have been successful in pressuring the Slovenians. They have agreed to become part of greater Austria."
- austria.4.a:0 "Good to see they have come to their sences."
+ austria.4.a:0 "Good to see they have come to their senses."
+
+ austria.5.t:0 "Austria Demands Subjugation"
+ austria.5.desc:0 "Austrian diplomats have arrived demanding we fold in the face of their pressure. We are a proud people but they Austrians are mighty, their armies vast."
+ austria.5.a:0 "Unless you are forty to one, Your force will soon be undone, undone!"
+ austria.5.b:0 "If they promise to maintain our autonomy, so be it."
+
+ austria.6.t:0 "Hungary rejects demands"
+ austria.6.desc:0 "Austrian diplomats haven't been successful in pressuring the Hungarians. They have refused to become part of greater Austria. We shall take more direct means."
+ austria.6.a:0 "So they have chosen death!"
+
+ austria.7.t:0 "Slovenia accepts demands"
+ austria.7.desc:0 "Austrian diplomats have been successful in pressuring the Slovenians. They have agreed to become part of greater Austria."
+ austria.7.a:0 "Good to see they have come to their senses."
+
+ austria.8.t:0 "Austria Proposes Alliance"
+ austria.8.desc:0 "Austrian diplomats have arrived proposing an alliance. The SS accompanying them has offered a lucrative personnel exchange offer that can benefit both of our states."
+ austria.8.a:0 "A tempting proposal, but Croatia forges its own path."
+ austria.8.b:0 "We gladly accept their offer"
+
+ austria.9.t:0 "Croatia refuses Alliance"
+ austria.9.desc:0 "Austrian diplomats and the SS haven't been successful in tempting the Croats to stand by our side. While most unfortunate, its hardly surprising considering how pride a people they are."
+ austria.9.a:0 "We didn't need them anyway."
+
+ austria.10.t:0 "Croatia agrees to Alliance"
+ austria.10.desc:0 "Austrian diplomats have been successful in their mission. The SS have already began their exchange program. We expect great things from the Croats."
+ austria.10.a:0 "A toast to our Croat friends!"

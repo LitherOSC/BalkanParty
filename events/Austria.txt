@@ -114,14 +114,14 @@ country_event = {
 				any_other_country = {
 					has_guaranteed = SLV
 				}
-				factor = 5 #i've got friends
+				factor = 2 #i've got friends
 			}
 			modifier = {
 				any_other_country = {
 					is_major = yes
 					has_guaranteed = SLV
 				}
-				factor = 5 #i've got big friends
+				factor = 3 #i've got big friends
 			}
 		}
 		AUS = {
@@ -145,6 +145,7 @@ country_event = {
 
 	option = {
 		name = austria.3.a
+		custom_effect_tooltip = austria.3.tooltip
 		create_wargoal = {
 			type = take_state_focus
 			target = SLV
@@ -153,6 +154,7 @@ country_event = {
 	}
 }
 
+#Slovenia accepts
 country_event = {
 	id = austria.4
 	title = austria.4.t
@@ -167,6 +169,7 @@ country_event = {
 
 	option = {
 		name = austria.4.a
+		custom_effect_tooltip = austria.4.tooltip
 		102 = {
 			add_core_of = AUS
 		}
@@ -183,10 +186,259 @@ country_event = {
 		}
 		annex_country = { target = SLV transfer_troops = yes }
 		add_political_power = 75
-		set_country_flag = AUS_annexed
 		add_war_support = 0.1
 		add_stability = 0.05
 
+
+	}
+}
+
+# Hungarian question
+country_event = {
+	id = austria.5
+	title = austria.5.t
+	desc = austria.5.desc
+	picture = GFX_report_event_hitler_parade
+
+
+
+	option = { # Accept
+		name = austria.5.a
+		ai_chance = {
+			base = 45
+			modifier = {
+				add = -50
+				AUS = { has_army_size = { size < 10 } }
+			}
+			modifier = {
+				add = 100
+				AUS = { has_army_manpower = { size > 199999 } }
+			}
+			modifier = {
+				add = 50
+				is_in_faction_with = AUS
+			}
+		}
+		AUS = {
+			country_event = { hours = 2 id = austria.7 }
+		}
+		custom_effect_tooltip = austria.7.tooltip.youwillbesubject
+	}
+	option = { # Refuse
+		name = austria.5.b
+		ai_chance = {
+			base = 50
+			modifier = {
+				add = 20
+				is_historical_focus_on = yes
+			}
+			modifier = {
+				AUS = { has_army_manpower = { size > 199999 } }
+				factor = 0.5
+			}
+			modifier = {
+				AUS = { has_army_manpower = { size > 249999 } }
+				add = -70
+			}
+			modifier = {
+				add = 50
+				AUS = { has_army_manpower = { size < 149999 } }
+			}
+			modifier = {
+				factor = 2
+				is_in_faction = yes
+				NOT = { is_in_faction_with = AUS }
+			}
+			modifier = {
+				any_other_country = {
+					has_guaranteed = SLV
+				}
+				factor = 2 #i've got friends
+			}
+			modifier = {
+				any_other_country = {
+					is_major = yes
+					has_guaranteed = SLV
+				}
+				factor = 3 #i've got big friends
+			}
+		}
+		AUS = {
+			add_opinion_modifier = { target = ROOT modifier = GER_anschluss_rejected }
+			country_event = { hours = 2 id = austria.6 }
+			if = { limit = { is_in_faction_with = SLV }
+				remove_from_faction = SLV
+			}
+		}
+	}
+}
+
+# Hungary refuses
+country_event = {
+	id = austria.6
+	title = austria.6.t
+	desc = austria.6.desc
+	picture = GFX_report_event_german_troops
+
+
+
+	option = {
+		name = austria.6.a
+		custom_effect_tooltip = austria.6.tooltip
+		create_wargoal = {
+			type = puppet_wargoal_focus 
+			target = HUN
+		}
+	}
+}
+
+#Hungary accepts
+country_event = {
+	id = austria.7
+	title = austria.7.t
+	desc = austria.7.desc
+	picture = GFX_report_event_german_speech
+
+	is_triggered_only = yes
+
+ 	immediate = {
+ 		add_named_threat = { threat = 5 name = austria.7.t }
+ 	}
+
+	option = {
+		name = austria.7.a
+		custom_effect_tooltip = austria.7.tooltip
+		add_political_power = 100
+		add_war_support = 0.1
+		add_stability = 0.05
+		AUS = { puppet = HUN }
+
+	}
+}
+
+# Croat alliance offer
+country_event = {
+	id = austria.8
+	title = austria.8.t
+	desc = austria.8.desc
+	picture = GFX_report_event_gre_allied_diplomacy
+
+
+	option = { # Accept
+		name = austria.8.a
+		ai_chance = {
+			base = 45
+			modifier = {
+				add = -50
+				AUS = { has_army_size = { size < 10 } }
+			}
+			modifier = {
+				add = 100
+				AUS = { has_army_manpower = { size > 199999 } }
+			}
+			modifier = {
+				add = 50
+				is_in_faction_with = AUS
+			}
+		}
+		AUS = {
+			country_event = { hours = 2 id = austria.10 }
+		}
+		custom_effect_tooltip = austria.10.tooltip.youwillbesubject
+	}
+	option = { # Refuse
+		name = austria.8.b
+		ai_chance = {
+			base = 50
+			modifier = {
+				add = 20
+				is_historical_focus_on = yes
+			}
+			modifier = {
+				AUS = { has_army_manpower = { size > 199999 } }
+				factor = 0.5
+			}
+			modifier = {
+				AUS = { has_army_manpower = { size > 249999 } }
+				add = -70
+			}
+			modifier = {
+				add = 50
+				AUS = { has_army_manpower = { size < 149999 } }
+			}
+			modifier = {
+				factor = 2
+				is_in_faction = yes
+				NOT = { is_in_faction_with = AUS }
+			}
+			modifier = {
+				any_other_country = {
+					has_guaranteed = SLV
+				}
+				factor = 2 #i've got friends
+			}
+			modifier = {
+				any_other_country = {
+					is_major = yes
+					has_guaranteed = SLV
+				}
+				factor = 3 #i've got big friends
+			}
+		}
+		AUS = {
+			add_opinion_modifier = { target = ROOT modifier = GER_anschluss_rejected }
+			country_event = { hours = 2 id = austria.9 }
+			if = { limit = { is_in_faction_with = SLV }
+				remove_from_faction = SLV
+			}
+			add_ideas = AUS_ss_shared_idea
+			add_to_faction = CRO
+		}
+		CRO = {
+			add_ideas = AUS_ss_shared_idea
+		}
+	}
+}
+
+# Croatia refuses
+country_event = {
+	id = austria.9
+	title = austria.9.t
+	desc = austria.9.desc
+	picture = GFX_report_event_hungary_refused
+
+
+
+	option = {
+		name = austria.9.a
+		custom_effect_tooltip = austria.9.tooltip
+		create_wargoal = {
+			type = puppet_wargoal_focus 
+			target = HUN
+		}
+	}
+}
+
+#Croatia accepts
+country_event = {
+	id = austria.10
+	title = austria.10.t
+	desc = austria.10.desc
+	picture = GFX_report_event_chinese_japanese_handshake
+
+	is_triggered_only = yes
+
+ 	immediate = {
+ 		add_named_threat = { threat = 5 name = austria.10.t }
+ 	}
+
+	option = {
+		name = austria.10.a
+		custom_effect_tooltip = austria.10.tooltip
+		add_political_power = 100
+		add_war_support = 0.1
+		add_stability = 0.05
+		AUS = { puppet = HUN }
 
 	}
 }

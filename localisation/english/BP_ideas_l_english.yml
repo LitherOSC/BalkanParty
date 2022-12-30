@@ -20,6 +20,14 @@
  AUS_KPO_COM_guarantees_desc:0 "We must protect our idealogical brothers."
  AUS_KPO_DEM_guarantees:0 "Maintain Balkan Peace"
  AUS_KPO_DEM_guarantees_desc:0 "Having stabalized our interior, we must now seek to protect the fragile peace in the Balkans."
+ AUS_Saal_Schutz:0 "Saal Schutz volunteers"
+ AUS_Saal_Schutz_desc:0 "Don't be stupid, be a smarty. Come and join the Nazi Party!"
+ AUS_germans:0 "Proper Germans"
+ AUS_germans_desc:0 "We Austrians, are Germans after all"
+ AUS_GER_ss_idea:0 "SS"
+ AUS_GER_ss_idea_desc:0 "The Austrian Schutzstaffel"
+ AUS_ss_shared_idea:0 "SS Foreign Personnel Exchange"
+ AUS_ss_shared_idea_desc:0 ""
 
 ########### SER
 

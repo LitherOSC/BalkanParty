@@ -23,3 +23,11 @@
   maintheme:0 "Bosanska Artiljerija"
   maintheme2:0 "My Dad is a War Criminal"
   maintheme3:0 "Serbian Artillery is led by God"
+
+##################################################### TOOLTIP ###########################################
+
+ austria.3.tooltip:0 "Gain a wargoal to seize Slovenia."
+ austria.4.tooltip:0 "Integrate Slovenia"
+ austria.6.tooltip:0 "Gain a wargoal to subjugate Hungary."
+ austria.7.tooltip:0 "Gain a Hungarian puppet."
+ austria.7.tooltip.youwillbesubject:0 "YOU WILL BECOME A SUBJECT"

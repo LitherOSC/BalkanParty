@@ -70,7 +70,8 @@ bookmarks = {
 			history = 
 			ideology = neutrality
 			ideas = {
-
+				AUS_Saal_Schutz
+				AUS_germans
 			}
 			focuses = {
 				AUS_Archduke_Robert_of_Austria_Este
