@@ -37,7 +37,7 @@ focus_tree = {
 		mutually_exclusive = {focus = SER_revive_YUG}
 		
 		ai_will_do = {
-			factor = 1
+			factor = 50
 		}
 	
 		available_if_capitulated = yes
@@ -184,6 +184,9 @@ focus_tree = {
 		search_filters = {   }
 		prerequisite = { focus = SER_democratic_rights}
 		prerequisite = { focus = SER_cultural_exchange}
+		ai_will_do = {
+			factor = 50
+		}
 		
 		available_if_capitulated = yes
 
@@ -220,6 +223,9 @@ focus_tree = {
 		x = -2
 		y = 4
 		cost = 10
+		ai_will_do = {
+			factor = 50
+		}
 		search_filters = {   }
 		prerequisite = { focus = SER_state_security_forces}
 		
@@ -365,7 +371,19 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-
+			every_country = {
+				limit = {
+					has_government = fascism
+					NOT = { is_in_faction_with = ROOT }
+				}
+				ROOT = {
+					create_wargoal = {
+						target = PREV
+						type = puppet_wargoal_focus
+						expire = 0
+					}
+				}
+			}
 
 		}
 	}	
@@ -467,7 +485,7 @@ focus_tree = {
 		mutually_exclusive = {focus = SER_acknowledge_neighbors}
 		
 		ai_will_do = {
-			factor = 3
+			factor = 100
 		}
 
 		available_if_capitulated = yes
@@ -488,6 +506,9 @@ focus_tree = {
 		cost = 10
 		search_filters = {   }
 		prerequisite = { focus = SER_revive_YUG}
+		ai_will_do = {
+			factor = 30
+		}
 		
 		available_if_capitulated = yes
 
@@ -513,6 +534,9 @@ focus_tree = {
 		x = 0
 		y = 1
 		cost = 10
+		ai_will_do = {
+			factor = 30
+		}
 		search_filters = {   }
 		prerequisite = { focus = SER_revive_YUG}
 		
@@ -532,6 +556,9 @@ focus_tree = {
 		cost = 10
 		search_filters = {   }
 		prerequisite = { focus = SER_revive_YUG}
+		ai_will_do = {
+			factor = 20
+		}
 		
 		available_if_capitulated = yes
 
@@ -555,8 +582,8 @@ focus_tree = {
 		prerequisite = { focus = SER_rally_paramilitaries}
 
 		ai_will_do = {
-			factor = 1
-		}		
+			factor = 20
+		}
 		available_if_capitulated = yes
 
 		completion_reward = {
@@ -601,6 +628,9 @@ focus_tree = {
 		x = 0
 		y = 2
 		cost = 5
+		ai_will_do = {
+			factor = 100
+		}
 		search_filters = {   }
 		prerequisite = { focus = SER_king_civil_war}
 		prerequisite = { focus = SER_rally_paramilitaries}
@@ -624,6 +654,9 @@ focus_tree = {
 		x = -1
 		y = 1
 		cost = 10
+		ai_will_do = {
+			factor = 40
+		}
 		mutually_exclusive = {focus = SER_king_civil_war}
 		search_filters = {   }
 		prerequisite = { focus = SER_monarchy_memories}
@@ -648,6 +681,9 @@ focus_tree = {
 		x = 0
 		y = 1
 		cost = 10
+		ai_will_do = {
+			factor = 100
+		}
 		search_filters = {   }
 		prerequisite = { focus = SER_king_influence}
 		
@@ -675,14 +711,20 @@ focus_tree = {
 		cost = 10
 		search_filters = {   }
 		prerequisite = { focus = SER_king_takeover focus = SER_king_civil_war}
-		
+		ai_will_do = {
+			factor = 400
+		}
 		available_if_capitulated = yes
 		available = {
 			has_war = true
 		}
 		completion_reward = {
 			set_cosmetic_tag = SER_YUG_KING
-
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.2
+			}	
+			add_war_support = 0.1
 		}
 	}
 	focus = {
@@ -729,6 +771,10 @@ focus_tree = {
 		search_filters = {   }
 		prerequisite = { focus = SER_execute_civilian_traitors }
 		prerequisite = { focus = SER_proclaim_YUG}
+
+		ai_will_do = {
+			factor = 10
+		}
 		
 		available_if_capitulated = yes
 
@@ -748,6 +794,18 @@ focus_tree = {
 		prerequisite = { focus = SER_YUG_national_guard}
 		
 		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				neutrality > 0.5
+			}
+			modifier = {
+				factor = 100
+				neutrality < 0.5
+			}
+		}
 
 		completion_reward = {
 			add_political_power = 150
@@ -1550,7 +1608,7 @@ focus_tree = {
 		prerequisite = { focus = }
 		
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 
 		available_if_capitulated = yes
@@ -1586,7 +1644,9 @@ focus_tree = {
 		cost = 5
 		search_filters = {   }
 		prerequisite = { focus = SER_fund_army}
-		
+		ai_will_do = {
+			factor = 10
+		}
 		available_if_capitulated = yes
 
 		completion_reward = {
@@ -1606,19 +1666,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 70
-			modifier = {
-				factor = 1.2
-				is_in_faction_with = GER
-			}
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
+			factor = 10
 		}
 
 		cancel_if_invalid = yes

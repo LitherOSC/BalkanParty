@@ -108,10 +108,14 @@
   AUS_KPO_socialist_militia_desc:0 "We must balance out the Nationalist Paramilitarism with our own."
   AUS_COM_peasant_army:0 "Peasant Army"
   AUS_COM_peasant_army_desc:0 "The workers, while ready to fight, are far more useful in the factories, they can be used as a reserve. The peasants will go into the fray first."
-  AUS_COM_trotskyite_model:0 "Trotskyite Model"
-  AUS_COM_trotskyite_model_desc:0 "The list of communist countries is incomplete. YOU CAN HELP BY EXPANDING IT."
+  AUS_KPO_nationalist_socialism:0 "Nationalist Socialist Democracy"
+  AUS_KPO_nationalist_socialism_desc:0 "There have been heavy concessions to the nationalists, while maintaining a democratic system. Perhaps rather than fighting the flow of politics, we should embrace the opinion of the people and fuse the parties into one."
+  AUS_KPO_nationalist_purge:0 "Purge the Nationalists"
+  AUS_KPO_nationalist_purge_desc:0 "The facade of a democratic government, tolerant of the right has gone on for long enough. It is time to purge this threat of our very existance."
   AUS_COM_anti_fascism:0 "Anti Fascism Policy"
   AUS_COM_anti_fascism_desc:0 "Fascism is a grave threat to our very existance, we must be the vanguard of the socialist cause that stands against it."
+  AUS_KPO_great_purge:0 "Great Purge"
+  AUS_KPO_great_purge_desc:0 "Enemies remain throught the state. They must be thoroughly rooted out."
 
   AUS_KPO_collectivize_industries:0 "Collectivize Industries"
   AUS_KPO_collectivize_industries_desc:0 "We must collectivize key industies. "
@@ -121,10 +125,10 @@
   AUS_COM_IND_CIV_2_desc:0 "Civilians demand everything from toilets to books to cars. We must expand our civilian industry to meet these demands."
   AUS_COM_IND_adm:0 "Bureau of Industry"
   AUS_COM_IND_adm_desc:0 "A bureau must be established to properly oversee the industrial programs of Serbia."
-  AUS_COM_IND_INF_1:0 "Serbian Roads"
-  AUS_COM_IND_INF_1_desc:0 "The roads of a nation are like its veins. They must not be neglected, and infact, be expanded upon."
-  AUS_COM_IND_INF_2:0 "Serbian Rail"
-  AUS_COM_IND_INF_2_desc:0 "If roads are veins, railroads are arteries. A national effort must be conducted to imcrease their count."
+  AUS_KPO_IND_INF_1:0 "Austrian Roads"
+  AUS_KPO_IND_INF_1_desc:0 "The roads of a nation are like its veins. They must not be neglected, and infact, be expanded upon."
+  AUS_KPO_IND_INF_2:0 "Austrian Autoban"
+  AUS_KPO_IND_INF_2_desc:0 "If roads are veins, roads where speed is just a number will surely only improve transportantion."
   AUS_COM_IND_mil_1:0 "Fire Arm Production"
   AUS_COM_IND_mil_1_desc:0 "Fire Arms are essential in the hellhole that is the Balkans. Can't fire at will if you have nothing to fire with."
   AUS_COM_IND_mil_2:0 "Barrel production"
@@ -134,6 +138,8 @@
 
   AUS_GER_greater_austria:0 "Ein größeres Österreich"
   AUS_GER_greater_austria_desc:0 "Ein größeres Österreich, eine blühende Zukunft ist in greifbarer Nähe. Dies ist die Stunde, das Jahrhundert, um unseren Platz im Herzen Europas zu markieren!"
+  AUS_GER_demand_slovenia:0 "Demand Slovenia"
+  AUS_GER_demand_slovenia_desc:0 "The Slovenians hold the access to the sea, it is our right, we must take it. Will the Slovenians peacefully fold or will they put up a pitiful last stand?"
 
   AUS_GER_north_wall:0 "Czech Wall"
   AUS_GER_north_wall_desc:0 "The Czech build their fortifications like a second Maginot Line. We should return the gesture."
@@ -143,6 +149,8 @@
   AUS_oil_expansion_desc:0 "We have been fortunate enough to have a natural oil field. We must exploit it to its full potential"
   AUS_rocketry_focus:0 "Austrian Rocketry Efforts"
   AUS_rocketry_focus_desc:0 "There is a new field of warfare yet to be properly researched. With large rockets we can potentially strike anywhere in the Balkans with hundreds of kilograms of explosives."
+  AUS_autoban:0 "Austrian Autoban"
+  AUS_autoban_desc:0 "As proper germans, we need proper roads"
 
 ################### MNT
 

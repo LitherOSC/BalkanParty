@@ -110,6 +110,32 @@ ideas = {
 				agency_upgrade_time = -0.25
 			}
 		}
+		AUS_KPO_great_purge_idea = {
+			
+			picture = officers_purged
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				fascism_drift = -0.1
+				communism_drift = 0.2
+				max_planning = -0.025
+				army_defence_factor = -0.025
+				army_attack_factor = -0.025
+				max_planning = -0.025
+				defence = -0.025
+        weekly_manpower = -50
+        conscription_factor = -0.25
+				political_power_factor = 0.25
+			}
+		}
 	}
 	# TECHNOLOGY
 	tank_manufacturer = {

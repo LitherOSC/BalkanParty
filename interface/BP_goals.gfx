@@ -1,10 +1,7 @@
 spriteTypes = {	
 ####################################################
 
-	SpriteType = {
-	name = "GFX_AUS_secure_electors"
-	texturefile = "gfx/interface/goals/goal_continuous_air_production.dds"			
-	}
+
 
 	SpriteType = {
 	name = "GFX_AUS_imperial_ascendancy"
@@ -60,10 +57,7 @@ spriteTypes = {
 	texturefile = "gfx/interface/goals/the_viennese_waltz.dds"			
 	}
 	
-	SpriteType = {
-	name = "GFX_AUS_decline_of_hungary"
-	texturefile = "gfx/interface/goals/goal_continuous_air_production.dds"			
-	}
+
 	SpriteType = {
 	name = "GFX_AUS_the_hungarian_question"
 	texturefile = "gfx/interface/goals/the_hungarian_question.dds"			
@@ -76,42 +70,19 @@ spriteTypes = {
 	name = "GFX_AUS_multicultural_empire"
 	texturefile = "gfx/interface/goals/multicultural_empire.dds"			
 	}
-	SpriteType = {
-	name = "GFX_AUS_secure_croatia"
-	texturefile = "gfx/interface/goals/goal_continuous_air_production.dds"			
-	}
 
-	SpriteType = {
-	name = "GFX_AUS_italian_ambition"
-	texturefile = "gfx/interface/goals/goal_continuous_air_production.dds"			
-	}
 		
-	SpriteType = {
-	name = "GFX_AUS_duchy_of_milan"
-	texturefile = "gfx/interface/goals/goal_continuous_air_production.dds"			
-	}
-		
-	SpriteType = {
-	name = "GFX_AUS_king_of_naples"
-	texturefile = "gfx/interface/goals/goal_continuous_air_production.dds"			
-	}
 		
 	SpriteType = {
 	name = "GFX_AUS_defeat_the_serbs"
 	texturefile = "gfx/interface/goals/defeat_the_serbs.dds"			
 	}	
-	SpriteType = {
-	name = "GFX_AUS_conquer_transylvania"
-	texturefile = "gfx/interface/goals/goal_continuous_air_production.dds"			
-	}	
+
 	SpriteType = {
 	name = "GFX_AUS_push_on_to_bulgaria"
 	texturefile = "gfx/interface/goals/push_on_to_bulgaria.dds"			
 	}	
-	SpriteType = {
-	name = "GFX_AUS_the_scourge_of_europe"
-	texturefile = "gfx/interface/goals/goal_continuous_air_production.dds"			
-	}	
+
 	SpriteType = {
 	name = "GFX_goal_continuous_air_production"
 	texturefile = "gfx/interface/goals/goal_continuous_air_production.dds"			

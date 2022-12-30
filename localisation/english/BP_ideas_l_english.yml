@@ -12,6 +12,14 @@
  AUS_KPO_socialist_militia_idea_desc:0 ""
  AUS_KPO_state_security_forces_idea:0 "Socialist Gestapo"
  AUS_KPO_state_security_forces_idea_desc:0 ""
+ AUS_KPO_great_purge_idea:0 "Great Purge"
+ AUS_KPO_great_purge_idea_desc:0 "The effects of the purge will be felt for a long time."
+ AUS_KPO_COM_faction:0 "Socialist Austrian Bloc"
+ AUS_KPO_COM_faction_desc:0 "The time has come for a unified communist front where fellow commies in peirl can flock to."
+ AUS_KPO_COM_guarantees:0 "Guarantee fellow Communists"
+ AUS_KPO_COM_guarantees_desc:0 "We must protect our idealogical brothers."
+ AUS_KPO_DEM_guarantees:0 "Maintain Balkan Peace"
+ AUS_KPO_DEM_guarantees_desc:0 "Having stabalized our interior, we must now seek to protect the fragile peace in the Balkans."
 
 ########### SER
 

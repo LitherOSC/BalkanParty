@@ -8,3 +8,16 @@
  austria.1.a:0 "The Archduke will rebuild the glory of the past!"
  austria.1.b:0 "Don't be stupid, be a smarty; come and join your Nazi Party!"
  austria.1.c:0 "Let a KPO member guard the vote box."
+
+ austria.2.t:0 "Austria Demands Subjugation"
+ austria.2.desc:0 "Austrian diplomats have arrived demanding we fold in the face of their pressure. We are a proud people but they Austrians are mighty, their armies vast."
+ austria.2.a:0 "Unless you are forty to one, Your force will soon be undone, undone!"
+ austria.2.b:0 "If they promise to spare the people, so be it."
+
+ austria.3.t:0 "Slovenia rejects demands"
+ austria.3.desc:0 "Austrian diplomats haven't been successful in pressuring the Slovenians. They have refused to become part of greater Austria. We shall take more direct means."
+ austria.3.a:0 "So they have chosen death!"
+
+ austria.4.t:0 "Slovenia accepts demands"
+ austria.4.desc:0 "Austrian diplomats have been successful in pressuring the Slovenians. They have agreed to become part of greater Austria."
+ austria.4.a:0 "Good to see they have come to their sences."
