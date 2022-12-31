@@ -227,6 +227,27 @@ ideas = {
 				agency_upgrade_time = -0.25
 			}
 		}
+		AUS_GER_trained_population = {
+			
+			picture = chi_army_corruption3
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				weekly_manpower = 250
+				mobilization_speed = 0.25
+				recruitable_population = 0.1
+				conscription_factor = 0.25
+				experience_loss_factor = -0.25
+			}
+		}
 	}
 	# TECHNOLOGY
 	tank_manufacturer = {

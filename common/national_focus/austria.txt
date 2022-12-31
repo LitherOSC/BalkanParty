@@ -2869,7 +2869,7 @@ focus_tree = {
 		icon = GFX_goal_generic_territory_or_war
 		prerequisite = { focus = GER_anschluss }
 		available = { is_subject = no }
-		x = 1
+		x = -3
 		y = 1
 		relative_position_id = GER_anschluss
 		cost = 10
@@ -3084,7 +3084,7 @@ focus_tree = {
 			}
 		}
 		cancel_if_invalid = no
-		x = -3
+		x = -1
 		y = 1
 		relative_position_id = GER_anschluss
 		cost = 10
@@ -3168,7 +3168,7 @@ focus_tree = {
 		prerequisite = { focus = GER_anschluss }
 
 		cancel_if_invalid = yes
-		x = -1
+		x = 3
 		y = 1
 		relative_position_id = GER_anschluss
 		cost = 10
@@ -3300,82 +3300,12 @@ focus_tree = {
 		}
 	}
 
-	focus = {
-		id = GER_second_vienna_award
-		icon = GFX_goal_generic_cavalry
-		prerequisite = { focus = GER_czech_friend focus = GER_end_of_czechoslovakia }
-		x = 0
-		y = 3
-		relative_position_id = GER_czech_friend
-		cost = 10
-		ai_will_do = {
-			factor = 10
-		}
-		available = {
-			is_subject = no
-			has_army_manpower = { size > 749999 }
-			has_capitulated = no
-		}
-		bypass = {
-			OR = {
-				AND = {
-					OR = {
-						HUN = {
-							NOT = { has_government = fascism }
-							is_friend_or_potential_friend_of_GER = no
-						}
-						ROM = {
-							OR = {
-								AND = {
-									NOT = { controls_state = 76 }
-									NOT = { controls_state = 83 }
-									NOT = { controls_state = 84 }
-								}
-								has_war_with = HUN
-								AND = {
-									is_in_faction_with = GER
-									HUN = { NOT = { is_in_faction_with = GER } }#GER should not want to give territory to Hungary if Romania joined the axis early.
-								}
-							}
-						}
-					}
-					OR = {
-						BUL = { is_friend_or_potential_friend_of_GER = no }
-						ROM = {
-							OR = {
-								NOT = { controls_state = 77 }
-								has_war_with = BUL					
-							}
-						}					
-					}
-				}
-				HUN = { exists = no } 
-				ROM = { exists = no	}
-				HUN = { has_capitulated = yes }
-				ROM = { has_capitulated = yes }
-				HUN = { is_subject_of = ROM } #just rude
-			}
-		}
-		completion_reward = {
-			if = {
-				limit = {
-					HUN = {
-						is_friend_or_potential_friend_of_GER = yes
-					}
-					ROM = {
-						controls_state = 76
-						NOT = { has_war_with = HUN }
-					}
-				}
-				country_event = { id = germany.20 }
-			}
-		}
-	}
+
 
 	focus = {
 		id = AUS_GER_ally_CRO
 		icon = GFX_focus_YUG_banovina_of_croatia
-		prerequisite = { focus = GER_second_vienna_award }
+		prerequisite = { focus = AUS_GER_ss }
 		available = {
 			NOT = { has_war_with = CRO }
 			CRO = {
@@ -3401,9 +3331,9 @@ focus_tree = {
 			}
 		}
 
-		x = 0
+		x = 2
 		y = 1
-		relative_position_id = GER_second_vienna_award
+		relative_position_id = AUS_GER_ss
 		cost = 10
 		ai_will_do = {
 			factor = 20
@@ -3757,341 +3687,100 @@ focus_tree = {
 	############################################
 
 	focus = {
-		id = GER_demand_slovenia
+		id = AUS_GER_military_complex
 		prerequisite = { focus = GER_anschluss }
-		icon = GFX_goal_generic_political_pressure
-		available = {
-			is_subject = no
-			controls_state = 4
-			controls_state = 152
-			has_army_manpower = { size > 749999 } #ca 80 div
-		}
-		bypass = {
-			OR = {
-				NOT = {
-					AND = {
-						OR = {
-							YUG = { owns_state = 102 }
-							102 = { owner = { is_subject_of = YUG } }
-						}
-						OR = {
-							YUG = { owns_state = 853 }
-							853 = { owner = { is_subject_of = YUG } }
-						}
-					}
-				}
-				has_war_with = YUG
-				is_in_faction_with = YUG
-				YUG = { is_subject_of = GER }
-				YUG = { has_non_aggression_pact_with = GER }
-				YUG = { has_opinion_modifier = tripartite_pact_opinion }
-			}
-		}
+		icon = GFX_goal_generic_construct_mil_factory
+
 		cancel_if_invalid = yes
-		x = 3
+		x = 1
 		y = 1
 		relative_position_id = GER_anschluss
 		cost = 10
 		ai_will_do = {
-			factor = 1
-		}	
+			factor = 10
+			modifier = {
+				add = 20
+				has_manpower < 250000
+			}
+		}
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 		completion_reward = {
-			add_named_threat = { threat = 2 name = GER_demand_slovenia_threat }
-			YUG = { add_opinion_modifier = { target = GER modifier = GER_demand_slovenia_YUG } }
-			if = {
+			random_owned_controlled_state = {
 				limit = {
-					NOT = { has_war_with = ENG }
-					YUG = { 
-						is_subject = no
-						NOT = { has_war_with = ENG }
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
 					}
 				}
-				ENG = {
-					country_event = { id = britain.14 }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
 				}
 			}
-			if = {
+			random_owned_controlled_state = {
 				limit = {
-					OR = {
-						YUG = { is_puppet = yes }
-						YUG = { has_war_with = ENG }
-						has_war_with = ENG
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
 					}
 				}
-				create_wargoal = {
-					type = annex_everything
-					target = YUG
-					expire = 0
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
 				}
 			}
 		}
 	}
 
 	focus = {
-		id = GER_first_ljubljana_award
-		prerequisite = { focus = GER_demand_slovenia }
-		icon = GFX_goal_generic_military_deal
-		available = {
-			is_subject = no
-			NOT = { is_in_faction_with = YUG }
-			NOT = { YUG = { has_non_aggression_pact_with = GER } }
-			NOT = { YUG = { has_opinion_modifier = tripartite_pact_opinion } }
-			OR = {
-				AND = {
-					country_exists = YUG
-					NOT = { has_war_with = YUG }
-					OR = {
-						owns_state = 102
-						102 = { owner = { is_subject_of = YUG } }
-						owns_state = 853
-						853 = { owner = { is_subject_of = YUG } }
-					}
-				}
-				custom_trigger_tooltip = {
-					tooltip = GER_first_ljubljana_award_tt
-					AND = {
-						NOT = { country_exists = YUG }
-						OR = {
-							owns_state = 102
-							102 = { owner = { is_subject_of = YUG } }
-						}
-						OR = {
-							owns_state = 853
-							853 = { owner = { is_subject_of = YUG } }
-						}
-						OR = {
-							owns_state = 45
-							45 = { owner = { is_subject_of = YUG } }
-						}
-						OR = { #Macedonia
-							owns_state = 106
-							106 = { owner = { is_subject_of = YUG } }
-						}
-						OR = { #New Southern Serbia state
-							owns_state = 803
-							803 = { owner = { is_subject_of = YUG } }
-						}
-						OR = { #Herzegovina
-							owns_state = 804
-							804 = { owner = { is_subject_of = YUG } }
-						}
-						OR = { #Kosovo
-							owns_state = 802
-							802 = { owner = { is_subject_of = YUG } }
-						}
-						OR = {
-							owns_state = 103
-							103 = { owner = { is_subject_of = YUG } }
-						}
-						OR = {
-							owns_state = 105
-							105 = { owner = { is_subject_of = YUG } }
-						}
-					}
-				}
-			}
-			OR = {
-				YUG = {
-					is_subject = no
-				}
-				YUG = {
-					is_puppet_of = GER
-				}
-			}
-		}
+		id = AUS_GER_mandatory_military_service
+		prerequisite = { focus = AUS_GER_military_complex }
+		icon = GFX_focus_generic_manpower
 
-		bypass = {
-			OR = {	
-				is_in_faction_with = YUG
-				YUG = { has_non_aggression_pact_with = GER }
-				YUG = { has_opinion_modifier = tripartite_pact_opinion }
-				NOT = { country_exists = YUG }
-				NOT = {
-					OR = {
-						YUG = {
-							owns_state = 45
-						}
-						45 = { owner = { is_subject_of = YUG } }
-						
-						YUG = {
-							owns_state = 106
-						}
-						106 = { owner = { is_subject_of = YUG } }
-					}
-				}
-				AND = {
-					HUN = { is_friend_or_potential_friend_of_GER = no }
-					BUL = { is_friend_or_potential_friend_of_GER = no }
-					ITA = { is_friend_or_potential_friend_of_GER = no }
-				}
-			}
-		}
 
 		x = 0
 		y = 1
-		relative_position_id = GER_demand_slovenia
+		relative_position_id = AUS_GER_military_complex
 		cost = 10
 		ai_will_do = {
 			factor = 10
+			modifier = {
+				add = 20
+				has_manpower < 250000
+			}
 		}
 		completion_reward = {
-			if = {
-				limit = {
-					HUN = {
-						is_friend_or_potential_friend_of_GER = yes
-						NOT = { is_in_faction_with = YUG }
-					}
-				}
-				hidden_effect = {
-					if = {
-						limit = { 
-							OR = {
-								45 = { is_owned_by = YUG }
-								45 = { is_owned_by = GER }
-							}
-						}
-						HUN = {
-							country_event = { id = hungary.6 days = 1 }
-							add_opinion_modifier = { target = GER modifier = GER_first_ljubljana_award_GER }
-							set_country_flag = GER_first_ljubljana_award
-						}
-					}
-				}
-				effect_tooltip = {
-					if = {
-						limit = {
-								OR = {
-									45 = { is_owned_by = YUG }
-									45 = { is_owned_by = GER }
-								}
-						}
-						HUN = {
-							add_opinion_modifier = { target = GER modifier = GER_first_ljubljana_award_GER }
-							transfer_state = 45
-						}
-					}
-				}
-				every_other_country = {
-					limit = { 
-						is_faction_leader = yes
-						NOT = { tag = GER }
-					}
-					reverse_add_opinion_modifier = { target = HUN modifier = GER_first_ljubljana_award_other }
-				}				
-			}
-			if = {
-				limit = {
-					BUL = {
-						is_friend_or_potential_friend_of_GER = yes
-						NOT = { is_in_faction_with = YUG }
-					}
-				}
-				hidden_effect = {
-					if = {
-						limit = {
-							OR = {
-								106 = { is_owned_by = YUG }
-								106 = { is_owned_by = GER }
-								803 = { is_owned_by = YUG }
-								803 = { is_owned_by = GER }
-							}
-						}
-						BUL = { 
-							country_event = { id = bulgaria.3 days = 1 } 
-							add_opinion_modifier = { target = GER modifier = GER_first_ljubljana_award_GER }
-							set_country_flag = GER_first_ljubljana_award
-						}
-					}
-				}
-				effect_tooltip = {
-					if = {
-						limit = {
-							OR = {
-								106 = { is_owned_by = YUG }
-								106 = { is_owned_by = GER }
-								803 = { is_owned_by = YUG }
-								803 = { is_owned_by = GER }
-							}
-						}
-						BUL = {
-							add_opinion_modifier = { target = GER modifier = GER_first_ljubljana_award_GER }
-							if = {
-								limit = {
-									106 = { is_owned_by = YUG }
-									106 = { is_owned_by = GER }
-								}
-								transfer_state = 106
-							}
-							if = {
-								limit = {
-									803 = { is_owned_by = YUG }
-									803 = { is_owned_by = GER }
-								}
-								transfer_state = 803
-							}
-						}
-					}
-				}
-				every_other_country = {
-					limit = { 
-						is_faction_leader = yes
-						NOT = { tag = GER }
-					}
-					reverse_add_opinion_modifier = { target = BUL modifier = GER_first_ljubljana_award_other }
-				}				
-			}
-			if = {
-				limit = {
-					ITA = {
-						OR = {
-							has_completed_focus = ITA_balkan_ambition
-							owns_state = 44
-						}
-						is_friend_or_potential_friend_of_GER = yes
-						NOT = { is_in_faction_with = YUG }
-					}
-				}
-				hidden_effect = {
-					ITA = { country_event = { id = italy.13 days = 1 } 
-						add_opinion_modifier = { target = GER modifier = GER_first_ljubljana_award_GER }
-					}
-					set_country_flag = GER_first_ljubljana_award
-				}
-				effect_tooltip = {
-					ITA = {
-						add_opinion_modifier = { target = GER modifier = GER_first_ljubljana_award_GER }
-						if = {
-							limit = { has_completed_focus = ITA_balkan_ambition }
-							transfer_state = 103
-						}
-						if = {
-							limit = { owns_state = 44 }
-							transfer_state = 105
-						}
-						if = {
-							limit = { owns_state = 44 }
-							transfer_state = 802
-						}
-					}
-				}
-				every_other_country = {
-					limit = { 
-						is_faction_leader = yes
-						NOT = { tag = GER }
-					}
-					reverse_add_opinion_modifier = { target = ITA modifier = GER_first_ljubljana_award_other }
-				}				
-			}
-			#hidden_effect = {
-			#	news_event = { hours = 6 id = news.208 }
-			#}
+			add_ideas = AUS_GER_trained_population
+			add_manpower = 25000
+			add_political_power = -50
+			add_stability = -0.10
 		}
 	}
 
 	focus = {
 		id = GER_fate_of_yugoslavia
-		prerequisite = { focus = GER_first_ljubljana_award }
+		prerequisite = { focus = AUS_GER_mandatory_military_service }
 		icon = GFX_goal_generic_territory_or_war
 		available = {
 			is_subject = no
@@ -4111,7 +3800,7 @@ focus_tree = {
 		}
 		x = 0
 		y = 1
-		relative_position_id = GER_first_ljubljana_award
+		relative_position_id = AUS_GER_mandatory_military_service
 		cost = 10
 		ai_will_do = {
 			factor = 10
