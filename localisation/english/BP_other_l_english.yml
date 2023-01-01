@@ -15,9 +15,9 @@
   SER_YUG_KING_neutrality:0 "Kingdom of Yugoslavia"
   SER_YUG_KING_neutrality_ADJ:0 "Yugoslavian"
   SER_YUG_KING_neutrality_DEF:0 "Kingdom of Yugoslavia"
-  AUS_GER_greater_aus_cos_tag:0 "Größeres Österreichisch"
-  AUS_GER_greater_aus_cos_tag_ADJ:0 "Größeres Österreich"
-  AUS_GER_greater_aus_cos_tag_DEF:0 "Größeres Österreich"
+  AUS_GER_greater_aus_cos_tag:0 "Größeres Österreich"
+  AUS_GER_greater_aus_cos_tag_ADJ:0 "Größeres Österreichisch"
+  AUS_GER_greater_aus_cos_tag_DEF:0 "Größeres Österreichisch"
   
 #################################################### MUSIC ##############################################
   maintheme:0 "Bosanska Artiljerija"
@@ -31,3 +31,6 @@
  austria.6.tooltip:0 "Gain a wargoal to subjugate Hungary."
  austria.7.tooltip:0 "Gain a Hungarian puppet."
  austria.7.tooltip.youwillbesubject:0 "YOU WILL BECOME A SUBJECT"
+
+ austria.10.tooltip:0 "Croatia joins our faction"
+ austria.13.tooltip:0 "The Turks join our faction"

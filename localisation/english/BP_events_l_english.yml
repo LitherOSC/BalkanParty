@@ -31,8 +31,8 @@
  austria.6.desc:0 "Austrian diplomats haven't been successful in pressuring the Hungarians. They have refused to become part of greater Austria. We shall take more direct means."
  austria.6.a:0 "So they have chosen death!"
 
- austria.7.t:0 "Slovenia accepts demands"
- austria.7.desc:0 "Austrian diplomats have been successful in pressuring the Slovenians. They have agreed to become part of greater Austria."
+ austria.7.t:0 "Hungary accepts demands"
+ austria.7.desc:0 "Austrian diplomats have been successful in pressuring the Hungarians. They have agreed to become part of greater Austria."
  austria.7.a:0 "Good to see they have come to their senses."
 
  austria.8.t:0 "Austria Proposes Alliance"
@@ -47,3 +47,16 @@
  austria.10.t:0 "Croatia agrees to Alliance"
  austria.10.desc:0 "Austrian diplomats have been successful in their mission. The SS have already began their exchange program. We expect great things from the Croats."
  austria.10.a:0 "A toast to our Croat friends!"
+
+ austria.11.t:0 "Austria Proposes Alliance"
+ austria.11.desc:0 "Austrian diplomats have arrived proposing an alliance. The SS accompanying them has offered a lucrative personnel exchange offer that can benefit both of our states."
+ austria.11.a:0 "An alliance with Germans has already ruined us once before"
+ austria.11.b:0 "An perfect opportunity, we join!"
+
+ austria.12.t:0 "Turkey refuses Alliance"
+ austria.12.desc:0 "Austrian diplomats and the SS haven't been successful in tempting the Turkey to stand by our side. While most unfortunate, its hardly surprising considering how pride a people they are."
+ austria.12.a:0 "Filthy Cockroaches, thats what they are!"
+
+ austria.13.t:0 "Turkey agrees to Alliance"
+ austria.13.desc:0 "Austrian diplomats have been successful in their mission. The SS have already began their exchange program. We expect great things from the Turks."
+ austria.13.a:0 "A toast to our Turkish friends!"

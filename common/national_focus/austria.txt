@@ -2902,7 +2902,7 @@ focus_tree = {
 		id = AUS_GER_hungarian_question
 		icon = GFX_focus_proclaim_the_restauration_of_Austria_Hungary
 		prerequisite = { focus = AUS_GER_demand_slovenia }
-		mutually_exclusive = { focus = GER_danzig_vs_slovakia }
+
 		will_lead_to_war_with = HUN
 		available = {
 			is_subject = no
@@ -3085,7 +3085,7 @@ focus_tree = {
 		}
 		cancel_if_invalid = no
 		x = -1
-		y = 1
+		y = 4
 		relative_position_id = GER_anschluss
 		cost = 10
 		ai_will_do = {
@@ -3323,7 +3323,6 @@ focus_tree = {
 		bypass = {
 			OR = {
 				is_in_faction_with = CRO
-				has_war_with = ITA
 				NOT = { country_exists = CRO }
 				CRO = {
 					is_subject = yes
@@ -3337,6 +3336,18 @@ focus_tree = {
 		cost = 10
 		ai_will_do = {
 			factor = 20
+			modifier = {
+				factor = 0
+				AUS = { has_army_size = { size < 10 } }
+			}
+			modifier = {
+				factor = 100
+				AUS = { has_army_manpower = { size > 219999 } }
+			}
+			modifier = {
+				AUS = { has_army_manpower = { size < 199999 } }
+				factor = 1
+			}
 		}
 
 		available_if_capitulated = yes
@@ -3351,107 +3362,52 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = GER_nationalist_spain_ally
-		icon = GFX_goal_generic_major_alliance
+		id = AUS_GER_ally_TUR
+		icon = GFX_focus_generic_befriend_turkey
 		prerequisite = { focus = AUS_GER_ally_CRO }
 		available = {
-			if = {
-				limit = {
-					NOT = { has_dlc = "La Resistance" }
-				}
-				SPR = { has_civil_war = no }
-				any_other_country = {
-					original_tag = SPR
-					has_government = fascism
-					NOT = { has_war_with = GER }
-					NOT = { is_in_faction_with = GER }
-				}
-			}
-			if = {
-				limit = {
-					has_dlc = "La Resistance"
-				}
-				SPA = {
-					exists = yes
-					has_civil_war = no
-					NOT = { has_war_with = GER }
-					NOT = { is_in_faction_with = GER }
-					NOT = { has_completed_focus = SPA_join_the_allies }
-				}
-			}
-			FRA = {
-				OR = {
-					exists = no
-					has_capitulated = yes
-					has_government = fascism
-				}
+
+			TUR = {
+				exists = yes
+				NOT = { has_war_with = AUS }
+				NOT = { TUR = { is_subject = yes } }
 			}
 		}
+		bypass = {
+			OR = {
+				TUR = {
+					is_in_faction_with = AUS
+				}			
+				TUR = {
+					is_subject = yes
+				}	
+			}
+
+
+		}
 		
-		#bypass = {
-		#	any_other_country = {
-		#		original_tag = SPR
-		#		has_government = fascism
-		#		is_in_faction_with = GER
-		#	}
-		#}
 		x = 0
 		y = 1
 		relative_position_id = AUS_GER_ally_CRO
 		cost = 10
 		ai_will_do = {
-			factor = 10
+			factor = 20
 			modifier = {
 				factor = 0
-				OR = {
-					is_historical_focus_on = yes
-					date < 1942.01.01
-					surrender_progress > 0
-					AND = {
-						has_war_with = ENG
-						ENG = { surrender_progress < 0.2 }
-					}
-				}
+				AUS = { has_army_size = { size < 10 } }
+			}
+			modifier = {
+				factor = 100
+				AUS = { has_army_manpower = { size > 259999 } }
+			}
+			modifier = {
+				AUS = { has_army_manpower = { size < 199999 } }
+				factor = 1
 			}
 		}
 		completion_reward = {
-			if = {
-				limit = {
-					OR = { 
-						AND = {
-							NOT = { has_dlc = "La Resistance" }
-							NOT = { country_exists = SPR }
-							SPR = { NOT = { has_government = fascism } }
-						}
-						AND = {
-							has_dlc = "La Resistance"
-							NOT = { country_exists = SPA }
-						}
-					}
-				}
-				custom_effect_tooltip = GER_nationalist_spain_ally_tt
-			}
-			if = {
-				limit = {
-					NOT = { has_dlc = "La Resistance" }
-				}
-				random_other_country = {
-					limit = {
-						original_tag = SPR
-						has_government = fascism
-					}
-					remove_ideas = SPA_recovering_from_civil_war
-					add_opinion_modifier = { target = GER modifier = ger_spa_alliance_focus }
-				}
-			}
-			if = {
-				limit = {
-					has_dlc = "La Resistance"
-				}
-				SPA = {
-					remove_ideas = SPA_recovering_from_civil_war
-					add_opinion_modifier = { target = GER modifier = ger_spa_alliance_focus }
-				}
+			TUR = {
+				country_event = austria.11
 			}
 		}
 	}
@@ -3462,7 +3418,6 @@ focus_tree = {
 		id = GER_danzig_vs_slovakia
 		icon = GFX_goal_generic_intelligence_exchange
 		prerequisite = { focus = GER_end_of_czechoslovakia }
-		mutually_exclusive = { focus = AUS_GER_hungarian_question }
 		available = {
 			is_subject = no
 			OR = {
@@ -3779,25 +3734,9 @@ focus_tree = {
 	}
 
 	focus = {
-		id = GER_fate_of_yugoslavia
+		id = AUS_GER_alpine_divisions
 		prerequisite = { focus = AUS_GER_mandatory_military_service }
-		icon = GFX_goal_generic_territory_or_war
-		available = {
-			is_subject = no
-			NOT = { has_war_with = YUG }
-			NOT = { is_in_faction_with = YUG }
-		}
-		bypass = {
-			OR = {
-				NOT = { country_exists = YUG }
-				any_other_country = {
-					is_in_faction_with = ROOT
-					YUG = {
-						is_puppet_of = PREV
-					}
-				}
-			}
-		}
+		icon = GFX_focus_GRE_a_land_of_mountains
 		x = 0
 		y = 1
 		relative_position_id = AUS_GER_mandatory_military_service
@@ -3807,155 +3746,34 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_ANNEXATION }	
 		completion_reward = {
-			country_event = { id = germany.98 }
-			custom_effect_tooltip = yugoslavia_mefo_bills_tt
+			add_ideas = AUS_GER_mountain_men
+
 		}
 	}
 
 	focus = {
-		id = GER_second_ljubljana_award
+		id = AUS_GER_fort_busters
 		mutually_exclusive = { focus = GER_war_with_greece } 
-		prerequisite = { focus = GER_fate_of_yugoslavia }
-		icon = GFX_goal_generic_forceful_treaty
-		available = {
-			is_subject = no
-			GRE = { 
-				has_war = no 
-				owns_state = 731
-				owns_state = 186
-				owns_state = 185
-				owns_state = 47 
-			}
-		}
+		prerequisite = { focus = AUS_GER_alpine_divisions }
+		icon = GFX_focus_generic_railway_gun
+
 		x = 0
 		y = 1
-		relative_position_id = GER_fate_of_yugoslavia
+		relative_position_id = AUS_GER_alpine_divisions
 		cost = 10
 		ai_will_do = {
 			factor = 10
+			modifier = {
+				factor = 0
+				has_completed_focus = GER_czech_friend
+			}
 		}
 
-		#bypass = {
-		#	OR = {
-		#		GRE = {
-		#			NOT = { owns_state = 731 }
-		#			NOT = { owns_state = 186 }
-		#			NOT = { owns_state = 185 }
-		#			NOT = { owns_state = 47 }
-		#		}
-		#		AND = {
-		#			OR = {
-		#				NOT = { country_exists = ITA }
-		#				ITA = { has_war_with = GRE }
-		#				NOT = { has_completed_focus = ITA_war_with_greece }
-		#				AND = {
-		#					ITA = {
-		#						NOT = { is_in_faction_with = GER }
-		#						is_in_faction = yes
-		#					}
-		#				}
-		#			}
-		#			OR = {
-		#				NOT = { country_exists = BUL }
-		#				BUL = { has_war_with = GRE }
-		#				AND = {
-		#					BUL = {
-		#						NOT = { is_in_faction_with = GER }
-		#						is_in_faction = yes
-		#					}
-		#				}
-		#			}
-		#			AND = {
-		#				731 = {
-		#					OR = {
-		#						NOT = { any_neighbor_state = { is_owned_by = GER } }
-		#						NOT = { is_owned_by = GRE }
-		#					}
-		#				}
-		#				47 = {
-		#					OR = {
-		#						NOT = { any_neighbor_state = { is_owned_by = GER } }
-		#						NOT = { is_owned_by = GRE }
-		#					}
-		#				}
-		#				185 = {
-		#					OR = {
-		#						NOT = { any_neighbor_state = { is_owned_by = GER } }
-		#						NOT = { is_owned_by = GRE }
-		#					}
-		#				}
-		#			}
-		#		}
-		#	}
-		#}
+	
 
 		completion_reward = {
-			add_named_threat = { threat = 2 name = GER_second_ljubljana_award }
-			if = {
-				limit = {
-					GRE = {
-						OR = {
-							owns_state = 185
-							owns_state = 186
-							owns_state = 47
-						} 
-					}
-					ITA = {
-						NOT = { has_war_with = GRE }
-						country_exists = ITA
-						has_completed_focus = ITA_war_with_greece
-						OR = {
-							is_in_faction_with = GER
-							is_in_faction = no							
-						}
-					}
-				}
-				set_global_flag = GER_second_ljubljana_award_ITA_event
-				country_event = { id = germany.99 }
-			}
-			if = {
-				limit = {
-					GRE = { owns_state = 184 }
-					BUL = {
-						NOT = { has_war_with = GRE }
-						country_exists = BUL
-						OR = {
-							is_in_faction_with = GER
-							is_in_faction = no							
-						}
-					}
-				}
-				set_global_flag = GER_second_ljubljana_award_BUL_event
-				country_event = { id = germany.100 }
-			}
-			if = {
-				limit = {
-					any_neighbor_country = {
-						tag = GRE
-					}
-					OR = {
-						NOT = { country_exists = ITA }
-						AND = {
-							ITA = {
-								NOT = { is_in_faction_with = GER }
-								is_in_faction = yes
-							}
-						}
-					}
-					OR = {
-						NOT = { country_exists = BUL }
-						AND = {
-							BUL = {
-								NOT = { is_in_faction_with = GER }
-								is_in_faction = yes
-							}
-						}
-					}
-				}
-				set_global_flag = GER_second_ljubljana_award_GER_event
-				country_event = { id = germany.101 }
-			}
-			custom_effect_tooltip = GER_second_ljubljana_award_tt
+			add_ideas = AUS_GER_railgun_production
+			equipment_bonus = { infantry = { instant = yes build_cost_ic = -0.10 }
 		}
 	}
 
@@ -3963,7 +3781,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_fate_of_greece
-		prerequisite = { focus = GER_second_ljubljana_award }
+		prerequisite = { focus = AUS_GER_fort_busters }
 		icon = GFX_goal_demand_sudetenland
 		available = {
 			country_exists = GRE
@@ -3974,7 +3792,7 @@ focus_tree = {
 		}
 		x = 0
 		y = 1
-		relative_position_id = GER_second_ljubljana_award
+		relative_position_id = AUS_GER_fort_busters
 		cost = 10
 		ai_will_do = {
 			factor = 10

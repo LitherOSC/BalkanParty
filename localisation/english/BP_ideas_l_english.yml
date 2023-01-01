@@ -28,6 +28,10 @@
  AUS_GER_ss_idea_desc:0 "The Austrian Schutzstaffel"
  AUS_ss_shared_idea:0 "SS Foreign Personnel Exchange"
  AUS_ss_shared_idea_desc:0 ""
+ AUS_GER_mountain_men:0 "Mountain Men"
+ AUS_GER_mountain_men_desc:0 ""
+ AUS_GER_railgun_production:0 "Railgun Production"
+ AUS_GER_railgun_production_desc:0 ""
 
 ########### SER
 

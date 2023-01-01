@@ -146,10 +146,17 @@
   AUS_GER_ss:0 "There is a need for a separate military police branch, loyal directly to the state. They shall be known as the Schutzstaffel, SS for short."
   AUS_GER_ally_CRO:0 "Ally Croatia"
   AUS_GER_ally_CRO_desc:0 "No people are more vicious than the Croats. The only thing that matches their ultra nationalism is their skill with a rifle. We must extend an offer to them for a united fascist front, they will be most welcome."
+  AUS_GER_ally_TUR:0 "Ally the Turks"
+  AUS_GER_ally_TUR_desc:0 "An ally in the great war, we offer them to join us once more."
   AUS_GER_military_complex:0 "Military Complex"
   AUS_GER_military_complex_desc:0 "Before we improve the army itself, we need to be certain we can supply it."
   AUS_GER_mandatory_military_service:0 "Mandatory Military Service"
   AUS_GER_mandatory_military_service_desc:0 "We must train the population to be ready for active service. Thus, we can have a much larger manpower pool to draw from."
+  AUS_GER_alpine_divisions:0 "Alpine Divisions"
+  AUS_GER_alpine_divisions_desc:0 "Austria is a mountain country, with the people being natural mountaineers. We can field large numbers of divisions reinforced with these men."
+  AUS_GER_fort_busters:0 "Fort Busters"
+  AUS_GER_fort_busters_desc:0 "The Czechs have dug deep into their hills, their fortifications run deep. To crack them we will need more specialized equipment."
+
 
   AUS_GER_north_wall:0 "Czech Wall"
   AUS_GER_north_wall_desc:0 "The Czech build their fortifications like a second Maginot Line. We should return the gesture."

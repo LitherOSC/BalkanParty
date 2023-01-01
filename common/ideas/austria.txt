@@ -139,7 +139,7 @@ ideas = {
 			
 			picture = generic_fascism_drift_2
 			allowed = {
-				always = no
+				always = yes
 			}
 
 			allowed_civil_war = {
@@ -164,11 +164,11 @@ ideas = {
 			
 			picture = german_advisors
 			allowed = {
-				always = no
+				always = yes
 			}
 
 			allowed_civil_war = {
-				always = no
+				always = yes
 			}
 
 			removal_cost = -1
@@ -231,11 +231,11 @@ ideas = {
 			
 			picture = chi_army_corruption3
 			allowed = {
-				always = no
+				always = yes
 			}
 
 			allowed_civil_war = {
-				always = no
+				always = yes
 			}
 
 			removal_cost = -1
@@ -243,9 +243,54 @@ ideas = {
 			modifier = {
 				weekly_manpower = 250
 				mobilization_speed = 0.25
-				recruitable_population = 0.1
 				conscription_factor = 0.25
 				experience_loss_factor = -0.25
+				conscription = 0.025
+			}
+		}
+		AUS_GER_mountain_men = {
+			
+			picture = tur_disorganised_armed_forces
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				experience_loss_factor = -0.25
+				special_forces_min = 6
+				special_forces_out_of_supply_factor = -0.25
+				special_forces_attack_factor = 0.25
+				special_forces_defence_factor = 0.25
+				special_forces_cap = 0.25
+				special_forces_no_supply_grace = 1
+			}
+		}
+		AUS_GER_railgun_production = {
+			
+			picture = FRA_factory_strikes
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				fortification_damage = 0.1
+			}
+			equipment_bonus = {
+				railway_gun_equipment = {
+					build_cost_ic = -0.2
+					instant = yes
+				}
 			}
 		}
 	}
