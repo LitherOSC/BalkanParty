@@ -18,6 +18,9 @@
   AUS_GER_greater_aus_cos_tag:0 "Größeres Österreich"
   AUS_GER_greater_aus_cos_tag_ADJ:0 "Größeres Österreichisch"
   AUS_GER_greater_aus_cos_tag_DEF:0 "Größeres Österreichisch"
+  AUS_GER_GER_cos_tag:0 "Deutschland"
+  AUS_GER_GER_cos_tag_ADJ:0 "Größeres Deutschland-Österreichisch"
+  AUS_GER_GER_cos_tag_DEF:0 "Größeres Deutschland-Österreichisch"
   
 #################################################### MUSIC ##############################################
   maintheme:0 "Bosanska Artiljerija"
@@ -34,3 +37,8 @@
 
  austria.10.tooltip:0 "Croatia joins our faction"
  austria.13.tooltip:0 "The Turks join our faction"
+
+ austria.100.tooltip:0 "Form Deutschland"
+
+ AUS_GER_anti_commie_tooltip:0 "Gain a causes beli on all commies"
+ AUS_COM_anti_fascist_tooltip:0 "Gain a causes beli on all fascists"

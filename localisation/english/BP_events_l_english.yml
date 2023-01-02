@@ -60,3 +60,15 @@
  austria.13.t:0 "Turkey agrees to Alliance"
  austria.13.desc:0 "Austrian diplomats have been successful in their mission. The SS have already began their exchange program. We expect great things from the Turks."
  austria.13.a:0 "A toast to our Turkish friends!"
+
+ austria.100.t:0 "Deutschland, Deutschland über alles!"
+ austria.100.desc:0 "Deutschland, Deutschland über alles, \nüber alles in der Welt, \nWenn es stets zu Schutz und Trutze \nbrüderlich zusammen hält, \nVon der Maas bis an die Memel, \nvon der Etsch bis an den [Little] Belt, \nDeutschland, Deutschland über alles, \nüber alles in der Welt!"
+ austria.100.a:0 "Erika!"
+
+ austria_news.101.t:0 "Austria forms Germany"
+ austria_news.101.desc:0 "Austria has enjoyed triumph after triumph, without any to successfully stop them. They now a major homogamy in the north, with their influence reaching far down south. What is to become of the Balkans with such a giant amidst them?"
+ austria_news.101.a:0 "We're Unstoppable"
+ austria_news.101.b:0 "There goes any chance of freedom"
+ austria_news.101.c:0 "The big brother gets bigger"
+ austria_news.101.d:0 "This charade has gone on for long enough!"
+

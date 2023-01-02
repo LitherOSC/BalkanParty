@@ -1,0 +1,33 @@
+ideas = {
+
+	country = {
+		Filler_neutrality = {
+
+			picture = tur_kemalist_neutrality
+			
+			removal_cost = -1
+
+		  allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			
+			modifier = {
+				fascism_acceptance = -100
+        neutrality_acceptance = -100
+        communism_acceptance = -100
+        democratic_Acceptance = -100
+				stability_factor = 0.5
+				generate_wargoal_tension = 1.00
+				justify_war_goal_time = 10.00
+				join_faction_tension = 1.00
+				send_volunteers_tension = 1
+				ai_get_ally_desire_factor = -500
+			}
+		}
+  }
+}

@@ -138,10 +138,18 @@
 
   AUS_GER_greater_austria:0 "Ein größeres Österreich"
   AUS_GER_greater_austria_desc:0 "Ein größeres Österreich, eine blühende Zukunft ist in greifbarer Nähe. Dies ist die Stunde, das Jahrhundert, um unseren Platz im Herzen Europas zu markieren!"
+  AUS_GER_anschluss:0 "Österreichisch Anschluss"
+  AUS_GER_anschluss_desc:0 "There are Austrians living near our borders which we can reunite with. Perhaps one day we can reunite all of Germany but that day remains a dream."
   AUS_GER_demand_slovenia:0 "Demand Slovenia"
   AUS_GER_demand_slovenia_desc:0 "The Slovenians hold the access to the sea, it is our right, we must take it. Will the Slovenians peacefully fold or will they put up a pitiful last stand?"
   AUS_GER_hungarian_question:0 "Hungarian Subjugation"
   AUS_GER_hungarian_question_desc:0 "Hungary may have broken free from the grasp of the Hapsburgs, but that was merely a temporary victory on their part "
+  AUS_GER_influence_fellow_fascists:0 "Influence Fellow Fascists"
+  AUS_GER_influence_fellow_fascists_desc:0 "While Austria is strong, it is perhaps not strong enough to take on the entire Balkans. We must find new allies, applying an appropriate amount of pressure as we do so."
+  AUS_GER_anti_commie_pact:0 "Anti Commie Pact"
+  AUS_GER_anti_commie_pact_desc:0 "No bigger enemy exists to the modern man filthy commies. We must bind the Balkans into an anti commie pact to track their vile movements."
+  AUS_GER_anti_commie:0 "Strike at Communism"
+  AUS_GER_anti_commie_desc:0 "No better way to de-communize then by shooting them."
   AUS_GER_ss:0 "SS branch"
   AUS_GER_ss:0 "There is a need for a separate military police branch, loyal directly to the state. They shall be known as the Schutzstaffel, SS for short."
   AUS_GER_ally_CRO:0 "Ally Croatia"
@@ -156,6 +164,8 @@
   AUS_GER_alpine_divisions_desc:0 "Austria is a mountain country, with the people being natural mountaineers. We can field large numbers of divisions reinforced with these men."
   AUS_GER_fort_busters:0 "Fort Busters"
   AUS_GER_fort_busters_desc:0 "The Czechs have dug deep into their hills, their fortifications run deep. To crack them we will need more specialized equipment."
+  AUS_GER_form_GER:0 "Form Deutschland"
+  AUS_GER_form_GER_desc:0 "At long last! We have not only survived but prevailed! We now have enough prestige to truly become german; by becoming Germany!"
 
 
   AUS_GER_north_wall:0 "Czech Wall"

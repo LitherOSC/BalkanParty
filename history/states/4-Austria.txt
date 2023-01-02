@@ -28,7 +28,7 @@ state={
 		1938.3.12 = {
 			owner = FIL
 			controller = GER
-			add_core_of = GER
+			
 		}
 		1939.1.1 = {
 			buildings = {

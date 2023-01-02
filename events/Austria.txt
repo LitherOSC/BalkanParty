@@ -559,3 +559,145 @@ country_event = {
 		}
 	}
 }
+
+#AUS GER GER
+country_event = {
+	id = austria.100
+	title = austria.100.t
+	desc = austria.100.desc
+	picture = GFX_report_event_chinese_japanese_handshake
+
+	is_triggered_only = yes
+
+
+	option = {
+		name = austria.100.a
+		custom_effect_tooltip = austria.100.tooltip
+		add_political_power = 100
+		add_war_support = 0.25
+		add_stability = 0.25
+		news_event = { hours = 1 id = austria_news.101 }
+		every_country = {
+			limit = {
+				NOT = {
+					TAG = AUS
+					TAG = FIL
+					is_puppet_of = AUS
+					is_in_faction_with = AUS
+				}
+			}
+			create_wargoal = {
+				type = puppet_wargoal_focus 
+				target = AUS
+			}
+		}
+		hidden_effect = {
+			50 = {
+				add_core_of = AUS
+			}
+			51 = {
+				add_core_of = AUS
+			}
+			52 = {
+				add_core_of = AUS
+			}
+			53 = {
+				add_core_of = AUS
+			}
+			54 = {
+				add_core_of = AUS
+			}
+			55 = {
+				add_core_of = AUS
+			}
+			56 = {
+				add_core_of = AUS
+			}
+			57 = {
+				add_core_of = AUS
+			}
+			58 = {
+				add_core_of = AUS
+			}
+			59 = {
+				add_core_of = AUS
+			}
+			60 = {
+				add_core_of = AUS
+			}
+			61 = {
+				add_core_of = AUS
+			}
+			62 = {
+				add_core_of = AUS
+			}
+			63 = {
+				add_core_of = AUS
+			}
+			64 = {
+				add_core_of = AUS
+			}
+			65 = {
+				add_core_of = AUS
+			}
+			66 = {
+				add_core_of = AUS
+			}
+			67 = {
+				add_core_of = AUS
+			}
+			68 = {
+				add_core_of = AUS
+			}
+			28 = {
+				add_core_of = AUS
+			}
+			85 = {
+				add_core_of = AUS
+			}
+			807 = {
+				add_core_of = AUS
+			}
+			763 = {
+				add_core_of = AUS
+			}
+			5 = {
+				add_core_of = AUS
+			}
+			42 = {
+				add_core_of = AUS
+			}
+			86 = {
+				add_core_of = AUS
+			}
+			762 = {
+				add_core_of = AUS
+			}
+			every_state = { 
+				limit = { is_core_of = AUS }
+				AUS = { transfer_state = PREV }
+			}
+			set_cosmetic_tag = AUS_GER_GER_cos_tag
+		}
+
+		
+	}
+}
+
+news_event = {
+	id = austria_news.101
+	title = austria_news.101.t
+	desc = austria_news.101.desc
+	picture = GFX_news_event_german_soldiers
+	
+
+	is_triggered_only = yes
+	
+	option = {
+		name = austria_news.101.a
+		trigger = {
+			TAG = AUS
+		}
+	}
+}
+
