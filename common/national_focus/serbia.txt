@@ -326,12 +326,12 @@ focus_tree = {
 	focus = {
 		id = SER_COM_peasant_army
 		icon = GFX_focus_ITA_peasants_rise
-		relative_position_id = SER_socialist_militia
+		relative_position_id = SER_COM_socialist_militia
 		x = 0
 		y = 1
 		cost = 10
 		search_filters = {   }
-		prerequisite = { focus = SER_socialist_militia}
+		prerequisite = { focus = SER_COM_socialist_militia}
 		
 		available_if_capitulated = yes
 
@@ -388,8 +388,13 @@ focus_tree = {
 		}
 	}	
 	focus = {
+<<<<<<< Updated upstream
 		id = 
 		icon = 
+=======
+		id = SER_COM_anti_fascism_2
+		icon = GFX_focus_spr_torchbearers_of_tomorrow
+>>>>>>> Stashed changes
 		relative_position_id = SER_COM_anti_fascism
 		x = 0
 		y = 1
@@ -405,14 +410,22 @@ focus_tree = {
 		}
 	}	
 	focus = {
+<<<<<<< Updated upstream
 		id = 
 		icon = 
 		relative_position_id = 
 		x = 
 		y = 
+=======
+		id = SER_COM_unified_front
+		icon = GFX_focus_generic_join_comintern
+		relative_position_id = SER_COM_trotskyite_model
+		x = 0
+		y = 1
+>>>>>>> Stashed changes
 		cost = 10
 		search_filters = {   }
-		prerequisite = { focus = }
+		prerequisite = { focus = SER_COM_trotskyite_model}
 		
 		available_if_capitulated = yes
 
@@ -422,14 +435,22 @@ focus_tree = {
 		}
 	}	
 	focus = {
+<<<<<<< Updated upstream
 		id = 
 		icon = 
 		relative_position_id = 
 		x = 
 		y = 
+=======
+		id = SER_COM_protect_comrades
+		icon = GFX_goal_support_communism
+		relative_position_id = SER_COM_unified_front
+		x = 0
+		y = 1
+>>>>>>> Stashed changes
 		cost = 10
 		search_filters = {   }
-		prerequisite = { focus = }
+		prerequisite = { focus = SER_COM_unified_front}
 		
 		available_if_capitulated = yes
 
@@ -439,6 +460,26 @@ focus_tree = {
 		}
 	}	
 	focus = {
+<<<<<<< Updated upstream
+=======
+		id = SER_COM_2222222
+		icon = GFX_goal_unknown
+		relative_position_id = SER_COM_trotskyite_model
+		x = -2
+		y = 1
+		cost = 10
+		search_filters = {   }
+		prerequisite = { focus = SER_COM_trotskyite_model}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+
+		}
+	}
+	focus = {
+>>>>>>> Stashed changes
 		id = 
 		icon = 
 		relative_position_id = 
@@ -833,14 +874,14 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = 
-		icon = 
-		relative_position_id = 
-		x = 
-		y = 
+		id = SER_YUG_secure_civ_front
+		icon = GFX_focus_mex_arrest_general_cedillo
+		relative_position_id = SER_YUG_state_security_forces
+		x = 0
+		y = 1
 		cost = 10
 		search_filters = {   }
-		prerequisite = { focus = }
+		prerequisite = { focus = SER_YUG_state_security_forces}
 		
 		available_if_capitulated = yes
 
@@ -1407,7 +1448,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_civ_factory
 		relative_position_id = SER_COM_IND_CIV_1
 		x = 0
-		y = 1
+		y = 2
 		cost = 10
 		search_filters = {   }
 		prerequisite = { focus = SER_COM_IND_CIV_1}
@@ -1492,7 +1533,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_mil_factory
 		relative_position_id = SER_COM_IND_mil_1
 		x = 0
-		y = 1
+		y = 2
 		cost = 10
 		search_filters = {   }
 		prerequisite = { focus = SER_COM_IND_mil_1}

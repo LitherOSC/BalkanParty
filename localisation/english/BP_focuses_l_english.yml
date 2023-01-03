@@ -276,7 +276,18 @@
   SER_COM_trotskyite_model:0 "Trotskyite Model"
   SER_COM_trotskyite_model_desc:0 "The list of communist countries is incomplete. YOU CAN HELP BY EXPANDING IT."
   SER_COM_anti_fascism:0 "Anti Fascism Policy"
+<<<<<<< Updated upstream
   SER_COM_anti_fascism_desc:0 "Fascism is a grave threat to our very existence, we must be the vanguard of the socialist cause that stands against it."
+=======
+  SER_COM_anti_fascism_desc:0 "Fascism is a grave threat to our very existance, we must be the vanguard of the socialist cause that stands against it."
+  SER_COM_anti_fascism_2:0 ""
+  SER_COM_anti_fascism_2_desc:0 ""
+  SER_COM_unified_front:0 ""
+  SER_COM_unified_front_desc:0 ""
+  SER_COM_protect_comrades:0 ""
+  SER_COM_protect_comrades_desc:0 ""
+
+>>>>>>> Stashed changes
 
 
 
@@ -307,6 +318,9 @@
   SER_YUG_distance_king_desc:0 "Prince Paul is a wonderful figure to rally about, but in the field of state politics he is not up to the task. Perhaps he should serve the state in spirit, rather than direct decision making."
   SER_YUG_fascist_gov:0 "Nationalist Government"
   SER_YUG_fascist_gov_desc:0 "With Prince Paul relegated from state politics, it is time to install a proper, nationalist government."
+  SER_YUG_secure_civ_front:0 ""
+  SER_YUG_secure_civ_front_desc:0 ""
+  
 
   SER_YUG_industrial_investments:0 "Yugoslavian Industrial Investments"
   SER_YUG_industrial_investments_desc:0 "The Yugoslav industry is critically small "
