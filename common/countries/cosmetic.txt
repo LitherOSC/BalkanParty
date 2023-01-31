@@ -14,6 +14,15 @@ AUS_GER_GER_cos_tag = {
 	color_ui = rgb { 115 115 115 }
 }
 
+FRA_HRE_BURGUNDY_TAG = {
+	color = rgb { 120 30 45 }
+	color_ui = rgb { 120 30 45 }
+}
+
+DNZ_HRE_PALATINATE_TAG = {
+	color = rgb { 51 102 153 }
+	color_ui = rgb { 51 102 153 }	
+}
 
 
 

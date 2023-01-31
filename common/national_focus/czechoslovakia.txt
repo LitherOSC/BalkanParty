@@ -2048,6 +2048,45 @@
 		}
 	}
 
+ ########################################################
+ ##################### HRE ############################
+ ############################################################
+
+	focus = {
+		id = CZE_Bohemian_memories
+		icon = GFX_focus_BUL_the_third_bulgarian_empire
+		relative_position_id = CZE_political_direction
+		x = 7
+		y = 1
+		cost = 10
+		allow_branch = {
+			AUS = {
+				has_completed_focus = AUS_Archduke_Robert_of_Austria_Este
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = {   }
+		prerequisite = { focus = CZE_political_direction}
+		prerequisite = {focus = CZE_strategy_decisions}
+		
+		available_if_capitulated = no
+
+		available = {
+			AUS = {
+				has_completed_focus = AUS_declare_HRE
+			}
+		}
+
+		completion_reward = {
+			add_timed_idea = {
+				idea = CZE_hre_Bohemian_support
+				days = 365
+			}
+		}
+	}
+
 	#######################################
 	######### STRATEGY DECISIONS ##########
 	#######################################

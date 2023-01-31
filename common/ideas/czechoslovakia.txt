@@ -241,6 +241,9 @@ ideas = {
 		}
 		CZE_export_focus2 = {
 
+			allowed = {
+				original_tag = CZE
+				always = no
 			}
 
 			allowed_civil_war = {
@@ -499,6 +502,22 @@ ideas = {
 
 			modifier = {
 				max_planning = 0.15
+			}
+		}
+		CZE_hre_Bohemian_support = {
+
+
+			picture = ast_abandon_the_westminster_system
+
+			removal_cost = -1
+
+			modifier = {
+				party_popularity_stability_factor = -1
+				political_power_gain = -0.25
+				stability_weekly = -0.005
+				war_support_weekly = 0.0025
+				neutrality_drift = 0.2
+				democratic_drift = -0.15
 			}
 		}
 

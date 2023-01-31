@@ -33,6 +33,18 @@
  AUS_GER_railgun_production:0 "Railgun Production"
  AUS_GER_railgun_production_desc:0 ""
 
+ HRE_emperor_idea:0 "Holy Roman Emperor"
+ HRE_emperor_idea_desc:0 "[ROOT.GetName] holds the title of Emperor in the Holy Roman Empire."
+ HRE_elector_idea:0 "Imperial Elector Status"
+ Prussian_army_idea:0 "Prussian Army"
+ HRE_autonomous_neutrality_idea:0 "Imperial autonomy from the Emperor."
+ HRE_autonomous_neutrality_idea_desc:0 "The members of the Holy Roman Empire are not required to answer the Emperor's call to arms. They do not wish to intervene in matters outside their domain."
+
+############ CZE
+
+ CZE_hre_Bohemian_support:0 "Cry for the Kingdom of Bohemia"
+ CZE_hre_Bohemian_support_desc:0 "We must join the Holy Roman Empire, we must become the Bohemian electorate!"
+
 ########### FIL
 
  Filler_neutrality:0 "Filler Neutrality"

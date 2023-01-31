@@ -293,6 +293,106 @@ ideas = {
 				}
 			}
 		}
+		HRE_elector_idea = {
+			
+			picture = generic_monarchist_uprising
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				party_popularity_stability_factor = 0.5
+				stability_factor = 0.20
+				war_support_factor = 0.20
+				political_power_factor = 0.50
+			}
+		}
+		Prussian_army_idea = {
+			
+			picture = ger_revive_the_kaiserreich
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				weekly_manpower = 250
+				mobilization_speed = 0.25
+				conscription_factor = 0.25
+				conscription = 0.025
+				experience_loss_factor = -0.25
+				special_forces_min = 10
+				special_forces_out_of_supply_factor = -0.25
+				special_forces_attack_factor = 0.25
+				special_forces_defence_factor = 0.25
+				special_forces_cap = 0.25
+				special_forces_no_supply_grace = 1
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				max_planning = 0.05
+				political_power_factor = -0.5
+				stability_factor = 0.15
+				war_support_factor = 0.15
+			}
+		}
+		HRE_autonomous_neutrality_idea = {
+
+			picture = ast_abandon_the_westminster_system
+			
+			removal_cost = -1
+
+		  allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			
+			modifier = {
+				fascism_acceptance = -50
+        neutrality_acceptance = 100
+        communism_acceptance = -500
+        democratic_acceptance = -50
+				stability_factor = 0.1
+				generate_wargoal_tension = 1.00
+				join_faction_tension = 1.00
+				send_volunteers_tension = 1
+				ai_get_ally_desire_factor = -500
+				ai_join_ally_desire_factor = -500
+			}
+		}
+		HRE_emperor_idea = {
+			
+			picture = HUN_hungarian_monarchy_habsburg
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				party_popularity_stability_factor = 0.5
+				stability_factor = 0.30
+				war_support_factor = 0.20
+				political_power_factor = 0.50
+			}
 	}
 	# TECHNOLOGY
 	tank_manufacturer = {

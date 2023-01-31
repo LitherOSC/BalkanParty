@@ -87,7 +87,8 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-
+			remove_ideas = AUS_Saal_Schutz
+			add_ideas = HRE_emperor_idea
 
 		}
 	}
@@ -201,8 +202,455 @@ focus_tree = {
 
 
 		completion_reward = {
-			create_faction = "Holy Roman Empire"
+			custom_effect_tooltip = aus_create_hre_tooltip
+			
+			hidden_effect = {
+				create_faction = "Holy Roman Empire"		
 
+				WUR = {
+					transfer_state = 50
+					add_state_core = 50
+					add_ideas = HRE_autonomous_neutrality_idea
+				}
+				SAX = {
+					transfer_state = 65
+					add_state_core = 65
+					add_ideas = HRE_autonomous_neutrality_idea
+					add_ideas = HRE_elector_idea
+				}
+				MEK = {
+					transfer_state = 58
+					transfer_state = 61
+					add_state_core = 58
+					add_state_core = 61
+					add_ideas = HRE_autonomous_neutrality_idea
+				}
+				BAY = {
+					transfer_state = 52
+					transfer_state = 53
+					transfer_state = 54
+					add_state_core = 52
+					add_state_core = 53
+					add_state_core = 54
+					add_ideas = HRE_autonomous_neutrality_idea
+					add_ideas = HRE_elector_idea
+				}
+				HAN = {
+					transfer_state = 59
+					transfer_state = 56
+					transfer_state = 57
+					add_state_core = 59
+					add_state_core = 56
+					add_state_core = 57
+					add_ideas = HRE_autonomous_neutrality_idea
+				}
+				PRE = {
+					transfer_state = 5
+					transfer_state = 60
+					transfer_state = 62
+					transfer_state = 63
+					transfer_state = 64
+					transfer_state = 66
+					transfer_state = 67
+					transfer_state = 68
+					transfer_state = 85
+					transfer_state = 763
+					transfer_state = 807
+					add_state_core = 5
+					add_state_core = 60
+					add_state_core = 62
+					add_state_core = 63
+					add_state_core = 64
+					add_state_core = 66
+					add_state_core = 67
+					add_state_core = 68
+					add_state_core = 85
+					add_state_core = 763
+					add_state_core = 807
+					add_ideas = Prussian_army_idea
+					add_ideas = HRE_autonomous_neutrality_idea
+					add_ideas = HRE_elector_idea
+				}	
+				SPM = {
+					transfer_state = 158
+					transfer_state = 735
+					add_state_core = 158
+					add_state_core = 735
+					add_ideas = HRE_autonomous_neutrality_idea
+				}
+				TOS = {
+					transfer_state = 162
+					add_state_core = 162
+					add_ideas = HRE_autonomous_neutrality_idea
+				}
+				COR = {
+					transfer_state = 1
+					add_state_core = 1
+					add_popularity = {
+						ideology = neutrality
+						popularity = 0.5
+					}
+					set_politics = {
+						ruling_party = neutrality
+						elections_allowed = no
+					}
+					add_ideas = HRE_autonomous_neutrality_idea
+				}
+				LUX = {
+					transfer_state = 8
+					add_state_core = 8
+					add_popularity = {
+						ideology = neutrality
+						popularity = 0.5
+					}
+					set_politics = {
+						ruling_party = neutrality
+						elections_allowed = no
+					}
+					add_ideas = HRE_autonomous_neutrality_idea
+				}
+				FRA = {
+					transfer_state = 17
+					transfer_state = 28
+					transfer_state = 6
+					transfer_state = 34
+					transfer_state = 29
+					add_state_core = 6
+					add_state_core = 17
+					add_state_core = 28
+					add_state_core = 29
+					add_state_core = 34
+					complete_national_focus = FRA_revive_the_national_bloc
+					complete_national_focus = FRA_utilize_the_leagues
+					complete_national_focus = FRA_the_council_of_rambouillet
+					complete_national_focus = FRA_revise_the_constitution
+					complete_national_focus = FRA_repeal_the_law_of_exile
+					complete_national_focus = FRA_orleanist_restoration
+					set_cosmetic_tag = FRA_HRE_BURGUNDY_TAG
+					add_popularity = {
+						ideology = neutrality
+						popularity = 0.3
+					}
+					add_ideas = HRE_autonomous_neutrality_idea
+					add_ideas = HRE_elector_idea
+				}
+				DNZ = {
+					transfer_state = 42
+					transfer_state = 51
+					transfer_state = 55
+					add_state_core = 42
+					add_state_core = 51
+					add_state_core = 55
+					set_cosmetic_tag = DNZ_HRE_PALATINATE_TAG
+					add_popularity = {
+						ideology = neutrality
+						popularity = 0.5
+					}
+					set_politics = {
+						ruling_party = neutrality
+						elections_allowed = no
+					}
+					add_ideas = HRE_autonomous_neutrality_idea
+					add_ideas = HRE_elector_idea
+				}
+				every_state = {
+					limit = { 
+						is_core_of = SWI
+					}
+					SWI = {
+						transfer_state = PREV
+						add_state_core = PREV
+					}
+				}
+				SWI = {
+					add_popularity = {
+						ideology = neutrality
+						popularity = 0.5
+					}
+					set_politics = {
+						ruling_party = neutrality
+						elections_allowed = no
+					}
+					add_ideas = HRE_autonomous_neutrality_idea
+				}
+				every_state = {
+					limit = { 
+						is_core_of = HOL
+					}
+					HOL = {
+						transfer_state = PREV
+						add_state_core = PREV
+					}
+				}
+				HOL = {
+					complete_national_focus = HOL_form_new_government
+					complete_national_focus = HOL_gateway_to_europe
+					complete_national_focus = HOL_maintain_trade_neutrality
+					complete_national_focus = HOL_oranje_boven
+					complete_national_focus = HOL_symbol_of_resistance
+					complete_national_focus = HOL_the_only_man_in_the_dutch_government
+					add_popularity = {
+						ideology = neutrality
+						popularity = 0.5
+					}
+					add_ideas = HRE_autonomous_neutrality_idea
+				}
+				every_state = {
+					limit = { 
+						is_core_of = LBV
+						NOT = {
+							state = 160
+						}
+					}
+					LBV = {
+						transfer_state = PREV
+						add_state_core = PREV
+					}
+				}
+				LBV = {
+					add_ideas = HRE_autonomous_neutrality_idea
+				}
+
+				add_to_faction = WUR
+				add_to_faction = SAX
+				add_to_faction = MEK
+				add_to_faction = BAY
+				add_to_faction = HAN
+				add_to_faction = PRE
+				add_to_faction = SWI
+				add_to_faction = HOL
+				add_to_faction = LBV
+				add_to_faction = SPM
+				add_to_faction = TOS
+				add_to_faction = COR
+				add_to_faction = LUX
+				add_to_faction = DNZ
+				add_to_faction = FRA
+				AUS = {
+					if = {
+						limit = {
+							has_dlc = "Together for Victory"
+						}
+						set_autonomy = {
+							target = WUR
+							autonomy_state = bp_hre_prince
+						}
+					}
+					else = {
+						puppet = WUR
+					}
+				}
+				AUS = {
+					if = {
+						limit = {
+							has_dlc = "Together for Victory"
+						}
+						set_autonomy = {
+							target = MEK
+							autonomy_state = bp_hre_prince
+						}
+					}
+					else = {
+						puppet = MEK
+					}
+				}
+				AUS = {
+					if = {
+						limit = {
+							has_dlc = "Together for Victory"
+						}
+						set_autonomy = {
+							target = HAN
+							autonomy_state = bp_hre_prince
+						}
+					}
+					else = {
+						puppet = HAN
+					}
+				}
+				AUS = {
+					if = {
+						limit = {
+							has_dlc = "Together for Victory"
+						}
+						set_autonomy = {
+							target = HOL
+							autonomy_state = bp_hre_prince
+						}
+					}
+					else = {
+						puppet = HOL
+					}
+				}
+				AUS = {
+					if = {
+						limit = {
+							has_dlc = "Together for Victory"
+						}
+						set_autonomy = {
+							target = LUX
+							autonomy_state = bp_hre_prince
+						}
+					}
+					else = {
+						puppet = LUX
+					}
+				}
+				AUS = {
+					if = {
+						limit = {
+							has_dlc = "Together for Victory"
+						}
+						set_autonomy = {
+							target = SWI
+							autonomy_state = bp_hre_prince
+						}
+					}
+					else = {
+						puppet = SWI
+					}
+				}
+				AUS = {
+					if = {
+						limit = {
+							has_dlc = "Together for Victory"
+						}
+						set_autonomy = {
+							target = LBV
+							autonomy_state = bp_hre_prince
+						}
+					}
+					else = {
+						puppet = LBV
+					}
+				}
+				AUS = {
+					if = {
+						limit = {
+							has_dlc = "Together for Victory"
+						}
+						set_autonomy = {
+							target = SPM
+							autonomy_state = bp_hre_prince
+						}
+					}
+					else = {
+						puppet = SPM
+					}
+				}
+				AUS = {
+					if = {
+						limit = {
+							has_dlc = "Together for Victory"
+						}
+						set_autonomy = {
+							target = TOS
+							autonomy_state = bp_hre_prince
+						}
+					}
+					else = {
+						puppet = TOS
+					}
+				}
+				AUS = {
+					if = {
+						limit = {
+							has_dlc = "Together for Victory"
+						}
+						set_autonomy = {
+							target = COR
+							autonomy_state = bp_hre_prince
+						}
+					}
+					else = {
+						puppet = COR
+					}
+				}
+				AUS = {
+					if = {
+						limit = {
+							has_dlc = "Together for Victory"
+						}
+						set_autonomy = {
+							target = SAX
+							autonomy_state = bp_hre_elector
+						}
+					}
+					else = {
+						puppet = SAX
+					}
+				}
+				AUS = {
+					if = {
+						limit = {
+							has_dlc = "Together for Victory"
+						}
+						set_autonomy = {
+							target = PRE
+							autonomy_state = bp_hre_elector
+						}
+					}
+					else = {
+						puppet = PRE
+					}
+				}
+				AUS = {
+					if = {
+						limit = {
+							has_dlc = "Together for Victory"
+						}
+						set_autonomy = {
+							target = DNZ
+							autonomy_state = bp_hre_elector
+						}
+					}
+					else = {
+						puppet = DNZ
+					}
+				}
+				AUS = {
+					if = {
+						limit = {
+							has_dlc = "Together for Victory"
+						}
+						set_autonomy = {
+							target = BUR
+							autonomy_state = bp_hre_elector
+						}
+					}
+					else = {
+						puppet = BUR
+					}
+				}
+				AUS = {
+					if = {
+						limit = {
+							has_dlc = "Together for Victory"
+						}
+						set_autonomy = {
+							target = BAY
+							autonomy_state = bp_hre_elector
+						}
+					}
+					else = {
+						puppet = BAY
+					}
+				}
+				AUS = {
+					if = {
+						limit = {
+							has_dlc = "Together for Victory"
+						}
+						set_autonomy = {
+							target = FRA
+							autonomy_state = bp_hre_elector
+						}
+					}
+					else = {
+						puppet = FRA
+					}
+				}
+			}
 		}
 	}
 
