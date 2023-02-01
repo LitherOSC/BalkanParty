@@ -183,6 +183,12 @@
 
  CZE_Bohemian_memories:0 "Memories of the Bohemian Electorate"
  CZE_Bohemian_memories_desc:0 "The Austrians have begun to turn back the clock, they aim to restore the Holy Roman Empire. But how can that empire be without the Glory of Bohemia, the grandest of electors. The people yearn for it!"
+ CZE_BOH_prepare_revolt:0 ""
+ CZE_BOH_prepare_revolt_desc:0 ""
+ CZE_BOH_approach_AUS:0 ""
+ CZE_BOH_approach_AUS_desc:0 ""
+ CZE_BOH_approach_PRE:0 ""
+ CZE_BOH_approach_PRE_desc:0 ""
 
 ################### MNT
 

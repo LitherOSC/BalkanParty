@@ -2065,7 +2065,15 @@
 			}
 		}
 		ai_will_do = {
-			factor = 10
+			factor = 20
+			modifier = {
+				factor = 1
+				has_government = communism
+			}
+			modifier = {
+				factor = 5
+				has_government = fascism
+			}
 		}
 		search_filters = {   }
 		prerequisite = { focus = CZE_political_direction}
@@ -2084,6 +2092,118 @@
 				idea = CZE_hre_Bohemian_support
 				days = 365
 			}
+		}
+	}
+
+	focus = {
+		id = CZE_BOH_prepare_revolt
+		icon = GFX_goal_unknown
+		relative_position_id = CZE_Bohemian_memories
+		x = 0
+		y = 5
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = {   }
+		prerequisite = { focus = CZE_Bohemian_memories}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+
+		}
+	}
+
+	focus = {
+		id = 
+		icon = GFX_goal_unknown
+		relative_position_id = CZE_BOH_prepare_revolt
+		x = -1
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = {   }
+		prerequisite = { focus = CZE_BOH_prepare_revolt}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+
+		}
+	}
+
+	focus = {
+		id = 
+		icon = GFX_goal_unknown
+		relative_position_id = CZE_BOH_prepare_revolt
+		x = 1
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = {   }
+		prerequisite = { focus = CZE_BOH_prepare_revolt}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+
+		}
+	}
+
+	focus = {
+		id = CZE_BOH_approach_AUS
+		icon = GFX_goal_unknown
+		relative_position_id = CZE_BOH_prepare_revolt
+
+		x = -1
+		y = 2
+		cost = 10
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 50
+				is_ally_with = AUS
+			}
+		}
+		search_filters = {   }
+		mutually_exclusive = { focus = CZE_BOH_approach_PRE}
+		prerequisite = { focus = }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+
+		}
+	}
+
+	focus = {
+		id = CZE_BOH_approach_PRE
+		icon = GFX_goal_unknown
+		relative_position_id = CZE_BOH_prepare_revolt
+
+		x = 1
+		y = 2
+		cost = 10
+		ai_will_do = {
+			factor = 20
+		}
+		search_filters = {   }
+		prerequisite = { focus = }
+		mutually_exclusive = { focus = CZE_BOH_approach_AUS }		
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+
 		}
 	}
 
