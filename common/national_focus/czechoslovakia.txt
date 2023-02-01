@@ -2117,7 +2117,7 @@
 	}
 
 	focus = {
-		id = 
+		id = CZE_BOH_royal_guard
 		icon = GFX_goal_unknown
 		relative_position_id = CZE_BOH_prepare_revolt
 		x = -1
@@ -2138,7 +2138,7 @@
 	}
 
 	focus = {
-		id = 
+		id = CZE_BOH_public_rallies
 		icon = GFX_goal_unknown
 		relative_position_id = CZE_BOH_prepare_revolt
 		x = 1
@@ -2175,7 +2175,8 @@
 		}
 		search_filters = {   }
 		mutually_exclusive = { focus = CZE_BOH_approach_PRE}
-		prerequisite = { focus = }
+		prerequisite = { focus = CZE_BOH_royal_guard}
+		prerequisite = { focus = CZE_BOH_public_rallies}
 		
 		available_if_capitulated = yes
 
@@ -2197,7 +2198,8 @@
 			factor = 20
 		}
 		search_filters = {   }
-		prerequisite = { focus = }
+		prerequisite = { focus = CZE_BOH_royal_guard}
+		prerequisite = { focus = CZE_BOH_public_rallies}
 		mutually_exclusive = { focus = CZE_BOH_approach_AUS }		
 		available_if_capitulated = yes
 
