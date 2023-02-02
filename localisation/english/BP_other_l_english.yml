@@ -27,6 +27,13 @@
   DNZ_HRE_PALATINATE_TAG:0 "Palatinate"
   DNZ_HRE_PALATINATE_TAG_ADJ:0 "Palatinatian"
   DNZ_HRE_PALATINATE_TAG_DEF:0 "Palatinate"
+  CZE_BOH:0 "Kingdom of Bohemia"
+  CZE_BOH_ADJ:0 "Bohemian"
+  CZE_BOH_DEF:0 "Bohemia"
+  CZE_BOH_democratic:0 "Commonwealth of Bohemia"
+  CZE_BOH_communism:0 "Bohemian People's Republic"
+  CZE_BOH_communism_ADJ:0 "PR Bohemian"
+  CZE_BOH_communism_DEF:0 "PR Bohemia"
   
 #################################################### MUSIC ##############################################
   maintheme:0 "Bosanska Artiljerija"

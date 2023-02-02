@@ -19,7 +19,7 @@ bookmarks = {
 			focuses = {
 				CZE_sudeten_1
 				CZE_industrial_legacy
-				CZE_military_research_institute
+				CZE_Bohemian_memories
 			}
 		}
 

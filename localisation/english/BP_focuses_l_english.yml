@@ -183,11 +183,19 @@
 
  CZE_Bohemian_memories:0 "Memories of the Bohemian Electorate"
  CZE_Bohemian_memories_desc:0 "The Austrians have begun to turn back the clock, they aim to restore the Holy Roman Empire. But how can that empire be without the Glory of Bohemia, the grandest of electors. The people yearn for it!"
- CZE_BOH_prepare_revolt:0 ""
+ CZE_BOH_prepare_revolt:0 "Prepare for the Revolt"
  CZE_BOH_prepare_revolt_desc:0 ""
- CZE_BOH_approach_AUS:0 ""
+ CZE_BOH_royal_guard:0 "Assemble a Royal Guard"
+ CZE_BOH_royal_guard_desc:0 ""
+ CZE_BOH_public_rallies:0 "Public Rallies"
+ CZE_BOH_public_rallies_desc:0 ""
+ CZE_BOH_to_arms:0 "To Arms!"
+ CZE_BOH_to_arms_desc:0 ""
+ CZE_BOH_join_hre:0 "Join the HRE"
+ CZE_BOH_join_hre_desc:0 ""
+ CZE_BOH_approach_AUS:0 "Approach Austria"
  CZE_BOH_approach_AUS_desc:0 ""
- CZE_BOH_approach_PRE:0 ""
+ CZE_BOH_approach_PRE:0 "Approach Prussia"
  CZE_BOH_approach_PRE_desc:0 ""
 
 ################### MNT

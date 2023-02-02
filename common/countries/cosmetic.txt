@@ -24,6 +24,11 @@ DNZ_HRE_PALATINATE_TAG = {
 	color_ui = rgb { 51 102 153 }	
 }
 
+CZE_BOH = {
+	color = rgb { 215 150 40 }
+	color_ui = rgb { 215 150 40 }	
+}
+
 
 
 MAL_UK = {
