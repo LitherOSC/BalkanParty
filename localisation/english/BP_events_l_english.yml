@@ -72,3 +72,19 @@
  austria_news.101.c:0 "The big brother gets bigger"
  austria_news.101.d:0 "This charade has gone on for long enough!"
 
+
+########################################
+##################### CZE
+#####################################
+
+ bp_cze.1.t:0 "To choose a king for Bohemia!"
+ bp_cze.1.desc:0 "uufnuugfurbugbrug"
+ bp_cze.1.a:0 "A Habsburg"
+ bp_cze.1.b:0 "gdfgthgfhb"
+ bp_cze.1.c:0 "ghfhbgfbh"
+
+ bp_cze.2.t:0 "Bohemia requests to join the Empire"
+ bp_cze.2.desc:0 "dfdfd"
+ bp_cze.2.a:0 "The missing lamb returns to the flock."
+ bp_cze.2.b:0 "They demand to be an elector once more? Preposterous!"
+

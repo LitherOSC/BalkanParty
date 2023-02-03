@@ -84,30 +84,68 @@ spriteTypes = {
 	}	
 
 	SpriteType = {
-	name = "GFX_goal_continuous_air_production"
-	texturefile = "gfx/interface/goals/goal_continuous_air_production.dds"			
+	name = "GFX_AUS_deal_with_the_bishoprics"
+	texturefile = "gfx/interface/goals/take_the_bishoprics.dds"			
 	}	
+
+	SpriteType = {
+	name = "GFX_AUS_duchy_of_bavaria"
+	texturefile = "gfx/interface/goals/duchy_of_bavaria.dds"			
+	}	
+
+
+	SpriteType = {
+	name = "GFX_AUS_control_swabia"
+	texturefile = "gfx/interface/goals/control_swabia.dds"			
+	}	
+
+
+	SpriteType = {
+	name = "GFX_AUS_connect_further_austria"
+	texturefile = "gfx/interface/goals/connect_further_austria.dds"			
+	}	
+
+
+	SpriteType = {
+	name = "GFX_AUS_weaken_france"
+	texturefile = "gfx/interface/goals/weaken_france.dds"			
+	}
+
+
+	SpriteType = {
+	name = "GFX_AUS_balance_of_power"
+	texturefile = "gfx/interface/goals/balance_of_power.dds"			
+	}
+
+
+	SpriteType = {
+	name = "GFX_AUS_shift_the_balance"
+	texturefile = "gfx/interface/goals/shift_the_balance.dds"			
+	}
+
+
+	SpriteType = {
+	name = "GFX_AUS_glory_to_von_habsburg"
+	texturefile = "gfx/interface/goals/glory_to_von_habsburg.dds"			
+	}
+
+
 	SpriteType = {
 	name = "GFX_goal_continuous_air_production"
 	texturefile = "gfx/interface/goals/goal_continuous_air_production.dds"			
-	}	
+	}
 	SpriteType = {
 	name = "GFX_goal_continuous_air_production"
 	texturefile = "gfx/interface/goals/goal_continuous_air_production.dds"			
-	}	
+	}
 	SpriteType = {
 	name = "GFX_goal_continuous_air_production"
 	texturefile = "gfx/interface/goals/goal_continuous_air_production.dds"			
-	}	
+	}
 	SpriteType = {
 	name = "GFX_goal_continuous_air_production"
 	texturefile = "gfx/interface/goals/goal_continuous_air_production.dds"			
 	}
 
-	#########################################
-	SpriteType = {
-	name = "GFX_goal_continuous_air_production"
-	texturefile = "gfx/interface/goals/goal_continuous_air_production.dds"			
-	}
 
 

@@ -13,7 +13,7 @@ focus_tree = {
 	
 	default = no
 
-	continuous_focus_position = { x = 50 y = 2000 }
+	continuous_focus_position = { x = 50 y = 2200 }
 
 #	focus = {
 #		id = ROM_
@@ -1301,15 +1301,15 @@ focus_tree = {
 
 		}
 	}
-###################################################################
-###############################
-##############################################################
+####################################
+############### bishoprics
+####################################
 	focus = {
-		id = 
-		icon = GFX_goal_unknown
-		relative_position_id = 
-		x = 0
-		y = 1
+		id = AUS_deal_with_the_Bishoprics
+		icon = GFX_AUS_deal_with_the_bishoprics
+		relative_position_id = AUS_declare_HRE
+		x = -4
+		y = 6
 		cost = 10
 		ai_will_do = {
 			factor = 10
@@ -1324,6 +1324,258 @@ focus_tree = {
 
 		}
 	}
+	focus = {
+		id = AUS_duchy_of_bavaria
+		icon = GFX_AUS_duchy_of_bavaria
+		relative_position_id = AUS_deal_with_the_Bishoprics
+		x = 0
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = {   }
+		prerequisite = { focus = AUS_deal_with_the_Bishoprics}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+
+		}
+	}
+	focus = {
+		id = AUS_deal_with_brandenburg
+		icon = GFX_focus_BUL_prussia_of_the_balkans
+		relative_position_id = AUS_duchy_of_bavaria
+		x = 2
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = {   }
+		prerequisite = { focus = AUS_duchy_of_bavaria }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+
+		}
+	}
+	focus = {
+		id = AUS_control_swabia
+		icon = GFX_AUS_control_swabia
+		relative_position_id = AUS_duchy_of_bavaria
+		x = 0
+		y = 3
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = {   }
+		prerequisite = { focus = AUS_duchy_of_bavaria }
+		prerequisite = { focus = AUS_connect_further_austria}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+
+		}
+	}
+#######################
+########## connect further austria
+######################
+
+	focus = {
+		id = AUS_connect_further_austria
+		icon = GFX_AUS_connect_further_austria
+		relative_position_id = AUS_declare_HRE
+		x = -2
+		y = 9
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = {   }
+		prerequisite = { focus = }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+
+		}
+	}
+
+	focus = {
+		id = AUS_gesslers_revenge
+		icon = GFX_focus_SWI_aktion_nationaler_widerstand
+		relative_position_id = AUS_connect_further_austria
+		x = 0
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = {   }
+		prerequisite = { focus = AUS_connect_further_austria }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+
+		}
+	}
+	focus = {
+		id = AUS_reclaim_burgundy
+		icon = GFX_focus_spa_supremacy_of_the_communion
+		relative_position_id = AUS_gesslers_revenge
+		x = 0
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = {   }
+		prerequisite = { focus = AUS_gesslers_revenge }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+
+		}
+	}
+	focus = {
+		id = AUS_weaken_france
+		icon = GFX_AUS_weaken_france
+		relative_position_id = AUS_reclaim_burgundy
+		x = 0
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = {   }
+		prerequisite = { focus = AUS_reclaim_burgundy }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+
+		}
+	}
+
+############################
+########### Balance of power
+##############################
+
+	focus = {
+		id = AUS_balance_of_power
+		icon = GFX_AUS_balance_of_power
+		relative_position_id = AUS_declare_HRE
+		x = 2
+		y = 8
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = {   }
+		prerequisite = { focus = }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+
+		}
+	}
+	focus = {
+		id = AUS_spread_the_von_habsburgs
+		icon = GFX_focus_generic_royal_wedding
+		relative_position_id = AUS_balance_of_power
+		x = 0
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = {   }
+		prerequisite = { focus = AUS_balance_of_power}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+
+		}
+	}
+	focus = {
+		id = AUS_shift_the_balance
+		icon = GFX_AUS_shift_the_balance
+		relative_position_id = AUS_spread_the_von_habsburgs
+		x = 0
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = {   }
+		prerequisite = { focus = AUS_spread_the_von_habsburgs}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+
+		}
+	}
+	focus = {
+		id = AUS_crush_the_revolution
+		icon = GFX_focus_spr_crush_the_revolution
+		relative_position_id = AUS_shift_the_balance
+		x = 0
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = {   }
+		prerequisite = { focus = AUS_shift_the_balance}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+
+		}
+	}
+	focus = {
+		id = AUS_glory_to_von_habsburg
+		icon = GFX_AUS_glory_to_von_habsburg
+		relative_position_id = AUS_crush_the_revolution
+		x = 0
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = {   }
+		prerequisite = { focus = AUS_crush_the_revolution}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+
+		}
+	}
+
 
 ###########################################################################################
 ############################################################### COM
