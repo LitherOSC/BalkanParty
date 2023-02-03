@@ -672,11 +672,29 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 10
+			factor = 5
 		}
 
 		available = {
-
+			is_in_faction_with = FRA
+			is_in_faction_with = BAY
+			is_in_faction_with = BUR
+			is_in_faction_with = DNZ
+			is_in_faction_with = PRE
+			is_in_faction_with = SAX
+			FRA = { has_opinion = { target = AUS value > 75 } }
+			BAY = { has_opinion = { target = AUS value > 75 } }
+			BUR = { has_opinion = { target = AUS value > 75 } }
+			DNZ = { has_opinion = { target = AUS value > 75 } }
+			PRE = { has_opinion = { target = AUS value > 50 } }
+			SAX = { has_opinion = { target = AUS value > 75 } }
+			if = {
+				limit = {
+					is_in_faction_with = CZE
+				}
+				CZE = { has_opinion = { target = AUS value > 50 } }
+				is_in_faction_with = CZE
+			}
 		}
 
 		bypass = {
@@ -704,10 +722,13 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
+		bypass = {
+			is_in_faction_with = CZE
+		}
 		available_if_capitulated = yes
 
 		completion_reward = {
-
+			CZE = { country_event = { id = 14}}
 
 		}
 	}

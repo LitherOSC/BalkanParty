@@ -4,6 +4,8 @@
 
 add_namespace = austria
 
+#################### AUS GER
+
 country_event = {
 	id = austria.1
 	title = austria.1.t
@@ -11,8 +13,6 @@ country_event = {
 	picture = GFX_report_event_election_vote
 	
 	is_triggered_only = yes
-
-	fire_only_once = yes
 
 	trigger = {
 		tag = AUS
@@ -701,3 +701,148 @@ news_event = {
 	}
 }
 
+
+################################
+############ AUS HRE
+###############################
+
+# Control Bohemia
+country_event = {
+	id = austria.14
+	title = austria.14.t
+	desc = austria.14.desc
+	picture = GFX_report_event_hitler_parade
+
+	is_triggered_only = yes
+
+	option = { # Accept
+		name = austria.14.a
+		ai_chance = {
+			base = 45
+			modifier = {
+				add = -50
+				AUS = { has_army_size = { size < 10 } }
+			}
+			modifier = {
+				add = 100
+				AUS = { has_army_manpower = { size > 199999 } }
+			}
+			modifier = {
+				add = 50
+				is_in_faction_with = AUS
+			}
+		}
+		AUS = {
+			country_event = { hours = 2 id = austria.16 }
+		}
+		custom_effect_tooltip = austria.14.tooltip.youwillbesubject
+	}
+	option = { # Refuse
+		name = austria.14.b
+		ai_chance = {
+			base = 50
+			modifier = {
+				add = 20
+				is_historical_focus_on = yes
+			}
+			modifier = {
+				AUS = { has_army_manpower = { size > 199999 } }
+				factor = 0.5
+			}
+			modifier = {
+				AUS = { has_army_manpower = { size > 249999 } }
+				add = -70
+			}
+			modifier = {
+				add = 50
+				AUS = { has_army_manpower = { size < 149999 } }
+			}
+			modifier = {
+				factor = 2
+				is_in_faction = yes
+				NOT = { is_in_faction_with = AUS }
+			}
+			modifier = {
+				any_other_country = {
+					has_guaranteed = CZE
+				}
+				factor = 2 #i've got friends
+			}
+			modifier = {
+				any_other_country = {
+					is_major = yes
+					has_guaranteed = CZE
+				}
+				factor = 3 #i've got big friends
+			}
+		}
+		AUS = {
+			add_opinion_modifier = { target = ROOT modifier = GER_anschluss_rejected }
+			country_event = { hours = 2 id = austria.15 }
+			if = { limit = { is_in_faction_with = CZE }
+				remove_from_faction = CZE
+			}
+		}
+	}
+}
+
+# Czechs refuse
+country_event = {
+	id = austria.15
+	title = austria.15.t
+	desc = austria.15.desc
+	picture = GFX_report_event_german_troops
+
+	is_triggered_only = yes
+
+	option = {
+		name = austria.15.a
+		custom_effect_tooltip = austria.6.tooltip
+		create_wargoal = {
+			type = puppet_wargoal_focus 
+			target = CZE
+		}
+	}
+}
+
+#Czechs accept
+country_event = {
+	id = austria.16
+	title = austria.16.t
+	desc = austria.16.desc
+	picture = GFX_report_event_german_speech
+
+	is_triggered_only = yes
+
+ 	immediate = {
+ 		add_named_threat = { threat = 5 name = austria.7.t }
+ 	}
+
+	option = {
+		name = austria.16.a
+		custom_effect_tooltip = austria.7.tooltip
+		add_political_power = 100
+		CZE = {
+			unlock_national_focus = CZE_Bohemian_memories
+			unlock_national_focus = CZE_BOH_prepare_revolt
+			complete_national_focus = CZE_BOH_royal_guard
+			unlock_national_focus = CZE_BOH_public_rallies
+			unlock_national_focus = CZE_BOH_to_arms
+			unlock_national_focus = CZE_BOH_join_hre
+			complete_national_focus = CZE_BOH_end_interregnum
+			set_cosmetic_tag = CZE_BOH
+			set_politics = {
+				ruling_party = neutrality
+				elections_allowed = no
+				}
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.3
+			}
+			add_ideas = HRE_autonomous_neutrality_idea
+			add_ideas = HRE_elector_idea
+			add_stability = -0.3
+		}
+
+	}
+}

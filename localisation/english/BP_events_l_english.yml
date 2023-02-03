@@ -73,6 +73,19 @@
  austria_news.101.d:0 "This charade has gone on for long enough!"
 
 
+ austria.14.t:0 "The HRE Emporor demands restoration of the Electorate of Bohemia"
+ austria.14.desc:0 "Austrian diplomats have arrived demanding we return to the imperial realm. Our history reaches far back into the empire, but can we really risk falling into a personal union under the Habsburgs once more?."
+ austria.14.a:0 "Unconquered city on Vltavas shore, Is protected by its people"
+ austria.14.b:0 "The Empire did last one thousand years... perhaps it shall again."
+
+ austria.15.t:0 "Czechoslovakaia Rejects the Offer"
+ austria.15.desc:0 "Austrian diplomats haven't been successful in pressuring the Czechs. They have refused to become part of the Holy Roman Empire, to be restored to their place. We shall take more direct means to reunite the Imperial Realm."
+ austria.15.a:0 "There will be no 1648 this time."
+
+ austria.16.t:0 "Bohemia joins the Empire!"
+ austria.16.desc:0 "Austrian diplomats have been successful in convincing the Czechs. They have agreed to be restored as an Imperial Elector.
+ austria.16.a:0 "The hole in the empire if filled."
+
 ########################################
 ##################### CZE
 #####################################
@@ -87,4 +100,6 @@
  bp_cze.2.desc:0 "dfdfd"
  bp_cze.2.a:0 "The missing lamb returns to the flock."
  bp_cze.2.b:0 "They demand to be an elector once more? Preposterous!"
+
+
 
